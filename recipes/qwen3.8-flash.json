@@ -46,8 +46,6 @@
       },
       "requirements": {
         "min_ram_bytes": 68719476736,
-        "recommended_ram_bytes": 128849018880,
-        "min_vram_bytes": 51539607552,
         "disk_bytes": 107463530810
       },
       "components": {

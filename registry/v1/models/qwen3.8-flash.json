@@ -46,8 +46,6 @@
       },
       "requirements": {
         "min_ram_bytes": 68719476736,
-        "recommended_ram_bytes": 128849018880,
-        "min_vram_bytes": 51539607552,
         "disk_bytes": 107463530810
       },
       "components": {
@@ -193,6 +191,6 @@
       }
     }
   ],
-  "published_at": "2026-10-03T22:07:00.267855Z",
-  "updated_at": "2026-10-03T22:07:00.267855Z"
+  "published_at": "2026-10-04T01:08:47+03:00",
+  "updated_at": "2026-10-04T01:08:47+03:00"
 }

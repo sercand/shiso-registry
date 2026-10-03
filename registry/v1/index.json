@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T22:07:00.282027Z",
+  "generated_at": "2026-10-03T22:29:32.831503Z",
   "models": [
     {
       "name": "qwen3.8-flash",
@@ -22,8 +22,8 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-03T22:07:00.267855Z",
-      "manifest_sha256": "6dd8137e8e69348871b8d005f677b4423b683c745b47eba17a52ba7cee8129b2",
+      "updated_at": "2026-10-04T01:08:47+03:00",
+      "manifest_sha256": "bc819c649c71fd11f51aa58f2bc2edb82087a83ac46b66b84890c728296fca38",
       "variants": [
         {
           "key": "exl3-405",
