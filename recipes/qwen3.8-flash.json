@@ -37,13 +37,10 @@
     {
       "key": "exl3-405",
       "backends": [
-        "metal",
         "cuda"
       ],
       "quant": "exl3-4.05bpw",
-      "requires": {
-        "min_metal_family": 7
-      },
+      "requires": {      },
       "requirements": {
         "min_ram_bytes": 68719476736,
         "disk_bytes": 107462993908

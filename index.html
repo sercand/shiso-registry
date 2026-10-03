@@ -31,7 +31,10 @@ browse here; the machine-readable artifacts are:</p>
   <li><a href="/recipes/">/recipes/</a> &mdash; the authored recipe sources</li>
 </ul>
 
-<p>Point a client at this host with <code>--registry-url</code> or
-<code>SHISO_REGISTRY_URL</code>; it appends <code>/registry/v1/</code> itself.</p>
+<p>Point a client at this host's <code>/registry/v1/</code> path with
+<code>--registry-url</code> or <code>SHISO_REGISTRY_URL</code>, for example
+<code>shiso pull &lt;model&gt; --registry-url https://&lt;this host&gt;/registry/v1/</code>.
+The client reads <code>index.json</code> and <code>models/&lt;name&gt;.json</code>
+relative to that URL, so it must include <code>/registry/v1/</code>.</p>
 </body>
 </html>

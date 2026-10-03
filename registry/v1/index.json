@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T22:31:46.255452Z",
+  "generated_at": "2026-10-03T22:40:43.172553Z",
   "models": [
     {
       "name": "qwen3.8-flash",
@@ -22,19 +22,17 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-04T01:29:44+03:00",
-      "manifest_sha256": "b74f8176bdf2ea1fc646428fc73e946f2ee45b5d27542ed84efdcd022a3598c3",
+      "updated_at": "2026-10-04T01:32:01+03:00",
+      "manifest_sha256": "0365ca6b6461e01466992451de7db59ad939984caa273074666a0ecd725491e9",
       "variants": [
         {
           "key": "exl3-405",
           "backends": [
-            "metal",
             "cuda"
           ],
           "quant": "exl3-4.05bpw",
           "min_ram_bytes": 68719476736,
-          "disk_bytes": 107462993908,
-          "min_metal_family": 7
+          "disk_bytes": 107462993908
         }
       ]
     }
