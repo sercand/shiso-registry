@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "name": "qwen3.8-flash",
+  "aliases": [
+    "qwen3.8-flash-next"
+  ],
+  "family": "qwen4exp",
+  "min_shiso_version": "0.1.0",
+  "description": "Sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and vision tower",
+  "tags": [],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
+    ],
+    "default_reasoning_effort": "medium",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "exl3-405",
+      "backends": [
+        "metal",
+        "cuda"
+      ],
+      "quant": "exl3-4.05bpw",
+      "requires": {
+        "min_metal_family": 7
+      },
+      "requirements": {
+        "min_ram_bytes": 68719476736,
+        "recommended_ram_bytes": 128849018880,
+        "min_vram_bytes": 51539607552,
+        "disk_bytes": 107463530810
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "turboderp/Qwen3.8-Flash-Next-exl3",
+          "revision": "55a732e0c4c3d4614bc42b68493bb930d9b02c0a",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 5055,
+              "sha256": "2ff43c0d52242195071dbb6b190f358eaf74d54ba64abdd780d4776c102ed719"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "merges.txt",
+              "size": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "model-00001-of-00009.safetensors",
+              "size": 8059362762,
+              "sha256": "f7aada062016dd519e73778a55b5f2c27420d133cc1d9c32a16fdda84628db46"
+            },
+            {
+              "name": "model-00002-of-00009.safetensors",
+              "size": 8067865392,
+              "sha256": "9b59a1f2aa822da10605bac5b30993db5de16980438519021639ec7f00277a7c"
+            },
+            {
+              "name": "model-00003-of-00009.safetensors",
+              "size": 8062251066,
+              "sha256": "afd197293ebf95ae2f12eb9765845b6bb1458501de8d538d1004216e7f7276cd"
+            },
+            {
+              "name": "model-00004-of-00009.safetensors",
+              "size": 8067896318,
+              "sha256": "2e307c9bbc15d5ea60d83eb305cc33b53781278f5d06d89f0e5c748b49fb0daf"
+            },
+            {
+              "name": "model-00005-of-00009.safetensors",
+              "size": 8062251066,
+              "sha256": "86117026391a449dfee9694a29c71550bfcfb522bbeedad2f5628d44fdd34562"
+            },
+            {
+              "name": "model-00006-of-00009.safetensors",
+              "size": 8067896318,
+              "sha256": "f8f64d518e44707fab7522671799e740dc24ec8b637444104795a6ec8f3f774e"
+            },
+            {
+              "name": "model-00007-of-00009.safetensors",
+              "size": 8062251066,
+              "sha256": "fe71c41078d23d8350bb397b52a2879c0532735ae75536fb34c74c3fc0e42312"
+            },
+            {
+              "name": "model-00008-of-00009.safetensors",
+              "size": 8067896318,
+              "sha256": "e46d1886537d7e61f640548b35da990f289261fecc330b890723a09aab278382"
+            },
+            {
+              "name": "model-00009-of-00009.safetensors",
+              "size": 3191543125,
+              "sha256": "15b7fced049294ee13f084079603ebb3e7b7a3c36271a7cfc3cf3a902ed53ae5"
+            },
+            {
+              "name": "model.safetensors.index.json",
+              "size": 32677781,
+              "sha256": "3375f7333b96069f476f191e929bc6dfbe8a3a3557e8844dec3d91dcded4657e"
+            },
+            {
+              "name": "ngram_embedding.safetensors",
+              "size": 39040193720,
+              "sha256": "c63613666649014e668cdbd32a4e3f1e8beda697eb4f3a1874300d93a1bfbc75",
+              "binds": "ngram"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "qbench_prompts.json",
+              "size": 324183,
+              "sha256": "80b3b8c6d41ec54da40f79d593ab91bcac42d638a5d96e069cb4e01e31666467"
+            },
+            {
+              "name": "qbench_prompts.md",
+              "size": 212719,
+              "sha256": "f2b3f16d2f92f6112c90aee2ce0e070eef414e64f2556fe06ca37471e0dbece5"
+            },
+            {
+              "name": "quantization_config.json",
+              "size": 96601545,
+              "sha256": "e5f86a6fa1a1ebb1b0fb4e2fd1d14e2989f7ccf13ad1a572be0af05129f4e3d1"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 17928,
+              "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            },
+            {
+              "name": "vision_k6.safetensors",
+              "size": 561389181,
+              "sha256": "04a66385d96ee7015dab2202615de786319d6219cd70b5208ef00f363b34b620",
+              "binds": "vision"
+            },
+            {
+              "name": "vocab.json",
+              "size": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "ctx": 262000,
+        "max_num_seqs": 4,
+        "spec_k": 4,
+        "spec_lookup": 8,
+        "capture_verify": true,
+        "capture_batch": true,
+        "gpu_memory_utilization": 0.88,
+        "solo_prefill_chunk": 4096
+      }
+    }
+  ]
+}

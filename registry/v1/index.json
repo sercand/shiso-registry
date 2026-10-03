@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-03T22:07:00.282027Z",
+  "models": [
+    {
+      "name": "qwen3.8-flash",
+      "aliases": [
+        "qwen3.8-flash-next"
+      ],
+      "family": "qwen4exp",
+      "min_shiso_version": "0.1.0",
+      "description": "Sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and vision tower",
+      "tags": [],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-03T22:07:00.267855Z",
+      "manifest_sha256": "6dd8137e8e69348871b8d005f677b4423b683c745b47eba17a52ba7cee8129b2",
+      "variants": [
+        {
+          "key": "exl3-405",
+          "backends": [
+            "metal",
+            "cuda"
+          ],
+          "quant": "exl3-4.05bpw",
+          "min_ram_bytes": 68719476736,
+          "disk_bytes": 107463530810,
+          "min_metal_family": 7
+        }
+      ]
+    }
+  ]
+}
