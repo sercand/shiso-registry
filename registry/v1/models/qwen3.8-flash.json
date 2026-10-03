@@ -46,7 +46,7 @@
       },
       "requirements": {
         "min_ram_bytes": 68719476736,
-        "disk_bytes": 107463530810
+        "disk_bytes": 107462993908
       },
       "components": {
         "base": {
@@ -136,16 +136,6 @@
               "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
             },
             {
-              "name": "qbench_prompts.json",
-              "size": 324183,
-              "sha256": "80b3b8c6d41ec54da40f79d593ab91bcac42d638a5d96e069cb4e01e31666467"
-            },
-            {
-              "name": "qbench_prompts.md",
-              "size": 212719,
-              "sha256": "f2b3f16d2f92f6112c90aee2ce0e070eef414e64f2556fe06ca37471e0dbece5"
-            },
-            {
               "name": "quantization_config.json",
               "size": 96601545,
               "sha256": "e5f86a6fa1a1ebb1b0fb4e2fd1d14e2989f7ccf13ad1a572be0af05129f4e3d1"
@@ -192,5 +182,5 @@
     }
   ],
   "published_at": "2026-10-04T01:08:47+03:00",
-  "updated_at": "2026-10-04T01:08:47+03:00"
+  "updated_at": "2026-10-04T01:29:44+03:00"
 }
