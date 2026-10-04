@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T11:53:43.201616Z",
+  "generated_at": "2026-10-04T12:40:24.884532Z",
   "models": [
     {
       "name": "flux.2-klein-4b",
@@ -32,6 +32,44 @@
           "quant": "fp8",
           "min_ram_bytes": 17179869184,
           "disk_bytes": 12299645375
+        }
+      ]
+    },
+    {
+      "name": "gemma-4-e4b",
+      "aliases": [],
+      "family": "gemma4",
+      "min_shiso_version": "0.1.0",
+      "description": "Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers",
+      "tags": [
+        "vision",
+        "audio",
+        "tools"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-04T15:40:24+03:00",
+      "manifest_sha256": "6637b873cddcb0b7ff819567dddd1e75dbffcc964b103c10acab7f5757038726",
+      "variants": [
+        {
+          "key": "qat-q4_0",
+          "backends": [
+            "cuda",
+            "metal"
+          ],
+          "quant": "Q4_0 (QAT)",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 6178692489,
+          "min_cuda_sm": 80
         }
       ]
     },

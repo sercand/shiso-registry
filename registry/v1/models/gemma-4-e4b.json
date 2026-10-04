@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "name": "gemma-4-e4b",
+  "aliases": [],
+  "family": "gemma4",
+  "min_shiso_version": "0.1.0",
+  "description": "Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers",
+  "tags": [
+    "vision",
+    "audio",
+    "tools"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "audio"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "medium"
+    ],
+    "default_reasoning_effort": "none",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "qat-q4_0",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "Q4_0 (QAT)",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 8589934592,
+        "recommended_ram_bytes": 17179869184,
+        "disk_bytes": 6178692489
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "google/gemma-4-E4B-it-qat-q4_0-gguf",
+          "revision": "4b4a2c1d584be7264f87aac328a1bc739ce81b6c",
+          "entry": "gemma-4-E4B_q4_0-it.gguf",
+          "files": [
+            {
+              "name": "gemma-4-E4B_q4_0-it.gguf",
+              "size": 5154941280,
+              "sha256": "676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee"
+            },
+            {
+              "name": "gemma-4-E4B-it-mmproj.gguf",
+              "size": 991552256,
+              "sha256": "7498a37cb619e55f2fcf87eb931f56e99389ed6d432e4c5c66110694c0d65578",
+              "binds": "vision"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "google/gemma-4-E4B-it-qat-q4_0-unquantized",
+          "revision": "476025a01dbf99361c062bbeca3d6a76bb4c4566",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 18569,
+              "sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5"
+            },
+            {
+              "name": "config.json",
+              "size": 5137,
+              "sha256": "f2db6d6e24cb4b695308897d82c8424fae946e95272a27de68b6e908c77b0f95"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 203,
+              "sha256": "b69207f9be617e982d13cc273cce6fd88c98dda99a4bdc5e2d52ffe0a0d9f0a9"
+            },
+            {
+              "name": "processor_config.json",
+              "size": 1689,
+              "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 32169626,
+              "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 3729,
+              "sha256": "3ab5c7b94dc97d65ca7064496fa69b88ff875378e1cb7ee3e43070c3a8170999"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "published_at": "2026-10-04T15:40:24+03:00",
+  "updated_at": "2026-10-04T15:40:24+03:00"
+}
