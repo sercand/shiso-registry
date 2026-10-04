@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "name": "clef",
+  "aliases": [],
+  "family": "qwen35",
+  "min_shiso_version": "0.1.0",
+  "description": "Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions",
+  "tags": [
+    "decision",
+    "systemone"
+  ],
+  "tasks": [
+    "decision"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "q4_k_m",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "Q4_K_M",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 34359738368,
+        "recommended_ram_bytes": 51539607552,
+        "disk_bytes": 19252222358
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "ggml-org/Clef-GGUF",
+          "revision": "5f70656b6670c65eb85ad07a11efe211b5f211bd",
+          "entry": "Clef-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Clef-Q4_K_M.gguf",
+              "size": 19232219104,
+              "sha256": "3d16919ab2c7de7b5f3343e2e29cb31b12ba9f30eb6c6bbac257157f5a279c7a"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Cloudflare/clef",
+          "revision": "2f3de3dd85f379784083b0814d997ab627200f0c",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 3688,
+              "sha256": "c42e88892bd3fd84e8276b2ad90df58c1c3b797676ea161035006a72ad468c58"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 214,
+              "sha256": "dc36854b2b25176764cfeeda32a3d80fb4fcffbef2b00d55c6614079bf21eb9f"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 19989325,
+              "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 1075,
+              "sha256": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
