@@ -1,7 +1,53 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T22:40:43.172553Z",
+  "generated_at": "2026-10-04T06:31:57.818172Z",
   "models": [
+    {
+      "name": "qwen3.5-4b",
+      "aliases": [],
+      "family": "qwen35",
+      "min_shiso_version": "0.1.0",
+      "description": "Dense 4B hybrid-attention model with a vision tower",
+      "tags": [
+        "vision",
+        "tools"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-04T09:31:57+03:00",
+      "manifest_sha256": "b41b9dd21583a64131f76e96cc15858205c3abf6081167963b7723cf1058315f",
+      "variants": [
+        {
+          "key": "mlx-optiq-4bit",
+          "backends": [
+            "metal"
+          ],
+          "quant": "mlx-optiq-4bit",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 3956941466
+        },
+        {
+          "key": "q4_k_m",
+          "backends": [
+            "cuda",
+            "metal"
+          ],
+          "quant": "Q4_K_M",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 3420891316,
+          "min_cuda_sm": 80
+        }
+      ]
+    },
     {
       "name": "qwen3.8-flash",
       "aliases": [
@@ -22,8 +68,8 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-04T01:32:01+03:00",
-      "manifest_sha256": "0365ca6b6461e01466992451de7db59ad939984caa273074666a0ecd725491e9",
+      "updated_at": "2026-10-04T01:43:15+03:00",
+      "manifest_sha256": "22f9d4d22ba2b7f532b663ea1d16dd6123247b2fd6d1913a440e66410fe39cc7",
       "variants": [
         {
           "key": "exl3-405",
