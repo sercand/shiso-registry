@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T06:31:57.818172Z",
+  "generated_at": "2026-10-04T07:41:13.46308Z",
   "models": [
     {
       "name": "qwen3.5-4b",
@@ -24,7 +24,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T09:31:57+03:00",
-      "manifest_sha256": "b41b9dd21583a64131f76e96cc15858205c3abf6081167963b7723cf1058315f",
+      "manifest_sha256": "3110038e25da1402a1545fefe277cbd8a811974b431a39ca3fb716eb458b301d",
       "variants": [
         {
           "key": "mlx-optiq-4bit",
@@ -33,7 +33,7 @@
           ],
           "quant": "mlx-optiq-4bit",
           "min_ram_bytes": 8589934592,
-          "disk_bytes": 3956941466
+          "disk_bytes": 3956912147
         },
         {
           "key": "q4_k_m",
@@ -43,7 +43,7 @@
           ],
           "quant": "Q4_K_M",
           "min_ram_bytes": 8589934592,
-          "disk_bytes": 3420891316,
+          "disk_bytes": 3426197888,
           "min_cuda_sm": 80
         }
       ]

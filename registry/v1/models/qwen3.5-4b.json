@@ -42,7 +42,7 @@
       "requirements": {
         "min_ram_bytes": 8589934592,
         "recommended_ram_bytes": 17179869184,
-        "disk_bytes": 3956941466
+        "disk_bytes": 3956912147
       },
       "components": {
         "base": {
@@ -84,23 +84,17 @@
               "name": "tokenizer_config.json",
               "size": 1135,
               "sha256": "b2bed5e033438f09f22b0ce9522115b4807d9bbcc3b82bf23372cb74d93ed081"
-            }
-          ]
-        },
-        "vision": {
-          "provider": "huggingface",
-          "repo": "mlx-community/Qwen3.5-4B-OptiQ-4bit",
-          "revision": "6cb5bdfd0bf15f484881fb9f1ab6d7c840fddde9",
-          "files": [
-            {
-              "name": "config.json",
-              "size": 55543,
-              "sha256": "aa725a49a83c5503506ff7dcbc57efdaeb7e64a5fa6e4b547d49979a29aec1b3"
             },
             {
               "name": "optiq/optiq_vision.safetensors",
               "size": 667061501,
-              "sha256": "2f3a952d401ef2e5735c0b56a0b718e338224a0d7af717f80a9315c26bdd8577"
+              "sha256": "2f3a952d401ef2e5735c0b56a0b718e338224a0d7af717f80a9315c26bdd8577",
+              "binds": "vision"
+            },
+            {
+              "name": "optiq_metadata.json",
+              "size": 26224,
+              "sha256": "38eb38a541e2b169c258630fd4a64b2bf256a024abfc55ff0935f0ec495d4be2"
             }
           ]
         }
@@ -119,7 +113,7 @@
       "requirements": {
         "min_ram_bytes": 8589934592,
         "recommended_ram_bytes": 17179869184,
-        "disk_bytes": 3420891316
+        "disk_bytes": 3426197888
       },
       "components": {
         "base": {
@@ -132,23 +126,12 @@
               "name": "Qwen3.5-4B-Q4_K_M.gguf",
               "size": 2740937888,
               "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
-            }
-          ]
-        },
-        "vision": {
-          "provider": "huggingface",
-          "repo": "mlx-community/Qwen3.5-4B-OptiQ-4bit",
-          "revision": "6cb5bdfd0bf15f484881fb9f1ab6d7c840fddde9",
-          "files": [
-            {
-              "name": "config.json",
-              "size": 55543,
-              "sha256": "aa725a49a83c5503506ff7dcbc57efdaeb7e64a5fa6e4b547d49979a29aec1b3"
             },
             {
-              "name": "optiq/optiq_vision.safetensors",
-              "size": 667061501,
-              "sha256": "2f3a952d401ef2e5735c0b56a0b718e338224a0d7af717f80a9315c26bdd8577"
+              "name": "mmproj-F16.gguf",
+              "size": 672423616,
+              "sha256": "cd88edcf8d031894960bb0c9c5b9b7e1fea6ebee02b9f7ce925a00d12891f864",
+              "binds": "vision"
             }
           ]
         },
