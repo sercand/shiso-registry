@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "name": "clef-flash",
+  "aliases": [],
+  "family": "qwen35",
+  "min_shiso_version": "0.1.0",
+  "description": "Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions",
+  "tags": [
+    "decision",
+    "systemone"
+  ],
+  "tasks": [
+    "decision"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "reasoning_efforts": [],
+    "default_reasoning_effort": null,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "q4_k_m",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "Q4_K_M",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 8589934592,
+        "recommended_ram_bytes": 17179869184,
+        "disk_bytes": 6506449296
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "ggml-org/Clef-Flash-GGUF",
+          "revision": "4a7a08c09bc63baf043b62b5ba89dd67a0357d95",
+          "entry": "Clef-Flash-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Clef-Flash-Q4_K_M.gguf",
+              "size": 6486448192,
+              "sha256": "3243a51d7a7bb205fb4fcf402a7df763f7d31e6645a9c10e5754c4395ab85b66"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Cloudflare/clef-flash",
+          "revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "config.json",
+              "size": 2832,
+              "sha256": "66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 116,
+              "sha256": "45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 19989325,
+              "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 1075,
+              "sha256": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "published_at": "2026-10-04T16:50:01+03:00",
+  "updated_at": "2026-10-04T16:50:01+03:00"
+}

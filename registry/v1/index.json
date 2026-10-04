@@ -1,7 +1,77 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T12:40:24.884532Z",
+  "generated_at": "2026-10-04T13:50:01.668256Z",
   "models": [
+    {
+      "name": "clef",
+      "aliases": [],
+      "family": "qwen35",
+      "min_shiso_version": "0.1.0",
+      "description": "Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions",
+      "tags": [
+        "decision",
+        "systemone"
+      ],
+      "tasks": [
+        "decision"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-04T16:50:01+03:00",
+      "manifest_sha256": "5eb498590219953b1202caf48953da238edc24d3837b53c34d24f289fbe3c332",
+      "variants": [
+        {
+          "key": "q4_k_m",
+          "backends": [
+            "cuda",
+            "metal"
+          ],
+          "quant": "Q4_K_M",
+          "min_ram_bytes": 34359738368,
+          "disk_bytes": 19252222358,
+          "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "clef-flash",
+      "aliases": [],
+      "family": "qwen35",
+      "min_shiso_version": "0.1.0",
+      "description": "Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions",
+      "tags": [
+        "decision",
+        "systemone"
+      ],
+      "tasks": [
+        "decision"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-04T16:50:01+03:00",
+      "manifest_sha256": "0d258ef29ac191f405eb34fb1bded92403354840a7e41a7ab8d6d8d3238c373e",
+      "variants": [
+        {
+          "key": "q4_k_m",
+          "backends": [
+            "cuda",
+            "metal"
+          ],
+          "quant": "Q4_K_M",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 6506449296,
+          "min_cuda_sm": 80
+        }
+      ]
+    },
     {
       "name": "flux.2-klein-4b",
       "aliases": [],
