@@ -1,7 +1,40 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T07:59:32.565622Z",
+  "generated_at": "2026-10-04T11:53:43.201616Z",
   "models": [
+    {
+      "name": "flux.2-klein-4b",
+      "aliases": [],
+      "family": "flux2",
+      "min_shiso_version": "0.1.0",
+      "description": "FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder",
+      "tags": [
+        "image-generation"
+      ],
+      "tasks": [
+        "image_generation"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "image"
+      ],
+      "updated_at": "2026-10-04T14:53:43+03:00",
+      "manifest_sha256": "bff1169737dedf542737ffd5b6ff80baf7843396e5ae202115e10f2b334ad067",
+      "variants": [
+        {
+          "key": "fp8",
+          "backends": [
+            "metal",
+            "cuda"
+          ],
+          "quant": "fp8",
+          "min_ram_bytes": 17179869184,
+          "disk_bytes": 12299645375
+        }
+      ]
+    },
     {
       "name": "qwen3.5-4b",
       "aliases": [],
