@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T07:41:13.46308Z",
+  "generated_at": "2026-10-04T07:59:32.565622Z",
   "models": [
     {
       "name": "qwen3.5-4b",
@@ -23,8 +23,8 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-04T09:31:57+03:00",
-      "manifest_sha256": "3110038e25da1402a1545fefe277cbd8a811974b431a39ca3fb716eb458b301d",
+      "updated_at": "2026-10-04T10:41:33+03:00",
+      "manifest_sha256": "ffb670e004ee5d21d962e934bf02bf3230721e8df996135322e9f7e3ba96d6f6",
       "variants": [
         {
           "key": "mlx-optiq-4bit",
@@ -44,6 +44,48 @@
           "quant": "Q4_K_M",
           "min_ram_bytes": 8589934592,
           "disk_bytes": 3426197888,
+          "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "qwen3.8-27b",
+      "aliases": [],
+      "family": "qwen35",
+      "min_shiso_version": "0.1.0",
+      "description": "Dense 27B hybrid-attention model with a DFlash2 block-diffusion drafter",
+      "tags": [
+        "tools"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-04T10:59:32+03:00",
+      "manifest_sha256": "f474adf277fc0f00ed87d131d3ec6c9fbf097bfaf3618edcd1185183ec0e7980",
+      "variants": [
+        {
+          "key": "mlx-4bit",
+          "backends": [
+            "metal"
+          ],
+          "quant": "mlx-4bit",
+          "min_ram_bytes": 34359738368,
+          "disk_bytes": 19930307866
+        },
+        {
+          "key": "nvfp4",
+          "backends": [
+            "cuda"
+          ],
+          "quant": "nvfp4",
+          "min_ram_bytes": 34359738368,
+          "disk_bytes": 25793770138,
           "min_cuda_sm": 80
         }
       ]
