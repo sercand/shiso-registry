@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "model": "gemma-4-e4b",
+  "records": [
+    {
+      "schema_version": 1,
+      "model": "gemma-4-e4b",
+      "variant": "qat-q4_0",
+      "variant_fingerprint": "690cb70777af1e04016092b37440f1c9dc09f46da20d8bfef06b2c84478655dd",
+      "device": "m1-max",
+      "chip": "Apple M1 Max",
+      "backend": "metal",
+      "ram_bytes": 68719476736,
+      "os": "macOS 27.0",
+      "shiso_version": "0.1.0",
+      "measured_at": "2026-10-05T10:38:02.374181Z",
+      "runs": 3,
+      "context_length": 8192,
+      "results": [
+        {
+          "kind": "chat",
+          "prompt_tokens": 511,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 313.76,
+          "decode_tokens_per_second": 29.33,
+          "time_to_first_token_ms": 1609.63
+        },
+        {
+          "kind": "chat",
+          "prompt_tokens": 4049,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 128.98,
+          "decode_tokens_per_second": 18.85,
+          "time_to_first_token_ms": 31167.78
+        }
+      ],
+      "stale": false
+    }
+  ]
+}

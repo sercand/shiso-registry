@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shiso hub</title>
+<meta name="description" content="Models packaged for the shiso inference server: pinned weights, hardware requirements and measured throughput.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="./"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="./">Models</a>
+      <a href="registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero">
+  <h1>Models for shiso</h1>
+  <p class="lede">Each model has pinned weights, hardware requirements and, where measured, prefill and decode speeds on real devices.</p>
+  <div class="cmd"><code>shiso pull &lt;name&gt;</code><button class="copy" data-copy="shiso pull " type="button">Copy</button></div>
+</section>
+
+<section class="finder" aria-label="Search models">
+  <div class="search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search models, tags, quants…  ( / )" autocomplete="off" spellcheck="false" aria-label="Search models">
+  </div>
+  <div class="chips" role="group" aria-label="Filters">
+    <button type="button" class="chip" data-filter="task" data-value="chat" aria-pressed="false">Chat <span>5</span></button><button type="button" class="chip" data-filter="task" data-value="decision" aria-pressed="false">Decision <span>2</span></button><button type="button" class="chip" data-filter="task" data-value="image_generation" aria-pressed="false">Image generation <span>1</span></button>
+    <span class="sep" aria-hidden="true"></span>
+    <button type="button" class="chip" data-filter="backend" data-value="cuda" aria-pressed="false">CUDA <span>8</span></button><button type="button" class="chip" data-filter="backend" data-value="metal" aria-pressed="false">Metal <span>7</span></button>
+    <span class="sep" aria-hidden="true"></span>
+    <button type="button" class="chip" data-filter="input" data-value="audio" aria-pressed="false">Audio in <span>1</span></button><button type="button" class="chip" data-filter="input" data-value="image" aria-pressed="false">Image in <span>4</span></button><button type="button" class="chip" data-filter="input" data-value="text" aria-pressed="false">Text in <span>8</span></button><button type="button" class="chip" data-filter="input" data-value="video" aria-pressed="false">Video in <span>3</span></button>
+  </div>
+  <p class="count" id="count" aria-live="polite">8 models</p>
+</section>
+
+<section id="models" class="grid">
+
+  <a class="card" href="models/clef/" data-model="clef" data-task="decision" data-backend="cuda metal" data-input="text">
+    <div class="card-head">
+      <h2>clef</h2>
+      <span class="family">qwen35</span>
+    </div>
+    <p class="desc">Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions</p>
+    <div class="pills">
+      <span class="pill task">Decision</span>
+      
+      <span class="pill soft">decision</span><span class="pill soft">systemone</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>32 GiB</dd></div>
+      <div><dt>Variants</dt><dd>1</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/clef-flash/" data-model="clef-flash" data-task="decision" data-backend="cuda metal" data-input="text">
+    <div class="card-head">
+      <h2>clef-flash</h2>
+      <span class="family">qwen35</span>
+    </div>
+    <p class="desc">Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions</p>
+    <div class="pills">
+      <span class="pill task">Decision</span>
+      
+      <span class="pill soft">decision</span><span class="pill soft">systemone</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>8 GiB</dd></div>
+      <div><dt>Variants</dt><dd>1</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/flux.2-klein-4b/" data-model="flux.2-klein-4b" data-task="image_generation" data-backend="cuda metal" data-input="text">
+    <div class="card-head">
+      <h2>flux.2-klein-4b</h2>
+      <span class="family">flux2</span>
+    </div>
+    <p class="desc">FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder</p>
+    <div class="pills">
+      <span class="pill task">Image generation</span>
+      
+      <span class="pill soft">image-generation</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>16 GiB</dd></div>
+      <div><dt>Variants</dt><dd>1</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/gemma-4-e4b/" data-model="gemma-4-e4b" data-task="chat" data-backend="cuda metal" data-input="text image audio">
+    <div class="card-head">
+      <h2>gemma-4-e4b</h2>
+      <span class="family">gemma4</span>
+    </div>
+    <p class="desc">Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill">image</span><span class="pill">audio</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>8 GiB</dd></div>
+      <div><dt>Variants</dt><dd>1</dd></div>
+      <div><dt>Decode</dt><dd>29 tok/s on m1-max</dd></div>
+    </dl>
+  </a>
+
+  <a class="card" href="models/qwen3.5-4b/" data-model="qwen3.5-4b" data-task="chat" data-backend="cuda metal" data-input="text image video">
+    <div class="card-head">
+      <h2>qwen3.5-4b</h2>
+      <span class="family">qwen35</span>
+    </div>
+    <p class="desc">Dense 4B hybrid-attention model with a vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill">image</span><span class="pill">video</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>8 GiB</dd></div>
+      <div><dt>Variants</dt><dd>2</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/qwen3.8-27b/" data-model="qwen3.8-27b" data-task="chat" data-backend="cuda metal" data-input="text">
+    <div class="card-head">
+      <h2>qwen3.8-27b</h2>
+      <span class="family">qwen35</span>
+    </div>
+    <p class="desc">Dense 27B hybrid-attention model with a DFlash2 block-diffusion drafter</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      
+      <span class="pill soft">tools</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>32 GiB</dd></div>
+      <div><dt>Variants</dt><dd>2</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/qwen3.8-flash/" data-model="qwen3.8-flash" data-task="chat" data-backend="cuda" data-input="text image video">
+    <div class="card-head">
+      <h2>qwen3.8-flash</h2>
+      <span class="family">qwen4exp</span>
+    </div>
+    <p class="desc">Sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill">image</span><span class="pill">video</span>
+      
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span></dd></div>
+      <div><dt>RAM from</dt><dd>64 GiB</dd></div>
+      <div><dt>Variants</dt><dd>1</dd></div>
+      
+    </dl>
+  </a>
+
+  <a class="card" href="models/ternary-bonsai-2-27b/" data-model="ternary-bonsai-2-27b" data-task="chat" data-backend="cuda metal" data-input="text image video">
+    <div class="card-head">
+      <h2>ternary-bonsai-2-27b</h2>
+      <span class="family">qwen35</span>
+    </div>
+    <p class="desc">Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill">image</span><span class="pill">video</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span><span class="pill soft">ternary</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Runs on</dt><dd><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></dd></div>
+      <div><dt>RAM from</dt><dd>16 GiB</dd></div>
+      <div><dt>Variants</dt><dd>3</dd></div>
+      
+    </dl>
+  </a>
+
+</section>
+<p class="empty" id="empty" hidden>No model matches. Try fewer words or clear a filter.</p>
+<script type="application/json" id="search-docs">[{"id":"clef","name":"clef","aliases":"","description":"Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions","tags":"decision systemone","family":"qwen35","tasks":"Decision","inputs":"text","backends":"cuda metal","quants":"Q4_K_M","publisher":"","url":"models/clef/"},{"id":"clef-flash","name":"clef-flash","aliases":"","description":"Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions","tags":"decision systemone","family":"qwen35","tasks":"Decision","inputs":"text","backends":"cuda metal","quants":"Q4_K_M","publisher":"","url":"models/clef-flash/"},{"id":"flux.2-klein-4b","name":"flux.2-klein-4b","aliases":"","description":"FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder","tags":"image-generation","family":"flux2","tasks":"Image generation","inputs":"text","backends":"cuda metal","quants":"fp8","publisher":"","url":"models/flux.2-klein-4b/"},{"id":"gemma-4-e4b","name":"gemma-4-e4b","aliases":"","description":"Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers","tags":"vision audio tools","family":"gemma4","tasks":"Chat","inputs":"text image audio","backends":"cuda metal","quants":"Q4_0 (QAT)","publisher":"","url":"models/gemma-4-e4b/"},{"id":"qwen3.5-4b","name":"qwen3.5-4b","aliases":"","description":"Dense 4B hybrid-attention model with a vision tower","tags":"vision tools","family":"qwen35","tasks":"Chat","inputs":"text image video","backends":"cuda metal","quants":"mlx-optiq-4bit Q4_K_M","publisher":"","url":"models/qwen3.5-4b/"},{"id":"qwen3.8-27b","name":"qwen3.8-27b","aliases":"","description":"Dense 27B hybrid-attention model with a DFlash2 block-diffusion drafter","tags":"tools","family":"qwen35","tasks":"Chat","inputs":"text","backends":"cuda metal","quants":"mlx-4bit nvfp4","publisher":"","url":"models/qwen3.8-27b/"},{"id":"qwen3.8-flash","name":"qwen3.8-flash","aliases":"qwen3.8-flash-next","description":"Sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and vision tower","tags":"","family":"qwen4exp","tasks":"Chat","inputs":"text image video","backends":"cuda","quants":"exl3-4.05bpw","publisher":"","url":"models/qwen3.8-flash/"},{"id":"ternary-bonsai-2-27b","name":"ternary-bonsai-2-27b","aliases":"bonsai-2-27b","description":"Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower","tags":"vision tools ternary","family":"qwen35","tasks":"Chat","inputs":"text image video","backends":"cuda metal","quants":"PQ2_0 (ternary, 2-bit slots) PTQ1_0 (ternary, packed trits) mlx-2bit (ternary, text only)","publisher":"","url":"models/ternary-bonsai-2-27b/"}]</script>
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="assets/minisearch.js" defer></script><script src="assets/site.js" defer></script>
+</body>
+</html>

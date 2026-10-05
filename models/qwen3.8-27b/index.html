@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwen3.8-27b · shiso hub</title>
+<meta name="description" content="Dense 27B hybrid-attention model with a DFlash2 block-diffusion drafter">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> qwen3.8-27b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>qwen3.8-27b</h1>
+    
+    <p class="lede">Dense 27B hybrid-attention model with a DFlash2 block-diffusion drafter</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill soft">tools</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull qwen3.8-27b</code><button class="copy" data-copy="shiso pull qwen3.8-27b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve qwen3.8-27b</code><button class="copy" data-copy="shiso serve qwen3.8-27b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>mlx-4bit</code></td>
+        <td>mlx-4bit</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">32 GiB<span class="muted"> · 48 GiB rec.</span></td>
+        <td class="num">18.6 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.8-27b" type="button" title="shiso pull qwen3.8-27b">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>nvfp4</code></td>
+        <td>nvfp4</td>
+        <td><span class="be be-cuda">cuda</span></td>
+        <td class="num">32 GiB<span class="muted"> · 48 GiB rec.</span></td>
+        <td class="num">24 GiB</td>
+        <td>CUDA sm80+</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.8-27b:nvfp4" type="button" title="shiso pull qwen3.8-27b:nvfp4">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen3.8-27b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>mlx-4bit</code> <span class="muted">18.6 GiB · 2 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/mlx-community/Qwen3.8-27B-4bit/tree/10c35caafbb80f7dc6a7a432cdd11af10a6d4818" rel="noopener noreferrer">mlx-community/Qwen3.8-27B-4bit@10c35caafb</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="14b65a0ee06517060a6bbd979bb1a8ff54e7b304b1a1f01d54344b88b8285e85">14b65a0ee065…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>model-00001-of-00003.safetensors</code></td><td class="num">5 GiB</td><td><code title="6cc1508e96fb5d0865dfd5753a79f4ec60651bf3e2a82844a7e8ae9c60528c0d">6cc1508e96fb…</code></td></tr>
+      
+        <tr><td><code>model-00002-of-00003.safetensors</code></td><td class="num">5 GiB</td><td><code title="83f2a20ca8058f486a3634a27faf99587f4cd3c156a83dee34fb99e6ac178670">83f2a20ca805…</code></td></tr>
+      
+        <tr><td><code>model-00003-of-00003.safetensors</code></td><td class="num">5 GiB</td><td><code title="31b8c91ef899f79efaaa69e3d2c096f6e2ebeb2ff20e29222abbd9ebc79e560a">31b8c91ef899…</code></td></tr>
+      
+        <tr><td><code>model.safetensors.index.json</code></td><td class="num">0 GiB</td><td><code title="13b840162b4cb35c66fef7df072f7dbb4717908204364f5e5d9f9655a2758fa8">13b840162b4c…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>processor_config.json</code></td><td class="num">0 GiB</td><td><code title="222e060084f093738ca7af4c89ef09d844e415876021325fdf7d5c6821b119d4">222e060084f0…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523">06b9509352d2…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b">792fa3f0cb88…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+        <tr><td><code>vocab.json</code></td><td class="num">0 GiB</td><td><code title="ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003">ce99b4cb2983…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/z-lab/Qwen3.8-27B-DFlash2/tree/50307d4c4cde6860d4eee73e2547cd786fe8e8a4" rel="noopener noreferrer">z-lab/Qwen3.8-27B-DFlash2@50307d4c4c</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980">873e3556509b…</code></td></tr>
+      
+        <tr><td><code>model.safetensors</code></td><td class="num">3.6 GiB</td><td><code title="67fc76d68dc5a9415511a4f394ef744d67510cd20e93b37cc2cc7d28e4bab65c">67fc76d68dc5…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>nvfp4</code> <span class="muted">24 GiB · 2 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/nvidia/Qwen3.8-27B-NVFP4/tree/482ca0f3832238542f8f5295dde86b5f22711d80" rel="noopener noreferrer">nvidia/Qwen3.8-27B-NVFP4@482ca0f383</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="71fa01bb64de20971045cd82a82c0ebb25a54e1b0a3f09ef23cf5479e9c54df8">71fa01bb64de…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="8a3a817a9d330f6f9e62f048fe62a48594946c4a5c4cb314a8011316d5094986">8a3a817a9d33…</code></td></tr>
+      
+        <tr><td><code>hf_quant_config.json</code></td><td class="num">0 GiB</td><td><code title="5f4aaa9e462ddb26a9790ab459eee69d100b9ade7541f0c86038e925c013f80b">5f4aaa9e462d…</code></td></tr>
+      
+        <tr><td><code>merges.txt</code></td><td class="num">0 GiB</td><td><code title="a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d">a9d356d7bdf1…</code></td></tr>
+      
+        <tr><td><code>model-00001-of-00003.safetensors</code></td><td class="num">9.3 GiB</td><td><code title="7d0fd155118901373eb0fd13ed3aae68f95be747bc205be72ebc41739c25ee80">7d0fd1551189…</code></td></tr>
+      
+        <tr><td><code>model-00002-of-00003.safetensors</code></td><td class="num">9.3 GiB</td><td><code title="98a7e9486baa860c792c9463a770cb9d017696bdd17606300a5b9334149f4c27">98a7e9486baa…</code></td></tr>
+      
+        <tr><td><code>model-00003-of-00003.safetensors</code></td><td class="num">1.8 GiB</td><td><code title="0506ad35dc21469708e7813bd76c592cef08bd0317b4a1fe899745ebe2435271">0506ad35dc21…</code></td></tr>
+      
+        <tr><td><code>model.safetensors.index.json</code></td><td class="num">0 GiB</td><td><code title="7aa103a2582b7d26631988de33dea19e8a308ee9c239e8e14feb374af30905e2">7aa103a2582b…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>processor_config.json</code></td><td class="num">0 GiB</td><td><code title="d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1">d89ef49ce9cd…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="e5d078b00e6c1223b32444db8c1001dc71d86ceef8ee706b5bf084c3a43a1f9c">e5d078b00e6c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+        <tr><td><code>vocab.json</code></td><td class="num">0 GiB</td><td><code title="ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003">ce99b4cb2983…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/z-lab/Qwen3.8-27B-DFlash2/tree/50307d4c4cde6860d4eee73e2547cd786fe8e8a4" rel="noopener noreferrer">z-lab/Qwen3.8-27B-DFlash2@50307d4c4c</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980">873e3556509b…</code></td></tr>
+      
+        <tr><td><code>model.safetensors</code></td><td class="num">3.6 GiB</td><td><code title="67fc76d68dc5a9415511a4f394ef744d67510cd20e93b37cc2cc7d28e4bab65c">67fc76d68dc5…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/qwen3.8-27b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/mlx-community/Qwen3.8-27B-4bit/blob/10c35caafbb80f7dc6a7a432cdd11af10a6d4818/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>mlx-community/Qwen3.8-27B-4bit</h1>
+<p>This model was converted to MLX format from <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer nofollow"><code>Qwen/Qwen3.8-27B</code></a>
+using mlx-vlm version <strong>0.6.8</strong>.
+Refer to the <a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noopener noreferrer nofollow">original model card</a> for more details on the model.</p>
+<h2>Use with mlx</h2>
+<pre><code>pip install -U mlx-vlm
+</code></pre>
+<pre><code>python -m mlx_vlm.generate --model mlx-community/Qwen3.8-27B-4bit --max-tokens 100 --temperature 0.0 --prompt "Describe this image." --image &lt;path_to_image&gt;
+</code></pre>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

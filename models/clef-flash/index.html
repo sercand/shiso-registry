@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clef-flash · shiso hub</title>
+<meta name="description" content="Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> clef-flash</nav>
+
+<section class="model-head">
+  <div>
+    <h1>clef-flash</h1>
+    
+    <p class="lede">Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) for /v1/systemone and /v1/decisions</p>
+    <div class="pills">
+      <span class="pill task">Decision</span>
+      <span class="pill soft">decision</span><span class="pill soft">systemone</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull clef-flash</code><button class="copy" data-copy="shiso pull clef-flash" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve clef-flash</code><button class="copy" data-copy="shiso serve clef-flash" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>q4_k_m</code></td>
+        <td>Q4_K_M</td>
+        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
+        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td class="num">6.1 GiB</td>
+        <td>CUDA sm80+</td>
+        <td><button class="copy small" data-copy="shiso pull clef-flash" type="button" title="shiso pull clef-flash">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench clef-flash</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>q4_k_m</code> <span class="muted">6.1 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/tree/4a7a08c09bc63baf043b62b5ba89dd67a0357d95" rel="noopener noreferrer">ggml-org/Clef-Flash-GGUF@4a7a08c09b</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Clef-Flash-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">6 GiB</td><td><code title="3243a51d7a7bb205fb4fcf402a7df763f7d31e6645a9c10e5754c4395ab85b66">3243a51d7a7b…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/Cloudflare/clef-flash/tree/17f0b0ad64efb65d273590632833508766b2aae6" rel="noopener noreferrer">Cloudflare/clef-flash@17f0b0ad64</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238">66f87f6fb261…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4">45707f8467bf…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523">06b9509352d2…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72">91a08f825d37…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/clef-flash/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/blob/4a7a08c09bc63baf043b62b5ba89dd67a0357d95/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>Clef-Flash</h1>
+<p>Run with https://llama.app</p>
+<pre><code>llama serve -hf ggml-org/Clef-Flash-GGUF
+</code></pre>
+<p>This is a decision model, to be used via <code>/v1/systemone</code> API. Requires https://github.com/ggml-org/llama.cpp/pull/29831</p>
+<h3>Source models</h3>
+<ul>
+<li>https://huggingface.co/Cloudflare/clef-flash</li>
+</ul>
+<blockquote>
+<p>[!IMPORTANT]
+This model is automatically converted using https://github.com/ggml-org/convert</p>
+</blockquote>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

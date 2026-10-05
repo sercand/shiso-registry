@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T20:05:44.973711Z",
+  "generated_at": "2026-10-05T12:10:15.136427Z",
   "models": [
     {
       "name": "clef",
@@ -22,6 +22,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T16:50:01+03:00",
+      "manifest": "models/clef/index.json",
       "manifest_sha256": "5eb498590219953b1202caf48953da238edc24d3837b53c34d24f289fbe3c332",
       "variants": [
         {
@@ -57,6 +58,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T16:50:01+03:00",
+      "manifest": "models/clef-flash/index.json",
       "manifest_sha256": "0d258ef29ac191f405eb34fb1bded92403354840a7e41a7ab8d6d8d3238c373e",
       "variants": [
         {
@@ -91,6 +93,7 @@
         "image"
       ],
       "updated_at": "2026-10-04T14:53:43+03:00",
+      "manifest": "models/flux.2-klein-4b/index.json",
       "manifest_sha256": "bff1169737dedf542737ffd5b6ff80baf7843396e5ae202115e10f2b334ad067",
       "variants": [
         {
@@ -128,6 +131,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T15:40:24+03:00",
+      "manifest": "models/gemma-4-e4b/index.json",
       "manifest_sha256": "6637b873cddcb0b7ff819567dddd1e75dbffcc964b103c10acab7f5757038726",
       "variants": [
         {
@@ -165,6 +169,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T10:41:33+03:00",
+      "manifest": "models/qwen3.5-4b/index.json",
       "manifest_sha256": "ffb670e004ee5d21d962e934bf02bf3230721e8df996135322e9f7e3ba96d6f6",
       "variants": [
         {
@@ -208,6 +213,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T10:59:32+03:00",
+      "manifest": "models/qwen3.8-27b/index.json",
       "manifest_sha256": "f474adf277fc0f00ed87d131d3ec6c9fbf097bfaf3618edcd1185183ec0e7980",
       "variants": [
         {
@@ -252,6 +258,7 @@
         "text"
       ],
       "updated_at": "2026-10-04T01:43:15+03:00",
+      "manifest": "models/qwen3.8-flash/index.json",
       "manifest_sha256": "22f9d4d22ba2b7f532b663ea1d16dd6123247b2fd6d1913a440e66410fe39cc7",
       "variants": [
         {
@@ -289,8 +296,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-04T20:05:44.950872Z",
-      "manifest_sha256": "ab458c12c5c3608b576000b85c0cc2bbc63dfb7ef1b6f9b1c9dc1728f12a4992",
+      "updated_at": "2026-10-04T23:05:56+03:00",
+      "manifest": "models/ternary-bonsai-2-27b/index.json",
+      "manifest_sha256": "e1ea75fec2bf75b1343f0418731f7e1f8e75302444e7713eabb444d6a3c5726a",
       "variants": [
         {
           "key": "pq2_0",
