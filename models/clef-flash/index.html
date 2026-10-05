@@ -78,7 +78,32 @@
 <section>
   <h2 id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench clef-flash</code> on a device with the model installed and commit the record.</p>
+  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  
+  
+  <p class="hint">Wall time of one /v1/decisions request with one yes/no question, batch 1.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Latency ms</th><th class="num">Prompt tok/s</th><th>Measured</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td rowspan="2"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
+        <td rowspan="2"><code>q4_k_m</code></td>
+        <td class="">515</td><td class="num strong">2654</td><td class="num">188</td>
+        <td rowspan="2">2026-10-05<div class="muted small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
+      </tr>
+    
+      <tr>
+        
+        <td class="">4087</td><td class="num strong">30494</td><td class="num">134</td>
+        
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+  
   
 </section>
 

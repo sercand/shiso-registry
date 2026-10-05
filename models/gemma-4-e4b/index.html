@@ -78,34 +78,32 @@
 <section>
   <h2 id="benchmarks">Throughput</h2>
   
-  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, batch 1, recipe defaults. Prefill comes from the time to first token.</p>
+  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  
+  
+  <p class="hint">Batch 1, recipe defaults. Prefill comes from the time to first token; decode is tokens a second after it.</p>
   <div class="table-wrap">
   <table>
-    <thead><tr><th>Device</th><th>Variant</th><th class="num">Prompt</th><th class="num">Prefill tok/s</th><th class="num">Decode tok/s</th><th class="num">TTFT ms</th><th>Measured</th></tr></thead>
+    <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Prefill tok/s</th><th class="num">Decode tok/s</th><th class="num">TTFT ms</th><th>Measured</th></tr></thead>
     <tbody>
     
       <tr>
         <td rowspan="2"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
         <td rowspan="2"><code>qat-q4_0</code></td>
-        <td class="num">511</td>
-        <td class="num">314</td>
-        <td class="num strong">29.3</td>
-        <td class="num">1610</td>
+        <td class="">511</td><td class="num">314</td><td class="num strong">29.3</td><td class="num">1610</td>
         <td rowspan="2">2026-10-05<div class="muted small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
       </tr>
     
       <tr>
         
-        <td class="num">4049</td>
-        <td class="num">129</td>
-        <td class="num strong">18.9</td>
-        <td class="num">31168</td>
+        <td class="">4049</td><td class="num">129</td><td class="num strong">18.9</td><td class="num">31168</td>
         
       </tr>
     
     </tbody>
   </table>
   </div>
+  
   
 </section>
 

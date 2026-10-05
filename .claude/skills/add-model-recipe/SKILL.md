@@ -269,16 +269,24 @@ file into `~/.shiso/blobs/sha256/<sha256>` (same filesystem) before
 
 ## Recording a benchmark
 
-Only **chat** models can be benchmarked so far; `bench` refuses decision,
-image and transcription models rather than record a tokens-per-second figure
-that would misdescribe them. Each result carries a `kind` (`chat` today) so the
-other tasks can add their own measurements.
+What is measured follows the recipe's task; each result carries its `kind`:
+
+| Task | Kind | Measured | Options |
+|---|---|---|---|
+| `chat` | `chat` | prefill and decode tok/s, time to first token, per prompt size | `--prompt-tokens`, `--decode-tokens` |
+| `decision` | `decision` | wall ms of one `/v1/decisions` yes/no question, and the prompt tok/s it implies | `--prompt-tokens` |
+| `image_generation` | `image` | wall seconds per single image; size read from the PNG, steps from the server | `--image-size 1024x1024,512x512` (default: server default) |
+| `transcription` | `transcription` | audio seconds per wall second (× real time), ms to first streamed text | `--audio clip.wav` (default: synthesized speech via macOS `say`) |
+
+A recipe with several measurable tasks needs `--task`. Diarization and
+embedding have no bench yet and are refused.
 
 1. `shiso pull <name>:<key>` on the device, then start a **release** server:
-   `shiso serve <name>:<key> --ctx 8192` (default port 8090). The context must
-   hold the largest prompt plus the decode budget (default 4096 + 128), or
-   `bench` refuses; the record stores the context it ran with. Close other GPU
-   work.
+   `shiso serve <name>:<key> --ctx 8192` (default port 8090). For chat and
+   decision the context must hold the largest prompt (plus the decode budget
+   for chat; default 4096 + 128), or `bench` refuses; the record stores the
+   context it ran with. Close other GPU work. Images on Metal are slow (FP8
+   FLUX at 512x512 takes minutes each); use `--runs 1` and one size there.
 2. `shiso-registry bench <name>:<key> --repo .` (or the editor's Benchmarks
    tab). It checks the installed files match the recipe, derives the device
    from the chip (`Apple M1 Max` is `m1-max`, `NVIDIA GB10` is `gb10`; override
