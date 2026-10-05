@@ -1,0 +1,6 @@
+.git/
+.claude/
+.wrangler/
+wrangler.jsonc
+.assetsignore
+cards/

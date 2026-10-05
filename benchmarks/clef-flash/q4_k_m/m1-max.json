@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "model": "clef-flash",
+  "variant": "q4_k_m",
+  "variant_fingerprint": "28b3062bc6fda7cb26c972573881b598adad6cb0eecdb82c0b67a6ea17f99651",
+  "device": "m1-max",
+  "chip": "Apple M1 Max",
+  "backend": "metal",
+  "ram_bytes": 68719476736,
+  "os": "macOS 27.0",
+  "shiso_version": "0.1.0",
+  "measured_at": "2026-10-05T12:31:10.983786Z",
+  "runs": 3,
+  "context_length": 8192,
+  "results": [
+    {
+      "kind": "decision",
+      "prompt_tokens": 515,
+      "latency_ms": 2654.24,
+      "prompt_tokens_per_second": 187.62
+    },
+    {
+      "kind": "decision",
+      "prompt_tokens": 4087,
+      "latency_ms": 30493.62,
+      "prompt_tokens_per_second": 133.85
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ternary-bonsai-2-27b · shiso hub</title>
+<meta name="description" content="Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> ternary-bonsai-2-27b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>ternary-bonsai-2-27b</h1>
+    <p class="aliases">also <code>bonsai-2-27b</code></p>
+    <p class="lede">Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span><span class="pill soft">ternary</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull ternary-bonsai-2-27b</code><button class="copy" data-copy="shiso pull ternary-bonsai-2-27b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve ternary-bonsai-2-27b</code><button class="copy" data-copy="shiso serve ternary-bonsai-2-27b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>pq2_0</code></td>
+        <td>PQ2_0 (ternary, 2-bit slots)</td>
+        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td class="num">8.7 GiB</td>
+        <td>CUDA sm80+</td>
+        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b" type="button" title="shiso pull ternary-bonsai-2-27b">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>ptq1_0</code></td>
+        <td>PTQ1_0 (ternary, packed trits)</td>
+        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td class="num">7.5 GiB</td>
+        <td>CUDA sm80+</td>
+        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b:ptq1_0" type="button" title="shiso pull ternary-bonsai-2-27b:ptq1_0">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>mlx-2bit</code></td>
+        <td>mlx-2bit (ternary, text only)</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td class="num">9.1 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b:mlx-2bit" type="button" title="shiso pull ternary-bonsai-2-27b:mlx-2bit">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench ternary-bonsai-2-27b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>pq2_0</code> <span class="muted">8.7 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Ternary-Bonsai-2-27B-PQ2_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">6.7 GiB</td><td><code title="3907dc1658db1f78a9826bf8d5bcb8dc65db0d466388937af57f2294fae62ec1">3907dc1658db…</code></td></tr>
+      
+        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
+      
+        <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b">69849221bfb9…</code></td></tr>
+      
+        <tr><td><code>NOTICE.txt</code></td><td class="num">0 GiB</td><td><code title="de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30">de0e0c48fb6f…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27">b11349aafa7c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>ptq1_0</code> <span class="muted">7.5 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Ternary-Bonsai-2-27B-PTQ1_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">5.5 GiB</td><td><code title="53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3">53107f530aa5…</code></td></tr>
+      
+        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
+      
+        <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b">69849221bfb9…</code></td></tr>
+      
+        <tr><td><code>NOTICE.txt</code></td><td class="num">0 GiB</td><td><code title="de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30">de0e0c48fb6f…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27">b11349aafa7c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>mlx-2bit</code> <span class="muted">9.1 GiB · 2 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b">69849221bfb9…</code></td></tr>
+      
+        <tr><td><code>NOTICE.txt</code></td><td class="num">0 GiB</td><td><code title="de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30">de0e0c48fb6f…</code></td></tr>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>hadamard.json</code></td><td class="num">0 GiB</td><td><code title="7132a3ec364f0bdac1f08f905f24f0ad2f14245060f592637a0396826d3b5fe6">7132a3ec364f…</code></td></tr>
+      
+        <tr><td><code>model.safetensors</code></td><td class="num">8 GiB</td><td><code title="130de5925082c168b7866b2e91b52e44abbafc99017e3ca352b77b5b55a269ed">130de5925082…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27">b11349aafa7c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/ternary-bonsai-2-27b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/blob/b072e1d3b35a0a630cece372c2127528e0994386/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><p>
+  <img src="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/resolve/b072e1d3b35a0a630cece372c2127528e0994386/assets/bonsai-logo.svg" width="280" alt="Bonsai">
+</p>
+<p>
+  <a href="https://prismml.com" rel="noopener noreferrer nofollow"><b>Prism ML Website</b></a> &nbsp;|&nbsp;
+  <a href="https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-27b-whitepaper.pdf" rel="noopener noreferrer nofollow"><b>Whitepaper</b></a> &nbsp;|&nbsp;
+  <a href="https://github.com/PrismML-Eng/Bonsai-demo" rel="noopener noreferrer nofollow"><b>Demo &amp; Examples</b></a> &nbsp;|&nbsp;
+  <a href="https://discord.gg/prismml" rel="noopener noreferrer nofollow"><b>Discord</b></a>
+</p>
+<h1>Bonsai 2 27B — GGUF</h1>
+<p>Full 27B-class reasoning in ternary transformer weights, for llama.cpp (CUDA, Metal, CPU)</p>
+<blockquote>
+<p><strong>~9.3x</strong> smaller than FP16 (ideal) | <strong>98.2%</strong> of FP16 intelligence retained | <strong>~47 tok/s</strong> on an Apple M5 Max laptop</p>
+</blockquote>
+<h2>Highlights</h2>
+<ul>
+<li><strong>~5.9 GB</strong> language model (down from ~54 GB FP16) — full 27B-class reasoning on a standard laptop or a single GPU</li>
+<li><strong>98.2% of FP16 intelligence retained</strong>: 84.78 average across 14 thinking-mode benchmarks — far above the conventional IQ2_XXS build (72.59) at about 82% of its footprint, and within 0.4 points of UD-Q4_K_XL at three times the footprint</li>
+<li><strong>Retains thinking, reasoning, and agentic behavior</strong> deep in the sub-4-bit regime, where conventional low-bit representations collapse: math within half a point of full precision (96.57), coding level with the baseline (89.42), agentic tool calling at 74.92</li>
+<li><strong>End-to-end ternary language weights</strong> across embeddings, attention projections, MLP projections, and LM head, at a <em>true</em> 1.72 bits per weight — no high-precision escape hatches behind a low-bit label; the vision tower ships as a separate Q8_0 mmproj pack</li>
+<li><strong>262K-token context</strong> on-device, kept practical by the Qwen3.8-27B hybrid-attention backbone (~75% linear attention)</li>
+<li><strong>Two GGUF packings</strong> with custom ternary hybrid-attention kernels for llama.cpp (CUDA, Metal) — <strong>PTQ1_0</strong> packs trits densely (1.75 bits/weight, 5.95 GB), <strong>PQ2_0</strong> stores each trit in a 2-bit slot (2.13 bits/weight, 7.21 GB); packed weights are consumed directly, never expanded back to FP16</li>
+<li><strong>MLX companion</strong>: also available as <a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit" rel="noopener noreferrer nofollow">Ternary-Bonsai-2-27B-mlx-2bit</a> for native Apple Silicon inference</li>
+</ul>
+<h2>Resources</h2>
+<ul>
+<li><strong><a href="https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-27b-whitepaper.pdf" rel="noopener noreferrer nofollow">Whitepaper</a></strong> — full methodology, benchmarks, and measurement notes</li>
+<li><strong><a href="https://github.com/PrismML-Eng/Bonsai-demo" rel="noopener noreferrer nofollow">Demo &amp; examples</a></strong> — <strong>the source of truth for running these models</strong>: tested setup for every backend, pinned binaries, serving, benchmarking and integration, kept current as the runtimes move</li>
+<li><strong>Low-bit kernels</strong>: <a href="https://github.com/PrismML-Eng/llama.cpp" rel="noopener noreferrer nofollow">llama.cpp fork</a> (CUDA + Metal) · <a href="https://github.com/PrismML-Eng/mlx" rel="noopener noreferrer nofollow">MLX fork</a> (Apple Silicon) · <a href="https://github.com/PrismML-Eng/mlx-swift" rel="noopener noreferrer nofollow">mlx-swift fork</a> (iOS/macOS)</li>
+<li><strong><a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/blob/main/KNOWN_ISSUES.md" rel="noopener noreferrer nofollow">Known issues</a></strong> — problems we know about, with workarounds and fix status</li>
+<li><strong><a href="https://discord.gg/prismml" rel="noopener noreferrer nofollow">Discord</a></strong> — join the community for support, discussion, and updates</li>
+</ul>
+<h2>Model Overview</h2>
+<table><thead><tr><th>Item</th><th>Specification</th></tr></thead><tbody>
+<tr><td>Base model</td><td>Derived from Qwen3.8-27B, a 27B hybrid-attention causal language model (architecture unchanged)</td></tr>
+<tr><td>Parameters</td><td>27.36B total — 24.35B language backbone (64 blocks) + 2.54B embedding/LM head + 0.46B vision tower (27 blocks)</td></tr>
+<tr><td>Architecture</td><td>Hybrid attention (~75% linear / ~25% full attention), SwiGLU MLP, RoPE, RMSNorm</td></tr>
+<tr><td>Context length</td><td>262K tokens (inherited from the base model; kept practical on-device by the predominantly linear-attention backbone)</td></tr>
+<tr><td>Weight format</td><td>Ternary g128: {−1, 0, +1} weights with FP16 group-wise scaling, packed as <strong>PTQ1_0</strong> (dense trits) or <strong>PQ2_0</strong> (2-bit slots)</td></tr>
+<tr><td>Weight basis</td><td>Blockwise Hadamard rotation (block 1024, fixed ±1 signs) folded into the stored weights; the matching transform is applied to activations at runtime</td></tr>
+<tr><td>Low-bit coverage</td><td>Embeddings, attention projections, MLP projections, LM head</td></tr>
+<tr><td>Vision tower</td><td>optional ~0.63 GB mmproj pack (Q8_0), loaded only for image input</td></tr>
+<tr><td>Deployed size</td><td><strong>5.95 GB</strong> (PTQ1_0) or <strong>7.21 GB</strong> (PQ2_0); 5.8 GB ideal at 1.72 bits/weight — see below</td></tr>
+<tr><td>Backends</td><td>llama.cpp (CUDA, Metal, CPU)</td></tr>
+<tr><td>License</td><td>Apache 2.0</td></tr>
+</tbody></table>
+<h2>Weight Representation: Ternary g128</h2>
+<p>Each weight takes a value from {−1, 0, +1}, with one shared FP16 scale factor for every group of 128 weights. A ternary value carries log₂3 ≈ 1.585 bits of information, so the effective storage cost of the format is <strong>~1.71 bits/weight</strong> (ternary code + 16-bit scale amortized over 128 weights); counting the small set of tensors held above the ternary representation brings the model as a whole to <strong>1.72 bits/weight</strong> — an idealized ~9.3x reduction vs FP16.</p>
+<p>The weights are stored in a <strong>rotated basis</strong>: each matrix is transformed blockwise by an orthogonal Hadamard rotation before the ternary assignment, and the runtime applies the matching transform to activations. The rotation is folded into the stored weights offline, so it costs no extra bits and no extra weight traffic; the packed model declares its rotation as metadata, so a runtime either applies the matching transform or refuses to load the file.</p>
+<h3>Memory Requirement</h3>
+<table><thead><tr><th>Format</th><th>True bits/weight</th><th>Size</th><th>Reduction</th></tr></thead><tbody>
+<tr><td>FP16 (baseline)</td><td>16.0</td><td>~54 GB</td><td>1.0x</td></tr>
+<tr><td>Ternary g128 (ideal)</td><td>1.72</td><td>5.8 GB</td><td>~9.3x</td></tr>
+<tr><td><strong>GGUF PTQ1_0</strong> (dense trits)</td><td><strong>1.75</strong></td><td><strong>5.95 GB</strong></td><td><strong>~9.0x</strong></td></tr>
+<tr><td><strong>GGUF PQ2_0</strong> (2-bit slots)</td><td><strong>2.13</strong></td><td><strong>7.21 GB</strong></td><td><strong>~7.5x</strong></td></tr>
+</tbody></table>
+<p>Practical deployment needs packing formats that efficient kernels can consume, and this repo ships two: <strong>PTQ1_0</strong> packs trits densely and lands essentially on the information-theoretic target, while <strong>PQ2_0</strong> stores each trit in a 2-bit slot, trading footprint for cheaper unpacking. Neither is uniformly faster — see the throughput table below for where each wins. These sizes describe the language model alone, the only component that must stay resident for text inference; 26.2M parameters (<strong>0.0976%</strong> of the language model — the recurrent state path of the linear-attention layers, plus the normalization weights) remain in higher precision and are counted in the 1.72 figure.</p>
+<h3>Shipped Components</h3>
+<p>The vision tower ships alongside the language model as an optional component (on-disk sizes):</p>
+<table><thead><tr><th>Component</th><th>Pack</th><th>Size</th><th>Residency</th></tr></thead><tbody>
+<tr><td>Language model</td><td>ternary g128 (PTQ1_0)</td><td>5.95 GB</td><td>resident</td></tr>
+<tr><td>Language model</td><td>ternary g128 (PQ2_0)</td><td>7.21 GB</td><td>resident</td></tr>
+<tr><td>Vision tower</td><td>mmproj (Q8_0)</td><td>0.63 GB</td><td>optional — multimodal input only</td></tr>
+<tr><td>Vision tower</td><td>mmproj BF16 (reference)</td><td>0.93 GB</td><td>optional</td></tr>
+</tbody></table>
+<p>The Q8_0 file carries the vision tower in an 8-bit container. It is usually offloaded, loaded only when an image actually arrives, so text-only serving never pays for it.</p>
+<h2>Best Practices</h2>
+<h3>Generation Parameters</h3>
+<p>We recommend using the following sets of sampling parameters for generation:</p>
+<blockquote>
+<ul>
+<li>Thinking Mode: <code>temperature=1.0</code>, <code>top_p=0.95</code>, <code>top_k=20</code>, <code>min_p=0.05</code>, <code>presence_penalty=0.0</code>, <code>repetition_penalty=1.0</code></li>
+<li>Instruct (or non-thinking) mode: <code>temperature=0.7</code>, <code>top_p=0.80</code>, <code>top_k=20</code>, <code>min_p=0.0</code>, <code>presence_penalty=1.5</code>, <code>repetition_penalty=1.0</code></li>
+</ul>
+</blockquote>
+<p><code>min_p=0.05</code> drops tokens far less likely than the top choice. In our tests it scored at least as
+well as <code>min_p=0.0</code> and followed instructions more reliably, so we recommend it for thinking mode.
+It is also llama.cpp's default: the GGUF files carry <code>top_k</code>, <code>top_p</code> and <code>temperature</code>
+(<code>general.sampling.*</code>) but not <code>min_p</code>, so llama.cpp applies 0.05 without being told. The other
+values match the base model's own <code>generation_config.json</code>. The reported benchmark results were
+measured with the same settings, except <code>min_p=0.0</code>.</p>
+<p><strong>The model uses <code>xhigh</code> reasoning effort by default; use <code>medium</code> for shorter responses and a balance of speed and accuracy. <code>low</code> reasoning effort is not supported and when selected the model will behave close to <code>xhigh</code>.</strong></p>
+<h3>System Prompt</h3>
+<p>You can use a simple system prompt such as:</p>
+<pre><code>You are a helpful assistant
+</code></pre>
+<h3>Choosing a Packing</h3>
+<p><strong>PQ2_0</strong> is the faster decode on H100, A100, and the Blackwell cards, is faster at prompt processing everywhere, and is the pack measured on Apple Silicon. <strong>PTQ1_0</strong> is the faster decode on the Ada-generation cards and the L4, and is the pick wherever memory is tightest. See the throughput table below.</p>
+<h2>Quickstart</h2>
+<blockquote>
+<p><strong><a href="https://github.com/PrismML-Eng/Bonsai-demo" rel="noopener noreferrer nofollow">PrismML-Eng/Bonsai-demo</a> is the source of truth for
+running these models.</strong> It carries the tested setup for every backend, pins a known-good binary
+release, and is kept current as the kernels move. Where anything here disagrees with it, it is right.</p>
+</blockquote>
+<h3>These files need our llama.cpp build</h3>
+<p>The ternary hybrid-attention kernels live in the
+<a href="https://github.com/PrismML-Eng/llama.cpp" rel="noopener noreferrer nofollow">PrismML-Eng/llama.cpp</a> fork. <strong>Stock llama.cpp will not
+run these files.</strong> It rejects <code>PQ2_0</code> and <code>PTQ1_0</code> as unknown types, and it loads <code>Q2_0</code> without any
+warning and produces garbage, because it has no Hadamard activation runtime. Use a binary from the
+fork.</p>
+<pre><code># prebuilt, pick the archive for your platform
+# https://github.com/PrismML-Eng/llama.cpp/releases/latest
+tar -xzf llama-&lt;tag&gt;-bin-&lt;platform&gt;.tar.gz -C bin --strip-components=1
+
+# or build it
+git clone https://github.com/PrismML-Eng/llama.cpp &amp;&amp; cd llama.cpp
+cmake -B build -DGGML_CUDA=ON &amp;&amp; cmake --build build -j    # drop -DGGML_CUDA=ON on macOS, Metal is default
+</code></pre>
+<pre><code>hf download prism-ml/Ternary-Bonsai-2-27B-gguf Ternary-Bonsai-2-27B-PQ2_0.gguf --local-dir .
+</code></pre>
+<pre><code>./bin/llama-cli -m Ternary-Bonsai-2-27B-PQ2_0.gguf \
+    -ngl 99 -fa on -c 32768 \
+    --temp 1.0 --top-p 0.95 --top-k 20 --min-p 0.05 \
+    -p "Explain quantum computing in simple terms." -n 16384
+</code></pre>
+<p>The binary is <code>./bin/llama-cli</code> from an extracted release archive, or <code>./build/bin/llama-cli</code> if you
+built the fork yourself. <code>-ngl 99</code> offloads every layer, <code>0</code> is CPU-only; <code>-c</code> sets the context, up
+to 262144. <code>-n 16384</code> leaves room for the thinking trace: the template defaults to <code>xhigh</code> reasoning
+effort, so a small cap such as 256 tokens ends generation mid-thought, before any answer.
+<code>--min-p 0.05</code> is llama.cpp's default; it is written out so the command states every recommended
+setting.</p>
+<p>This is a reasoning model and it thinks by default. For the server, tool calling, reasoning budgets,
+image input with the <code>mmproj</code> file, and speculative decoding, follow
+<a href="https://github.com/PrismML-Eng/Bonsai-demo" rel="noopener noreferrer nofollow">Bonsai-demo</a>, which ships run scripts that pick the
+right flags for your hardware.</p>
+<h2>Cross-Platform Throughput</h2>
+<p><code>tg128</code> is token-generation throughput over 128 generated tokens (the memory-bandwidth-bound, interactive phase); <code>pp512</code> is prompt-processing throughput over 512 input tokens (the compute-bound phase). Both in tokens/s, measured with <code>llama-bench</code> on these GGUF packs (custom low-bit kernels), at batch size 1 and depth 0 with no vision tower. NVIDIA energy is board power including HBM/GDDR.</p>
+<table><thead><tr><th>Platform</th><th>PQ2_0 TG128</th><th>PQ2_0 PP512</th><th>PQ2_0 J/tok</th><th>PTQ1_0 TG128</th><th>PTQ1_0 PP512</th><th>PTQ1_0 J/tok</th></tr></thead><tbody>
+<tr><td>RTX 5090 (32 GB)</td><td><strong>129.9</strong></td><td>3893</td><td><strong>1.95</strong></td><td>120.5</td><td>1805</td><td>2.15</td></tr>
+<tr><td>RTX PRO 6000 Blackwell</td><td>124.8</td><td><strong>4020</strong></td><td>2.49</td><td>117.9</td><td>1972</td><td>2.77</td></tr>
+<tr><td>H100 SXM (80 GB)</td><td>113.9</td><td>2830</td><td>2.69</td><td>86.9</td><td>1237</td><td>3.18</td></tr>
+<tr><td>RTX 6000 Ada (48 GB)</td><td>82.8</td><td>2431</td><td>2.51</td><td><strong>90.4</strong></td><td>1657</td><td>2.49</td></tr>
+<tr><td>RTX 4090 (24 GB)</td><td>81.2</td><td>3124</td><td>2.99</td><td><strong>91.1</strong></td><td>1645</td><td>2.58</td></tr>
+<tr><td>L40S (48 GB)</td><td>74.4</td><td>2868</td><td>3.24</td><td><strong>81.8</strong></td><td>1543</td><td>2.82</td></tr>
+<tr><td>A100 SXM (80 GB)</td><td>73.9</td><td>1328</td><td>3.43</td><td>54.7</td><td>706</td><td>4.28</td></tr>
+<tr><td>L4 (24 GB, 72 W)</td><td>29.8</td><td>777</td><td>2.42</td><td><strong>32.1</strong></td><td>467</td><td><strong>2.25</strong></td></tr>
+<tr><td>Laptop (Apple M5 Pro, Metal)</td><td>28.1</td><td>387</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<p>On the laptop the FP16 baseline (~54 GB) does not fit at all — the meaningful statement is not a speedup ratio but that a 27B model runs interactively on an everyday laptop. The measured decode streams ~204 GB/s of weights on the M5 Pro, confirming the memory-bandwidth-dominated profile that the low-bit representation is built to exploit. The M5 Pro figure is measured on a quiet machine; this laptop swings ~4% with background load.</p>
+<p>The two packings are a genuine trade rather than a strict ordering. PTQ1_0 moves 17% less weight data per step, but unpacking dense trits costs arithmetic, so it wins on the Ada-generation parts and the L4 — where memory is the binding constraint — and loses on H100, A100, and the Blackwell cards, where batch-1 decode is limited by instruction throughput and launch overhead instead. Prompt processing, being compute-bound, favors PQ2_0 everywhere.</p>
+<p>The Apple row carries no per-token energy figure because the two platforms' instrumentation does not enclose the same components: <code>nvidia-smi</code> includes the card's HBM/GDDR, while Apple's <code>powermetrics</code> reports CPU, GPU, and ANE with no DRAM rail. What the measurement does support is absolute draw: the M5 Pro decodes at <strong>27.5 W</strong> on the GPU rail and 34.1 W across CPU and GPU, against 300–455 W of board power for the NVIDIA cards above.</p>
+<h3>Additional Apple Platforms</h3>
+<p>Measured on the earlier pre-rotation build and reported pending re-measurement on the current stack (llama.cpp Metal backend):</p>
+<table><thead><tr><th>Platform</th><th>Footprint</th><th>TG128 (tok/s)</th><th>PP512 (tok/s)</th></tr></thead><tbody>
+<tr><td>Laptop (Apple M5 Max, Metal)</td><td>7.2 GB</td><td>47.0</td><td>765</td></tr>
+<tr><td>Laptop (Apple M5 Pro, Metal)</td><td>7.2 GB</td><td>28.7</td><td>393</td></tr>
+<tr><td>Laptop (Apple M4 Pro, Metal)</td><td>7.2 GB</td><td>18.0</td><td>125</td></tr>
+</tbody></table>
+<p>On the wider M5 Max the model reaches ~47 tok/s; on the M4 Pro, prefill (~125 tok/s) rather than decode is the practical limit for very long prompts.</p>
+<h2>Benchmarks</h2>
+<p>Evaluated with EvalScope + vLLM on NVIDIA H100 under identical infrastructure, decoding, and scoring, in <strong>thinking mode</strong> — where the model's full reasoning is exercised and the sub-4-bit collapse of conventional methods is most visible. 14 benchmarks across six skill categories. Bit-widths are true averages; "vs FP16" is relative to the Qwen3.8-27B FP16 reference.</p>
+<table><thead><tr><th>Variant</th><th>True bpw</th><th>Footprint</th><th>Thinking avg</th><th>vs FP16</th></tr></thead><tbody>
+<tr><td>Qwen3.8-27B FP16</td><td>16.0</td><td>54 GB</td><td>86.32</td><td>100%</td></tr>
+<tr><td>Qwen3.8-27B UD-Q4_K_XL ("4-bit")</td><td>5.2</td><td>17.6 GB</td><td>85.18</td><td>98.7%</td></tr>
+<tr><td>Qwen3.8-27B IQ2_XXS ("2-bit")</td><td>2.16</td><td>7.27 GB</td><td>72.59</td><td>84.1%</td></tr>
+<tr><td><strong>Bonsai 2 27B</strong></td><td><strong>1.72</strong></td><td><strong>5.95 GB</strong></td><td><strong>84.78</strong></td><td><strong>98.2%</strong></td></tr>
+</tbody></table>
+<p>At 5.95 GB, Bonsai 2 27B outscores the sub-4-bit conventional build by more than twelve points at about 82% of its size, and comes within 0.4 points of UD-Q4_K_XL at a third of its footprint.</p>
+<p>The aggregate gap also understates <em>how</em> the conventional builds fail: their degradation is selective, concentrated on the benchmarks that demand sustained chains of reasoning. IQ2_XXS falls to 57.5 on AIME26 and 56.4 on LiveCodeBench while still scoring 88.93 on MMLU-Redux — which is why casual testing misses the collapse. Bonsai 2 holds exactly these benchmarks, scoring 95.83 and 90.07. The previous Bonsai 27B report showed the same pattern on a second model family, Gemma-4-31B, so the collapse is a property of the methods rather than of one base model.</p>
+<h3>By Skill Category</h3>
+<table><thead><tr><th>Category</th><th>Benchmarks</th><th>FP16</th><th>Bonsai 2 27B</th></tr></thead><tbody>
+<tr><td>Knowledge &amp; reasoning</td><td>MMLU-Redux, MuSR</td><td>85.55</td><td>79.86</td></tr>
+<tr><td>Math</td><td>GSM8K, MATH-500, AIME25, AIME26</td><td>97.06</td><td>96.57</td></tr>
+<tr><td>Coding</td><td>HumanEval+, MBPP+, LiveCodeBench</td><td>89.07</td><td>89.42</td></tr>
+<tr><td>Instruction following</td><td>IFEval, IFBench</td><td>81.25</td><td>82.66</td></tr>
+<tr><td>Agentic / tool calling</td><td>BFCL v3</td><td>76.74</td><td>74.92</td></tr>
+<tr><td>Vision</td><td>MMMU-Pro, OCR Bench v2</td><td>71.36</td><td>66.19</td></tr>
+<tr><td><strong>Overall (14)</strong></td><td></td><td><strong>86.32</strong></td><td><strong>84.78</strong></td></tr>
+</tbody></table>
+<p>The reasoning backbone comes through intact: math falls only from 97.06 to 96.57, coding is level with the baseline, and instruction following is slightly ahead of it. The remaining gap is concentrated in the most demanding categories — knowledge and reasoning, and vision.</p>
+<h3>Full Per-Benchmark Results</h3>
+<details>
+<summary>Expand full per-benchmark results (thinking mode)</summary>
+<table><thead><tr><th>Benchmark</th><th>FP16</th><th>UD-Q4_K_XL</th><th>IQ2_XXS</th><th>Bonsai 2 27B</th></tr></thead><tbody>
+<tr><td>MMLU-Redux</td><td>91.46</td><td>93.35</td><td>88.93</td><td>89.09</td></tr>
+<tr><td>MuSR</td><td>79.63</td><td>73.01</td><td>66.99</td><td>70.63</td></tr>
+<tr><td>GSM8K</td><td>97.19</td><td>96.66</td><td>89.90</td><td>96.66</td></tr>
+<tr><td>MATH-500</td><td>99.80</td><td>99.40</td><td>84.60</td><td>98.80</td></tr>
+<tr><td>AIME25</td><td>96.67</td><td>92.91</td><td>66.67</td><td>95.00</td></tr>
+<tr><td>AIME26</td><td>94.58</td><td>93.00</td><td>57.50</td><td>95.83</td></tr>
+<tr><td>HumanEval+</td><td>93.29</td><td>95.73</td><td>91.46</td><td>95.12</td></tr>
+<tr><td>MBPP+</td><td>83.86</td><td>83.86</td><td>78.89</td><td>83.07</td></tr>
+<tr><td>LiveCodeBench</td><td>90.05</td><td>87.96</td><td>56.40</td><td>90.07</td></tr>
+<tr><td>IFEval</td><td>91.50</td><td>88.83</td><td>84.03</td><td>91.31</td></tr>
+<tr><td>IFBench (prompt-loose)</td><td>71.00</td><td>65.65</td><td>53.76</td><td>74.00</td></tr>
+<tr><td>BFCL v3</td><td>76.74</td><td>75.05</td><td>70.28</td><td>74.92</td></tr>
+<tr><td>MMMU-Pro</td><td>81.73</td><td>81.73</td><td>65.19</td><td>75.49</td></tr>
+<tr><td>OCR Bench v2</td><td>60.99</td><td>65.45</td><td>61.70</td><td>56.88</td></tr>
+<tr><td><strong>Average (14)</strong></td><td><strong>86.32</strong></td><td><strong>85.18</strong></td><td><strong>72.59</strong></td><td><strong>84.78</strong></td></tr>
+</tbody></table>
+</details>
+<h2>Intelligence Density</h2>
+<p>Intelligence density captures the ratio of a model's capability to its deployed size:</p>
+<pre><code>D = -log2(1 - score/100) / size_GB
+</code></pre>
+<table><thead><tr><th>Variant</th><th>Size (GB)</th><th>Benchmark avg</th><th>Intelligence Density (1/GB)</th></tr></thead><tbody>
+<tr><td><strong>Bonsai 2 27B</strong></td><td><strong>5.95</strong></td><td><strong>84.78</strong></td><td><strong>0.457</strong></td></tr>
+<tr><td>Ternary Bonsai 27B (previous release)</td><td>5.75</td><td>80.98</td><td>0.416</td></tr>
+<tr><td>Qwen3.8-27B IQ2_XXS</td><td>7.27</td><td>72.59</td><td>0.257</td></tr>
+<tr><td>Qwen3.8-27B UD-Q4_K_XL</td><td>17.56</td><td>85.18</td><td>0.157</td></tr>
+<tr><td>Qwen3.8-27B FP16</td><td>54.66</td><td>86.32</td><td>0.053</td></tr>
+</tbody></table>
+<p>Bonsai 2 27B delivers about <strong>1.8x</strong> the density of the densest conventional build here (IQ2_XXS at 0.257) and nearly <strong>9x</strong> FP16. Each stored gigabyte is translated into far more usable intelligence. For Bonsai 2 27B and the conventional builds, sizes are the on-disk sizes of the published files. Against the previous Bonsai 27B release, density rises from 0.416 to 0.457, a 9.9% gain; that row is recomputed on these same 14 benchmarks for a like-for-like comparison.</p>
+<h2>Use Cases</h2>
+<ul>
+<li><strong>Laptop-local 27B agents</strong>: full 27B reasoning and tool use on a standard laptop at ~28 tok/s, with the 262K context available for long-document analysis, full-repository code work, and other tasks that depend on holding a large working set in context</li>
+<li><strong>Privacy-sensitive and offline settings</strong>: on-device execution keeps prompts and data on the device by construction, and works with intermittent or no connectivity</li>
+<li><strong>Single-GPU and commodity-GPU serving</strong>: 27B-class quality from a single consumer or entry-level datacenter GPU — ~130 tok/s on an RTX 5090, ~30 tok/s on a 72 W L4 — with headroom for larger batches, longer contexts, or co-resident models</li>
+<li><strong>Quality-first low-bit deployment</strong>: 98.2% of the full-precision model's benchmark average at roughly a ninth of its size</li>
+</ul>
+<h2>Limitations</h2>
+<ul>
+<li><strong>The quality–footprint trade-off</strong>: the ternary model retains 98.2% of the full-precision average, and the gap is modest and predictable — the reasoning core (math, coding) stays within a few points of baseline, with the difference concentrated in the most demanding categories</li>
+<li><strong>Native low-bit kernels</strong>: the dense PTQ1_0 packing (1.75 bits/weight, 5.95 GB) now exists, but unpacking trits costs arithmetic — it is faster on Ada-class and smaller accelerators and slower on Ampere, Hopper, and Blackwell, where batch-1 decode is not bandwidth-starved; returning the footprint advantage as latency on every target is an active engineering target</li>
+</ul>
+<h2>Citation</h2>
+<p>If you use Bonsai 2 27B, please cite:</p>
+<pre><code>@techreport{bonsai2_27b,
+    title   = {Bonsai 2 27B: A 27B Ternary Reasoning Model},
+    author  = {Prism ML},
+    year    = {2026},
+    month   = {September},
+    url     = {https://prismml.com}
+}
+</code></pre>
+<h2>Contact</h2>
+<p>For questions, feedback, or collaboration inquiries: <strong>contact@prismml.com</strong></p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

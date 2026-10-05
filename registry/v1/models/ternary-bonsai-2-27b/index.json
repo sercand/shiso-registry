@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "name": "ternary-bonsai-2-27b",
+  "aliases": [
+    "bonsai-2-27b"
+  ],
+  "family": "qwen35",
+  "min_shiso_version": "0.1.0",
+  "description": "Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower",
+  "tags": [
+    "vision",
+    "tools",
+    "ternary"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
+    ],
+    "default_reasoning_effort": "xhigh",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "pq2_0",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "PQ2_0 (ternary, 2-bit slots)",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "recommended_ram_bytes": 34359738368,
+        "disk_bytes": 9293227507
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "revision": "b072e1d3b35a0a630cece372c2127528e0994386",
+          "entry": "Ternary-Bonsai-2-27B-PQ2_0.gguf",
+          "files": [
+            {
+              "name": "Ternary-Bonsai-2-27B-PQ2_0.gguf",
+              "size": 7206168928,
+              "sha256": "3907dc1658db1f78a9826bf8d5bcb8dc65db0d466388937af57f2294fae62ec1"
+            },
+            {
+              "name": "Ternary-Bonsai-2-27B-mmproj-BF16.gguf",
+              "size": 931145856,
+              "sha256": "e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7",
+              "binds": "vision"
+            },
+            {
+              "name": "LICENSE",
+              "size": 10174,
+              "sha256": "69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b"
+            },
+            {
+              "name": "NOTICE.txt",
+              "size": 411,
+              "sha256": "de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30"
+            }
+          ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "incoai/Qwen3.8-27B-DFlash2-GGUF",
+          "revision": "51962825493a48b846b40126d35c799ac4093ad0",
+          "entry": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+              "size": 1143006816,
+              "sha256": "1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+          "revision": "fcba37d2117a7077eac6b613b2668d14d9779edd",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 58145,
+              "sha256": "238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 17928,
+              "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "spec_k": 7
+      }
+    },
+    {
+      "key": "ptq1_0",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "PTQ1_0 (ternary, packed trits)",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "recommended_ram_bytes": 34359738368,
+        "disk_bytes": 8033707507
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "revision": "b072e1d3b35a0a630cece372c2127528e0994386",
+          "entry": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+          "files": [
+            {
+              "name": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+              "size": 5946648928,
+              "sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3"
+            },
+            {
+              "name": "Ternary-Bonsai-2-27B-mmproj-BF16.gguf",
+              "size": 931145856,
+              "sha256": "e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7",
+              "binds": "vision"
+            },
+            {
+              "name": "LICENSE",
+              "size": 10174,
+              "sha256": "69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b"
+            },
+            {
+              "name": "NOTICE.txt",
+              "size": 411,
+              "sha256": "de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30"
+            }
+          ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "incoai/Qwen3.8-27B-DFlash2-GGUF",
+          "revision": "51962825493a48b846b40126d35c799ac4093ad0",
+          "entry": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+              "size": 1143006816,
+              "sha256": "1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+          "revision": "fcba37d2117a7077eac6b613b2668d14d9779edd",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 58145,
+              "sha256": "238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 17928,
+              "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "spec_k": 7
+      }
+    },
+    {
+      "key": "mlx-2bit",
+      "backends": [
+        "metal"
+      ],
+      "quant": "mlx-2bit (ternary, text only)",
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "recommended_ram_bytes": 34359738368,
+        "disk_bytes": 9751688616
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+          "revision": "fcba37d2117a7077eac6b613b2668d14d9779edd",
+          "files": [
+            {
+              "name": "LICENSE",
+              "size": 10174,
+              "sha256": "69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b"
+            },
+            {
+              "name": "NOTICE.txt",
+              "size": 411,
+              "sha256": "de0e0c48fb6f691a31e74f338e3ccf93f9ecdfe2866ab769c4bf8b79a7636a30"
+            },
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 58145,
+              "sha256": "238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "hadamard.json",
+              "size": 297903,
+              "sha256": "7132a3ec364f0bdac1f08f905f24f0ad2f14245060f592637a0396826d3b5fe6"
+            },
+            {
+              "name": "model.safetensors",
+              "size": 8595477990,
+              "sha256": "130de5925082c168b7866b2e91b52e44abbafc99017e3ca352b77b5b55a269ed"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 17928,
+              "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "incoai/Qwen3.8-27B-DFlash2-GGUF",
+          "revision": "51962825493a48b846b40126d35c799ac4093ad0",
+          "entry": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+              "size": 1143006816,
+              "sha256": "1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "spec_k": 7
+      }
+    }
+  ],
+  "published_at": "2026-10-04T23:05:56+03:00",
+  "updated_at": "2026-10-04T23:05:56+03:00"
+}

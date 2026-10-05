@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwen3.5-4b · shiso hub</title>
+<meta name="description" content="Dense 4B hybrid-attention model with a vision tower">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> qwen3.5-4b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>qwen3.5-4b</h1>
+    
+    <p class="lede">Dense 4B hybrid-attention model with a vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull qwen3.5-4b</code><button class="copy" data-copy="shiso pull qwen3.5-4b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve qwen3.5-4b</code><button class="copy" data-copy="shiso serve qwen3.5-4b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, medium)</span></dd></div>
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>mlx-optiq-4bit</code></td>
+        <td>mlx-optiq-4bit</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td class="num">3.7 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.5-4b" type="button" title="shiso pull qwen3.5-4b">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>q4_k_m</code></td>
+        <td>Q4_K_M</td>
+        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
+        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td class="num">3.2 GiB</td>
+        <td>CUDA sm80+</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.5-4b:q4_k_m" type="button" title="shiso pull qwen3.5-4b:q4_k_m">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen3.5-4b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>mlx-optiq-4bit</code> <span class="muted">3.7 GiB · 1 component</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/mlx-community/Qwen3.5-4B-OptiQ-4bit/tree/6cb5bdfd0bf15f484881fb9f1ab6d7c840fddde9" rel="noopener noreferrer">mlx-community/Qwen3.5-4B-OptiQ-4bit@6cb5bdfd0b</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="aa725a49a83c5503506ff7dcbc57efdaeb7e64a5fa6e4b547d49979a29aec1b3">aa725a49a83c…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="f2130efdf66df1834aa4f7a6e48752e88a8dff41965739c6ffb2bb26c841615e">f2130efdf66d…</code></td></tr>
+      
+        <tr><td><code>model.safetensors</code></td><td class="num">3 GiB</td><td><code title="5d59fea455202270c0f7f71a1902516b06457df5600c3182e1ff9163c33287c1">5d59fea45520…</code></td></tr>
+      
+        <tr><td><code>model.safetensors.index.json</code></td><td class="num">0 GiB</td><td><code title="67306a1f0b0181d92adfe92fce654b6c91ee0c5c2b51b0de114ced2a2ecdbcbc">67306a1f0b01…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4">87a7830d63fc…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b2bed5e033438f09f22b0ce9522115b4807d9bbcc3b82bf23372cb74d93ed081">b2bed5e03343…</code></td></tr>
+      
+        <tr><td><code>optiq/optiq_vision.safetensors</code> <span class="pill soft">→ vision</span></td><td class="num">0.6 GiB</td><td><code title="2f3a952d401ef2e5735c0b56a0b718e338224a0d7af717f80a9315c26bdd8577">2f3a952d401e…</code></td></tr>
+      
+        <tr><td><code>optiq_metadata.json</code></td><td class="num">0 GiB</td><td><code title="38eb38a541e2b169c258630fd4a64b2bf256a024abfc55ff0935f0ec495d4be2">38eb38a541e2…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>q4_k_m</code> <span class="muted">3.2 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/e87f176479d0855a907a41277aca2f8ee7a09523" rel="noopener noreferrer">unsloth/Qwen3.5-4B-GGUF@e87f176479</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.5-4B-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">2.6 GiB</td><td><code title="00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4">00fe7986ff5f…</code></td></tr>
+      
+        <tr><td><code>mmproj-F16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.6 GiB</td><td><code title="cd88edcf8d031894960bb0c9c5b9b7e1fea6ebee02b9f7ce925a00d12891f864">cd88edcf8d03…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a" rel="noopener noreferrer">Qwen/Qwen3.5-4B@851bf6e806</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670">ddc63e1c717a…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42">5f9e4d4901a9…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8">316230d6a809…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/qwen3.5-4b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/mlx-community/Qwen3.5-4B-OptiQ-4bit/blob/6cb5bdfd0bf15f484881fb9f1ab6d7c840fddde9/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>mlx-community/Qwen3.5-4B-OptiQ-4bit</h1>
+<blockquote>
+<p><strong>Built with <a href="https://mlx-optiq.com" rel="noopener noreferrer nofollow">mlx-optiq</a></strong>, the MLX-native toolkit to quantize, fine-tune, and serve LLMs locally on Apple Silicon, no PyTorch and no cloud. <a href="https://mlx-optiq.com/docs/lab/" rel="noopener noreferrer nofollow">Try the Lab</a> · <a href="https://mlx-optiq.com/models" rel="noopener noreferrer nofollow">All OptiQ quants</a> · <a href="https://mlx-optiq.com/docs/" rel="noopener noreferrer nofollow">Docs</a></p>
+</blockquote>
+<p>A 4-bit mixed-precision MLX quant produced by <a href="https://mlx-optiq.com/" rel="noopener noreferrer nofollow">mlx-optiq</a>, the sensitivity-aware quantization toolkit for Apple Silicon. Beats stock uniform 4-bit on every benchmark in the six-metric Capability Score.</p>
+<p>A 4-bit mixed-precision MLX quant of <a href="https://huggingface.co/Qwen/Qwen3.5-4B" rel="noopener noreferrer nofollow">Qwen/Qwen3.5-4B</a>. Per-layer bit-widths come from a KL-divergence sensitivity pass on a <a href="https://mlx-optiq.com/blog/calibration-mix" rel="noopener noreferrer nofollow">six-domain calibration mix</a> (prose · reasoning · code · agent · tool-call · constraint-bearing instructions). Sensitive layers go to 8-bit; robust ones stay at 4-bit. The on-disk size is within ~5 % of a stock uniform 4-bit MLX quant.</p>
+<h2>Quantization details</h2>
+<table><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody>
+<tr><td>Predominant precision</td><td>4-bit</td></tr>
+<tr><td>Layers at 8-bit (sensitive)</td><td>75</td></tr>
+<tr><td>Layers at 4-bit (robust)</td><td>173</td></tr>
+<tr><td>Total quantized layers</td><td>248</td></tr>
+<tr><td>Group size</td><td>64</td></tr>
+<tr><td>Calibration mix</td><td><a href="https://mlx-optiq.com/blog/calibration-mix" rel="noopener noreferrer nofollow">six-domain mix</a> (40 samples × 6 domains)</td></tr>
+<tr><td>Reference for sensitivity</td><td>bf16 (auto-resolved; falls back to uniform-4-bit if bf16 doesn't fit)</td></tr>
+<tr><td>Bundled MTP head</td><td><code>mtp.safetensors</code> (4-bit projections, BF16 norms), enables 1.4× decode via <code>optiq serve --mtp</code></td></tr>
+</tbody></table>
+<p>We follow the same naming convention <code>llama.cpp</code> uses for Q4_K_M and similar mixed-precision quants: the "4-bit" label is for the predominant precision, not the weighted average. The mixed allocation is what lets this build beat stock uniform-4-bit on every benchmark below at the same disk size.</p>
+<h2>Usage</h2>
+<p>Load it with <code>mlx-lm</code> and use it as usual:</p>
+<pre><code>pip install mlx-lm
+</code></pre>
+<pre><code>from mlx_lm import load, generate
+
+model, tokenizer = load("mlx-community/Qwen3.5-4B-OptiQ-4bit")
+response = generate(
+    model, tokenizer,
+    prompt="Explain quantum computing in simple terms.",
+    max_tokens=200,
+)
+</code></pre>
+<p>For more (mixed-precision KV-cache serving, sensitivity-aware LoRA fine-tuning, OpenAI + Anthropic-compatible inference server, hot-swap mounted adapters, sandboxed Python execution for agent workflows), install <a href="https://mlx-optiq.com/" rel="noopener noreferrer nofollow"><code>mlx-optiq</code></a>:</p>
+<pre><code>pip install mlx-optiq
+</code></pre>
+<h3>Speculative decoding (MTP)</h3>
+<p>This quant ships with a bundled Multi-Token Prediction head as <code>mtp.safetensors</code>. Enable it for ~1.4× faster decode:</p>
+<pre><code>optiq serve --model mlx-community/Qwen3.5-4B-OptiQ-4bit --mtp
+</code></pre>
+<p>Acceptance rate stays ~70% at depth 2 (the empirical sweet spot for Qwen3.5).</p>
+<p>See the <a href="https://mlx-optiq.com/docs/qwen3.5" rel="noopener noreferrer nofollow">Qwen3.5 family guide</a> on <a href="https://mlx-optiq.com/" rel="noopener noreferrer nofollow">mlx-optiq.com</a> for sampling defaults, training recipes, and family-specific caveats.</p>
+<h2>Benchmarks</h2>
+<p>Six-metric Capability Score (mean of MMLU + GSM8K + IFEval + BFCL + HumanEval + HashHop). Apples-to-apples comparison against stock uniform 4-bit:</p>
+<table><thead><tr><th>Metric</th><th>OptiQ</th><th>Uniform 4-bit</th><th>Δ</th></tr></thead><tbody>
+<tr><td>MMLU (5-shot, 1000 samples)</td><td><strong>69.9%</strong></td><td>68.7%</td><td>+1.1</td></tr>
+<tr><td>GSM8K (1000 samples, 3-shot CoT)</td><td><strong>80.5%</strong></td><td>78.8%</td><td>+1.7</td></tr>
+<tr><td>IFEval (full set, strict)</td><td><strong>69.1%</strong></td><td>68.4%</td><td>+0.7</td></tr>
+<tr><td>BFCL-V3 simple (200 calls)</td><td><strong>90.0%</strong></td><td>85.0%</td><td>+5.0</td></tr>
+<tr><td>HumanEval (164 problems, pass@1)</td><td><strong>78.0%</strong></td><td>76.2%</td><td>+1.8</td></tr>
+<tr><td>HashHop (long-context retrieval)</td><td><strong>25.0%</strong></td><td>24.0%</td><td>+1.0</td></tr>
+<tr><td><strong>Capability Score</strong> (mean of 6)</td><td><strong>68.76</strong></td><td>66.86</td><td><strong>+1.90</strong></td></tr>
+<tr><td>KL vs bf16 reference (mean / p95)</td><td>0.1224 / 0.5692</td><td>,</td><td>,</td></tr>
+<tr><td>On-disk size</td><td>3.0 GB</td><td>2.8 GB</td><td>+0.2</td></tr>
+</tbody></table>
+<p>Every metric gets one equal vote. Disk size is reported next to the score as an honest second axis instead of being folded into the score. See the <a href="https://mlx-optiq.com/blog/eval-framework" rel="noopener noreferrer nofollow">eval-framework writeup</a> for the full methodology.</p>
+<h2>Links</h2>
+<ul>
+<li><strong>Project website:</strong> <a href="https://mlx-optiq.com/" rel="noopener noreferrer nofollow">mlx-optiq.com</a></li>
+<li><strong>Qwen3.5 family guide:</strong> <a href="https://mlx-optiq.com/docs/qwen3.5" rel="noopener noreferrer nofollow">mlx-optiq.com/docs/qwen3.5</a></li>
+<li><strong>PyPI:</strong> <a href="https://pypi.org/project/mlx-optiq/" rel="noopener noreferrer nofollow">pypi.org/project/mlx-optiq</a></li>
+<li><strong>Calibration mix:</strong> <a href="https://mlx-optiq.com/blog/calibration-mix" rel="noopener noreferrer nofollow">mlx-optiq.com/blog/calibration-mix</a></li>
+<li><strong>Eval framework:</strong> <a href="https://mlx-optiq.com/blog/eval-framework" rel="noopener noreferrer nofollow">mlx-optiq.com/blog/eval-framework</a></li>
+<li><strong>Base model:</strong> <a href="https://huggingface.co/Qwen/Qwen3.5-4B" rel="noopener noreferrer nofollow">Qwen/Qwen3.5-4B</a></li>
+</ul>
+<h2>Quantize your own</h2>
+<p>This quant was produced by <a href="https://mlx-optiq.com" rel="noopener noreferrer nofollow">mlx-optiq</a>. Point it at any Hugging Face model to get the same sensitivity-aware mixed precision:</p>
+<pre><code>pip install mlx-optiq
+optiq convert &lt;hf-model-id&gt; --target-bpw 5.0 --candidate-bits 4,8
+optiq lab   # full local workbench: chat, compare, quantize, fine-tune
+</code></pre>
+<h2>License</h2>
+<p>Apache 2.0 (inherits from base model).</p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

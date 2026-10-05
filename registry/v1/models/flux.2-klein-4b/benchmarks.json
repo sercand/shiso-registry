@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "model": "flux.2-klein-4b",
+  "records": [
+    {
+      "schema_version": 1,
+      "model": "flux.2-klein-4b",
+      "variant": "fp8",
+      "variant_fingerprint": "ce758b4dd43232efc830d6a9c639ff201a8ad213102c55437e6db6fc5ab71400",
+      "device": "m1-max",
+      "chip": "Apple M1 Max",
+      "backend": "metal",
+      "ram_bytes": 68719476736,
+      "os": "macOS 27.0",
+      "shiso_version": "0.1.0",
+      "measured_at": "2026-10-05T12:41:30.852298Z",
+      "runs": 2,
+      "results": [
+        {
+          "kind": "image",
+          "width": 512,
+          "height": 512,
+          "steps": 4,
+          "seconds_per_image": 207.27
+        }
+      ],
+      "stale": false
+    }
+  ]
+}

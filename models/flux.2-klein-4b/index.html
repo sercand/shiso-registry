@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flux.2-klein-4b · shiso hub</title>
+<meta name="description" content="FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> flux.2-klein-4b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>flux.2-klein-4b</h1>
+    
+    <p class="lede">FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder</p>
+    <div class="pills">
+      <span class="pill task">Image generation</span>
+      <span class="pill soft">image-generation</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull flux.2-klein-4b</code><button class="copy" data-copy="shiso pull flux.2-klein-4b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve flux.2-klein-4b</code><button class="copy" data-copy="shiso serve flux.2-klein-4b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>flux2</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>image</dd></div>
+    
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>fp8</code></td>
+        <td>fp8</td>
+        <td><span class="be be-metal">metal</span><span class="be be-cuda">cuda</span></td>
+        <td class="num">16 GiB<span class="muted"> · 24 GiB rec.</span></td>
+        <td class="num">11.5 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull flux.2-klein-4b" type="button" title="shiso pull flux.2-klein-4b">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  
+  
+  <p class="hint">Wall time of one single-image request at the server&#39;s step count.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Device</th><th>Variant</th><th class="">Size</th><th class="num">Steps</th><th class="num">s / image</th><th>Measured</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td rowspan="1"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
+        <td rowspan="1"><code>fp8</code></td>
+        <td class="">512×512</td><td class="num">4</td><td class="num strong">207.27</td>
+        <td rowspan="1">2026-10-05<div class="muted small">shiso 0.1.0 · 2 runs</div></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+  
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>fp8</code> <span class="muted">11.5 GiB · 2 components</span></summary>
+    
+    
+    <h3>image <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/tree/5b4408e59397a4a37ccb46afe426d8ed86379441" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4b-fp8@5b4408e593</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>flux-2-klein-4b-fp8.safetensors</code> <span class="pill soft">entry</span></td><td class="num">3.8 GiB</td><td><code title="97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6">97ed34fe0567…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>image_assets <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>transformer/config.json</code></td><td class="num">0 GiB</td><td><code title="09733c74a3da6d17dd0a0472a091a8950c7c6935889c32c16cc800ede05029de">09733c74a3da…</code></td></tr>
+      
+        <tr><td><code>text_encoder/config.json</code></td><td class="num">0 GiB</td><td><code title="214b4c29a0d975e9fddf9994a5673f22cb2c4c5750352f9227c2c3251ebeab40">214b4c29a0d9…</code></td></tr>
+      
+        <tr><td><code>text_encoder/model.safetensors.index.json</code></td><td class="num">0 GiB</td><td><code title="06b3d5319b6d76d1a4a2433419180016cfd54ed62d086a5e6567a809f8c82634">06b3d5319b6d…</code></td></tr>
+      
+        <tr><td><code>text_encoder/model-00001-of-00002.safetensors</code></td><td class="num">4.6 GiB</td><td><code title="8c0506e7f4936fa7e26183a4fd8da4e2bdbc5990ba64ae441f965d51228f36ea">8c0506e7f493…</code></td></tr>
+      
+        <tr><td><code>text_encoder/model-00002-of-00002.safetensors</code></td><td class="num">2.9 GiB</td><td><code title="82f2bd839378541b0557bfabaf37c7d3d637071fdcb73302dedd7cf61162ce07">82f2bd839378…</code></td></tr>
+      
+        <tr><td><code>vae/config.json</code></td><td class="num">0 GiB</td><td><code title="0d6dfb69ae95a5e2ac9836284bbb63d8b38ce67b25ba2dff380752b2a10ab948">0d6dfb69ae95…</code></td></tr>
+      
+        <tr><td><code>vae/diffusion_pytorch_model.safetensors</code></td><td class="num">0.2 GiB</td><td><code title="ca70d2202afe6415bdbcb8793ba8cd99fd159cfe6192381504d6c4d3036e0f04">ca70d2202afe…</code></td></tr>
+      
+        <tr><td><code>tokenizer/added_tokens.json</code></td><td class="num">0 GiB</td><td><code title="c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680">c0284b582e14…</code></td></tr>
+      
+        <tr><td><code>tokenizer/chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8">a55ee1b16601…</code></td></tr>
+      
+        <tr><td><code>tokenizer/merges.txt</code></td><td class="num">0 GiB</td><td><code title="8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5">8831e4f1a044…</code></td></tr>
+      
+        <tr><td><code>tokenizer/special_tokens_map.json</code></td><td class="num">0 GiB</td><td><code title="76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd">76862e765266…</code></td></tr>
+      
+        <tr><td><code>tokenizer/tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4">aeb13307a71a…</code></td></tr>
+      
+        <tr><td><code>tokenizer/tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0">443bfa629eb1…</code></td></tr>
+      
+        <tr><td><code>tokenizer/vocab.json</code></td><td class="num">0 GiB</td><td><code title="ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910">ca10d7e9fb3e…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/flux.2-klein-4b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/blob/5b4408e59397a4a37ccb46afe426d8ed86379441/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><p><img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/realism.jpg" alt="Teaser">
+<img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/editing.jpg" alt="Teaser">
+<img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/others.jpg" alt="Teaser"></p>
+<p><code>FLUX.2 [klein] 4B</code> is a 4 billion parameter rectified flow transformer capable of generating images from text descriptions and supports multi-reference editing capabilities.
+For more information, please read our <a href="https://bfl.ai/blog/flux2-klein-towards-interactive-visual-intelligence" rel="noopener noreferrer nofollow">blog post</a>.</p>
+<p>This repository holds an <a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/blob/main/flux-2-klein-4b-fp8.safetensors" rel="noopener noreferrer nofollow">FP8 version</a> of FLUX.2 [klein] 4B. The main repository of this model (full BF16 weights) can be found <a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B" rel="noopener noreferrer nofollow">here</a>.</p>
+<hr>
+<p>Limitations</p>
+<ul>
+<li>This model is not intended or able to provide factual information.</li>
+<li>While the model can output text, text rendered may be inaccurate or subject to distortion.</li>
+<li>As a statistical model, this checkpoint may represent or amplify biases observed in the training data.</li>
+<li>The model may fail to generate output that matches the prompts.</li>
+<li>Prompt following is heavily influenced by the prompting style.</li>
+</ul>
+<p>Out-of-Scope Use</p>
+<p>The model and its derivatives may not be used:</p>
+<ul>
+<li>In any way that violates applicable law.</li>
+<li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way; including but not limited to the solicitation, creation, acquisition, or dissemination of child exploitative content.</li>
+<li>To generate or disseminate deceptive, fraudulent, misleading or otherwise harmful content.</li>
+<li>To generate or disseminate personal identifiable information that can be used to harm an individual.</li>
+<li>To harass, abuse, threaten, stalk, or bully individuals or groups of individuals.</li>
+<li>To create non-consensual intimate imagery or illegal pornographic content.</li>
+<li>For fully automated decision making or high risk applications that adversely impact an individual's legal rights or otherwise create or modify a binding, enforceable obligation.</li>
+</ul>
+<p>Nothing contained in this Model Card should be interpreted as or deemed a restriction or modification to the license the model is released under.</p>
+<p>Hardware</p>
+<p>The FLUX.2 [klein] 4B model fits in ~13GB VRAM and is accessible on NVIDIA RTX 3090/4070 and above.</p>
+<hr>
+<p>Responsible AI Development</p>
+<p>Black Forest Labs is committed to the responsible development and deployment of our models. Prior to releasing the FLUX.2 family of models, we evaluated and mitigated a number of risks in our model checkpoints and hosted services, including the generation of unlawful content, including child sexual abuse material (CSAM) and nonconsensual intimate imagery (NCII). We implemented a series of pre-release mitigations to help prevent misuse by third parties, with additional post-release mitigations to help address residual risks:</p>
+<ol>
+<li>Pre-training mitigation. We filtered pre-training data for multiple categories of "not safe for work" (NSFW) and known child sexual abuse material (CSAM) to help prevent a user generating unlawful content in response to text prompts or uploaded images. We have partnered with the https://www.iwf.org.uk/, an independent nonprofit organization dedicated to preventing online abuse, to filter known CSAM from the training data.</li>
+<li>Post-training mitigation. Subsequently, we undertook multiple rounds of targeted fine-tuning to provide additional mitigation against potential abuse, including both text-to-image (T2I) and image-to-image (I2I) attacks. By inhibiting certain behaviors and suppressing certain concepts in the trained model, these techniques can help to prevent a user generating synthetic CSAM or NCII from a text prompt, or transforming an uploaded image into synthetic CSAM or NCII.</li>
+<li>Ongoing evaluation. Throughout this process, we conducted multiple internal and external third-party evaluations of model checkpoints to identify further opportunities for mitigation. External third-party evaluations focused on eliciting CSAM and NCII through adversarial testing with (i) text-only prompts, (ii) a single uploaded reference image with text prompts, and (iii) multiple uploaded reference images with text prompts. Based on this feedback, we conducted further safety fine-tuning to produce our open-weight FLUX.2 [klein] models.</li>
+<li>Release decision. After safety fine-tuning and prior to release, we conducted a final third-party evaluation of the proposed release checkpoints, focused on T2I and I2I generation of synthetic CSAM and NCII, including a comparison with other open-weight T2I and I2I models. The final FLUX.2 [klein] checkpoints demonstrated high resilience against violative inputs in complex generation and editing tasks, and demonstrated higher resilience than leading open-weight models across these risk categories. Based on these findings, we approved the release of the open-weight FLUX.2 [klein] 4B models under an Apache 2.0 license and the release of the FLUX.2 [klein] 9B models under a non-commercial license to support third-party research and development.</li>
+<li>Inference filters. The repository for the FLUX.2 [klein] models includes filters for NSFW and protected content in inputs and outputs. Filters or manual review must be used with the FLUX.2 [klein] 9B models under the terms of the FLUX Non-Commercial License, and we encourage deployers to implement these mitigations when using the FLUX.2 [klein] 4B models. Where we implement these features on our own hosted services, we may apply multiple filters to intercept text prompts, uploaded images, and output images. We utilize both in-house and third-party filters to mitigate against harmful outputs, such as CSAM and NCII outputs, including filters provided by https://thehive.ai/ and https://www.microsoft.com/.</li>
+<li>Content provenance. Content provenance features can help users and platforms better identify, label, and interpret AI-generated content online. The inference code for FLUX.2 [klein] implements an example of pixel-layer watermarking. Additionally, this repository includes links to the https://c2pa.org/ standard for metadata. The API for FLUX.2 [klein] applies cryptographically-signed C2PA metadata to downloaded output content to indicate that images were produced with our model.</li>
+<li>Policies. Acceptable use of our models and access to our API are governed by policies set out in applicable documentation, including FLUX Non-Commercial License (for our non-commercial open-weight users); Developer Terms of Service, Self-Hosted Commercial License Terms, and Usage Policy (for our commercial open-weight model users); and Developer Terms of Service, FLUX API Service Terms, and Usage Policy (for our API users). These prohibit the generation of unlawful content or the use of generated content for unlawful, defamatory, or abusive purposes.</li>
+<li>Safety. Black Forest Labs takes model safety seriously. We provide a dedicated email address (safety@blackforestlabs.ai) to solicit feedback from the community. We maintain a reporting relationship with organizations such as the https://www.iwf.org.uk/ and the https://www.missingkids.org/, and welcome ongoing engagement with authorities, developers, and researchers to share intelligence about emerging risks and develop effective mitigations.</li>
+</ol>
+<hr>
+<p>License</p>
+<p>This model is licensed under the https://www.apache.org/licenses/LICENSE-2.0.</p>
+<p>Trademarks &amp; IP</p>
+<p>This project may contain trademarks or logos for projects, products, or services. Use of Black Forest Labs and FLUX trademarks or logos in modified versions of this project must not cause confusion or imply sponsorship or endorsement. Any use of third-party trademarks, intellectual property or logos are subject to those third-party's policies.</p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
