@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "model": "qwen3-asr-1.7b",
+  "variant": "q8_0",
+  "variant_fingerprint": "1a266c648bc044de723996e6ace7c736943530885c28cd81de842ac3c75ffb92",
+  "device": "m1-max",
+  "chip": "Apple M1 Max",
+  "backend": "metal",
+  "ram_bytes": 68719476736,
+  "os": "macOS 27.0",
+  "shiso_version": "0.1.0",
+  "measured_at": "2026-10-06T10:31:48.259124Z",
+  "runs": 3,
+  "results": [
+    {
+      "kind": "transcription",
+      "clip": "synthesized speech",
+      "audio_seconds": 46.51,
+      "wall_seconds": 4.8,
+      "realtime_multiple": 9.7,
+      "first_text_ms": 3190.17
+    }
+  ]
+}
