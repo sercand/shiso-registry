@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T12:47:10.793871Z",
+  "generated_at": "2026-10-06T10:32:02.527916Z",
   "models": [
     {
       "name": "clef",
@@ -144,6 +144,43 @@
           "min_ram_bytes": 8589934592,
           "disk_bytes": 6178692489,
           "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "qwen3-asr-1.7b",
+      "aliases": [],
+      "family": "qwen3_asr",
+      "min_shiso_version": "0.1.0",
+      "description": "Qwen3-ASR 1.7B multilingual speech recognizer, Q8_0 GGUF with a Nemotron 3 Diarization speaker sidecar",
+      "tags": [
+        "speech-recognition",
+        "diarization",
+        "audio"
+      ],
+      "tasks": [
+        "transcription",
+        "diarization"
+      ],
+      "inputs": [
+        "audio"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-06T13:31:27+03:00",
+      "manifest": "models/qwen3-asr-1.7b/index.json",
+      "manifest_sha256": "91fe9593f0550411b383d4b21f2fd4490b03ed21694e0dee37ba2d212632c31a",
+      "variants": [
+        {
+          "key": "q8_0",
+          "backends": [
+            "metal",
+            "cuda"
+          ],
+          "quant": "q8_0",
+          "min_ram_bytes": 4294967296,
+          "disk_bytes": 2627419424
         }
       ]
     },
