@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "name": "qwen3-asr-1.7b",
+  "aliases": [],
+  "family": "qwen3_asr",
+  "min_shiso_version": "0.1.0",
+  "description": "Qwen3-ASR 1.7B multilingual speech recognizer, Q8_0 GGUF with a Nemotron 3 Diarization speaker sidecar",
+  "tags": [
+    "speech-recognition",
+    "diarization",
+    "audio"
+  ],
+  "tasks": [
+    "transcription",
+    "diarization"
+  ],
+  "modalities": {
+    "inputs": [
+      "audio"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "q8_0",
+      "backends": [
+        "metal",
+        "cuda"
+      ],
+      "quant": "q8_0",
+      "requirements": {
+        "min_ram_bytes": 4294967296,
+        "recommended_ram_bytes": 8589934592,
+        "disk_bytes": 2627419424
+      },
+      "components": {
+        "asr": {
+          "provider": "huggingface",
+          "repo": "unslothai/Qwen3-ASR-1.7B-GGUF",
+          "revision": "cad2b8497d1541a8b6f9f7ad32e8c6f9c9908da3",
+          "entry": "Qwen3-ASR-1.7B-Q8_0.gguf",
+          "files": [
+            {
+              "name": "Qwen3-ASR-1.7B-Q8_0.gguf",
+              "size": 2165034944,
+              "sha256": "58e22d0532d4eacaf034cfac17a6fed159f37c41390c710186783be439d1fc57"
+            },
+            {
+              "name": "mmproj-Qwen3-ASR-1.7B-Q8_0.gguf",
+              "size": 355709344,
+              "sha256": "46c1d533af3f354ceb37ce855dbceff7da7fa7cf1e6a523df3b13440bd164c0d",
+              "binds": "asr_mmproj"
+            }
+          ]
+        },
+        "diarization": {
+          "provider": "huggingface",
+          "repo": "audio-cpp/Nemotron-3-Diarization-GGUF",
+          "revision": "647d39feaa0e91dca5ce355a95403837b76dff56",
+          "entry": "nemotron-3-diarization-q8_0.gguf",
+          "files": [
+            {
+              "name": "nemotron-3-diarization-q8_0.gguf",
+              "size": 106675136,
+              "sha256": "9a737455bd10123bcf1e036d9a0b07b6e8c42e7d0dd1a5ee4141dc386db46d0b"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "info": {
+    "publisher": "Qwen",
+    "card": {
+      "provider": "huggingface",
+      "repo": "Qwen/Qwen3-ASR-1.7B",
+      "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
+    },
+    "parameters": 1700000000
+  }
+}
