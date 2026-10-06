@@ -180,7 +180,7 @@
       "server_defaults": {
         "ctx": 262000,
         "max_num_seqs": 4,
-        "spec_k": 4,
+        "spec_k": 3,
         "spec_lookup": 8,
         "capture_verify": true,
         "capture_batch": true,
