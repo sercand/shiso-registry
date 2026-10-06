@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T10:32:02.527916Z",
+  "generated_at": "2026-10-06T14:03:53.126585754Z",
   "models": [
     {
       "name": "clef",
@@ -280,7 +280,7 @@
         "qwen3.8-flash-next"
       ],
       "family": "qwen4exp",
-      "min_shiso_version": "0.1.0",
+      "min_shiso_version": "0.2.0",
       "description": "Sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and vision tower",
       "tags": [],
       "tasks": [
@@ -294,9 +294,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-04T01:43:15+03:00",
+      "updated_at": "2026-10-06T17:03:53+03:00",
       "manifest": "models/qwen3.8-flash/index.json",
-      "manifest_sha256": "22f9d4d22ba2b7f532b663ea1d16dd6123247b2fd6d1913a440e66410fe39cc7",
+      "manifest_sha256": "efe08c638d016dc239562006703f2505d89fe0a08b785d2e33c013f7197cd91c",
       "variants": [
         {
           "key": "exl3-405",
@@ -305,7 +305,7 @@
           ],
           "quant": "exl3-4.05bpw",
           "min_ram_bytes": 68719476736,
-          "disk_bytes": 107462993908
+          "disk_bytes": 107463993905
         }
       ]
     },
