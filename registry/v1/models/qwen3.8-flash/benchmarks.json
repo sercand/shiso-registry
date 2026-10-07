@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "model": "qwen3.8-flash",
+  "records": [
+    {
+      "schema_version": 1,
+      "model": "qwen3.8-flash",
+      "variant": "exl3-405",
+      "variant_fingerprint": "bf25ec279bbaca5448ed4ddd5639fe04d5abad9a014738b5399c130fac27e35f",
+      "device": "gb10",
+      "chip": "NVIDIA GB10",
+      "backend": "cuda",
+      "ram_bytes": 130596839424,
+      "os": "Ubuntu 24.04.4 LTS",
+      "shiso_version": "0.2.1",
+      "measured_at": "2026-10-07T20:17:57.384660045Z",
+      "runs": 3,
+      "context_length": 262000,
+      "results": [
+        {
+          "kind": "chat",
+          "prompt_tokens": 515,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 943.13,
+          "decode_tokens_per_second": 66.22,
+          "time_to_first_token_ms": 528.03
+        },
+        {
+          "kind": "chat",
+          "prompt_tokens": 4083,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 1760.39,
+          "decode_tokens_per_second": 52.37,
+          "time_to_first_token_ms": 2299.72
+        }
+      ],
+      "stale": false
+    }
+  ]
+}

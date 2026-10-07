@@ -78,7 +78,32 @@
 <section>
   <h2 id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen3.8-flash</code> on a device with the model installed and commit the record.</p>
+  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  
+  
+  <p class="hint">Batch 1, recipe defaults. Prefill comes from the time to first token; decode is tokens a second after it.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Prefill tok/s</th><th class="num">Decode tok/s</th><th class="num">TTFT ms</th><th>Measured</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td rowspan="2"><strong>gb10</strong><div class="muted small">NVIDIA GB10 · 122 GiB · cuda</div></td>
+        <td rowspan="2"><code>exl3-405</code></td>
+        <td class="">515</td><td class="num">943</td><td class="num strong">66.2</td><td class="num">528</td>
+        <td rowspan="2">2026-10-07<div class="muted small">shiso 0.2.1 · 3 runs · ctx 262000</div></td>
+      </tr>
+    
+      <tr>
+        
+        <td class="">4083</td><td class="num">1760</td><td class="num strong">52.4</td><td class="num">2300</td>
+        
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+  
   
 </section>
 
