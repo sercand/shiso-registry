@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07T14:00:38.215567Z",
+  "generated_at": "2026-10-07T20:10:39.954323Z",
   "models": [
     {
       "name": "clef",
@@ -100,9 +100,9 @@
         "audio"
       ],
       "outputs": [],
-      "updated_at": "2026-10-07T14:00:37.928735Z",
+      "updated_at": "2026-10-07T08:06:28+03:00",
       "manifest": "models/embeddinggemma-2/index.json",
-      "manifest_sha256": "8beef373eb45e55af7c76a22db1c35b5e06f46dac7e40e6c5f3751b75a0bbe05",
+      "manifest_sha256": "b5858157f849d70a685e307d3fca6a611e39d613809ce3dbf8fcc99852fe8be0",
       "variants": [
         {
           "key": "q8_0",
