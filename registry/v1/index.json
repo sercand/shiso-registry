@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T21:47:41.696574Z",
+  "generated_at": "2026-10-07T14:00:21.03616Z",
   "models": [
     {
       "name": "clef",
@@ -294,9 +294,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-06T17:03:53+03:00",
+      "updated_at": "2026-10-07T00:48:41+03:00",
       "manifest": "models/qwen3.8-flash/index.json",
-      "manifest_sha256": "a967119a7e16bc56ba72f53b761d62ac880eafe0ac1b30ceb638a15f3b7c6232",
+      "manifest_sha256": "5a595ce0fb31cb16e8d8fcaf63afe1e49ecddfe2c5775ef6865aef4c553ad553",
       "variants": [
         {
           "key": "exl3-405",
