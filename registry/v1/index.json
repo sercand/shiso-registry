@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T21:47:41.696574Z",
+  "generated_at": "2026-10-07T05:07:11.574134Z",
   "models": [
     {
       "name": "clef",
@@ -71,6 +71,48 @@
           "min_ram_bytes": 8589934592,
           "disk_bytes": 6506449296,
           "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "embeddinggemma-2",
+      "aliases": [
+        "embedding-gemma-2"
+      ],
+      "family": "embedding_gemma2",
+      "min_shiso_version": "0.2.1",
+      "description": "EmbeddingGemma 2, a 740M multimodal embedding model: text, images, video and audio in one 768-d space (Matryoshka 512/256/128), with task prompts",
+      "tags": [
+        "embedding",
+        "multimodal",
+        "vision",
+        "audio",
+        "video",
+        "multilingual"
+      ],
+      "tasks": [
+        "embedding"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "outputs": [],
+      "updated_at": "2026-10-07T08:06:28+03:00",
+      "manifest": "models/embeddinggemma-2/index.json",
+      "manifest_sha256": "b5858157f849d70a685e307d3fca6a611e39d613809ce3dbf8fcc99852fe8be0",
+      "variants": [
+        {
+          "key": "q8_0",
+          "backends": [
+            "metal",
+            "cuda"
+          ],
+          "quant": "Q8_0",
+          "min_ram_bytes": 4294967296,
+          "disk_bytes": 896854609
         }
       ]
     },
@@ -294,9 +336,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-06T17:03:53+03:00",
+      "updated_at": "2026-10-07T00:48:41+03:00",
       "manifest": "models/qwen3.8-flash/index.json",
-      "manifest_sha256": "a967119a7e16bc56ba72f53b761d62ac880eafe0ac1b30ceb638a15f3b7c6232",
+      "manifest_sha256": "658651d90b5d13ec01f08142120efddba58e51ed1b9624e177c8e6bdca281676",
       "variants": [
         {
           "key": "exl3-405",
