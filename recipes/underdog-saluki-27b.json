@@ -38,9 +38,13 @@
     {
       "key": "iq2-mix",
       "backends": [
+        "cuda",
         "metal"
       ],
       "quant": "IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)",
+      "requires": {
+        "min_cuda_sm": 80
+      },
       "requirements": {
         "min_ram_bytes": 17179869184,
         "recommended_ram_bytes": 34359738368,
