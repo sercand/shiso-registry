@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T07:29:33.856893Z",
+  "generated_at": "2026-10-09T14:30:15.094303Z",
   "models": [
     {
       "name": "clef",
@@ -419,8 +419,9 @@
       ],
       "family": "qwen35",
       "min_shiso_version": "0.2.1",
-      "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now",
+      "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact, with a DFlash2 block drafter and a vision tower",
       "tags": [
+        "vision",
         "tools",
         "reasoning"
       ],
@@ -428,14 +429,16 @@
         "chat"
       ],
       "inputs": [
-        "text"
+        "text",
+        "image",
+        "video"
       ],
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-09T10:29:32+03:00",
+      "updated_at": "2026-10-09T17:30:14+03:00",
       "manifest": "models/underdog-saluki-27b/index.json",
-      "manifest_sha256": "022433be7ba98fff38a5ba777d818cdbe7de233a9477fcdd370cf566b6ac1320",
+      "manifest_sha256": "a65565d0ff732c8dbbe7e0855afe83f1d40308a6583c562b5d4de685f43b37dc",
       "variants": [
         {
           "key": "iq2-mix",
@@ -445,7 +448,7 @@
           ],
           "quant": "IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)",
           "min_ram_bytes": 17179869184,
-          "disk_bytes": 7911222589,
+          "disk_bytes": 9981836317,
           "min_cuda_sm": 80
         }
       ]

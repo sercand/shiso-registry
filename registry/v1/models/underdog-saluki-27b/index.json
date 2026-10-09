@@ -6,8 +6,9 @@
   ],
   "family": "qwen35",
   "min_shiso_version": "0.2.1",
-  "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now",
+  "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact, with a DFlash2 block drafter and a vision tower",
   "tags": [
+    "vision",
     "tools",
     "reasoning"
   ],
@@ -16,7 +17,9 @@
   ],
   "modalities": {
     "inputs": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "outputs": [
       "text"
@@ -48,7 +51,7 @@
       "requirements": {
         "min_ram_bytes": 17179869184,
         "recommended_ram_bytes": 34359738368,
-        "disk_bytes": 7911222589
+        "disk_bytes": 9981836317
       },
       "components": {
         "base": {
@@ -63,6 +66,12 @@
               "sha256": "4a673518b11b1c4445f9b9a9d3c40356f5ba39f6a6260dcb25f3fbfd475d9efb"
             },
             {
+              "name": "mmproj-Underdog-Saluki-27B-1.0-F16.gguf",
+              "size": 927606912,
+              "sha256": "f3aa57813a513420c2ef765503b057c1946bf4c8cdf3679d266a6644fc6cfd50",
+              "binds": "vision"
+            },
+            {
               "name": "LICENSE",
               "size": 11358,
               "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
@@ -71,6 +80,19 @@
               "name": "NOTICE",
               "size": 590,
               "sha256": "3c202e89a77d1540553cb12fb518220170227979974ad83e0563822fa969857b"
+            }
+          ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "incoai/Qwen3.8-27B-DFlash2-GGUF",
+          "revision": "51962825493a48b846b40126d35c799ac4093ad0",
+          "entry": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+              "size": 1143006816,
+              "sha256": "1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd"
             }
           ]
         },
@@ -118,9 +140,11 @@
           ]
         }
       },
-      "server_defaults": {}
+      "server_defaults": {
+        "spec_k": 7
+      }
     }
   ],
   "published_at": "2026-10-09T09:29:14+03:00",
-  "updated_at": "2026-10-09T10:29:32+03:00"
+  "updated_at": "2026-10-09T17:30:14+03:00"
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>underdog-saluki-27b · shiso hub</title>
-<meta name="description" content="Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now">
+<meta name="description" content="Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact, with a DFlash2 block drafter and a vision tower">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -25,10 +25,10 @@
   <div>
     <h1>underdog-saluki-27b</h1>
     <p class="aliases">also <code>saluki-27b</code></p>
-    <p class="lede">Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now</p>
+    <p class="lede">Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact, with a DFlash2 block drafter and a vision tower</p>
     <div class="pills">
       <span class="pill task">Chat</span>
-      <span class="pill soft">tools</span><span class="pill soft">reasoning</span>
+      <span class="pill soft">vision</span><span class="pill soft">tools</span><span class="pill soft">reasoning</span>
     </div>
   </div>
   <div class="quick">
@@ -44,7 +44,7 @@
     
     
     
-    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
     <div><dt>Output</dt><dd>text</dd></div>
     <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
     <div><dt>License</dt><dd>apache-2.0</dd></div>
@@ -65,7 +65,7 @@
         <td>IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)</td>
         <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
         <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
-        <td class="num">7.4 GiB</td>
+        <td class="num">9.3 GiB</td>
         <td>CUDA sm80+</td>
         <td><button class="copy small" data-copy="shiso pull underdog-saluki-27b" type="button" title="shiso pull underdog-saluki-27b">Copy pull</button></td>
       </tr>
@@ -88,8 +88,8 @@
   <h2 id="files">Files</h2>
   
   <details class="files">
-    <summary><code>iq2-mix</code> <span class="muted">7.4 GiB · 2 components</span></summary>
-    
+    <summary><code>iq2-mix</code> <span class="muted">9.3 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>spec_k = 7</code></p>
     
     <h3>base <a class="small" href="https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0/tree/1336c0b5d74dfe6ad7f793577092f5effd9f97c6" rel="noopener noreferrer">ConwayResearch/Underdog-Saluki-27B-1.0@1336c0b5d7</a></h3>
     <div class="table-wrap">
@@ -99,9 +99,23 @@
       
         <tr><td><code>Underdog-Saluki-27B-1.0-IQ2-mix.gguf</code> <span class="pill soft">entry</span></td><td class="num">7.4 GiB</td><td><code title="4a673518b11b1c4445f9b9a9d3c40356f5ba39f6a6260dcb25f3fbfd475d9efb">4a673518b11b…</code></td></tr>
       
+        <tr><td><code>mmproj-Underdog-Saluki-27B-1.0-F16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="f3aa57813a513420c2ef765503b057c1946bf4c8cdf3679d266a6644fc6cfd50">f3aa57813a51…</code></td></tr>
+      
         <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30">cfc7749b96f6…</code></td></tr>
       
         <tr><td><code>NOTICE</code></td><td class="num">0 GiB</td><td><code title="3c202e89a77d1540553cb12fb518220170227979974ad83e0563822fa969857b">3c202e89a77d…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
       
       </tbody>
     </table>
