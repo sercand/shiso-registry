@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:29:19.864337Z",
+  "generated_at": "2026-10-09T07:29:33.856893Z",
   "models": [
     {
       "name": "clef",
@@ -433,18 +433,20 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-09T09:29:14+03:00",
+      "updated_at": "2026-10-09T10:29:32+03:00",
       "manifest": "models/underdog-saluki-27b/index.json",
-      "manifest_sha256": "3466e5d153810fcc685eb2672fbf538547fbb3608e9036aab3969559fcaddef5",
+      "manifest_sha256": "022433be7ba98fff38a5ba777d818cdbe7de233a9477fcdd370cf566b6ac1320",
       "variants": [
         {
           "key": "iq2-mix",
           "backends": [
+            "cuda",
             "metal"
           ],
           "quant": "IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)",
           "min_ram_bytes": 17179869184,
-          "disk_bytes": 7911222589
+          "disk_bytes": 7911222589,
+          "min_cuda_sm": 80
         }
       ]
     }
