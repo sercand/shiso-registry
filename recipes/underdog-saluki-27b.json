@@ -6,8 +6,9 @@
   ],
   "family": "qwen35",
   "min_shiso_version": "0.2.1",
-  "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now",
+  "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact, with a DFlash2 block drafter and a vision tower",
   "tags": [
+    "vision",
     "tools",
     "reasoning"
   ],
@@ -16,7 +17,9 @@
   ],
   "modalities": {
     "inputs": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "outputs": [
       "text"
@@ -48,7 +51,7 @@
       "requirements": {
         "min_ram_bytes": 17179869184,
         "recommended_ram_bytes": 34359738368,
-        "disk_bytes": 7911222589
+        "disk_bytes": 9981836317
       },
       "components": {
         "base": {
@@ -61,6 +64,12 @@
               "name": "Underdog-Saluki-27B-1.0-IQ2-mix.gguf",
               "size": 7898369152,
               "sha256": "4a673518b11b1c4445f9b9a9d3c40356f5ba39f6a6260dcb25f3fbfd475d9efb"
+            },
+            {
+              "name": "mmproj-Underdog-Saluki-27B-1.0-F16.gguf",
+              "size": 927606912,
+              "sha256": "f3aa57813a513420c2ef765503b057c1946bf4c8cdf3679d266a6644fc6cfd50",
+              "binds": "vision"
             },
             {
               "name": "LICENSE",
@@ -116,9 +125,24 @@
               "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
             }
           ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "incoai/Qwen3.8-27B-DFlash2-GGUF",
+          "revision": "51962825493a48b846b40126d35c799ac4093ad0",
+          "entry": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.8-27B-DFlash2-Q4_K_M.gguf",
+              "size": 1143006816,
+              "sha256": "1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd"
+            }
+          ]
         }
       },
-      "server_defaults": {}
+      "server_defaults": {
+        "spec_k": 7
+      }
     }
   ]
 }
