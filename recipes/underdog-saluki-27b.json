@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "name": "underdog-saluki-27b",
+  "aliases": [
+    "saluki-27b"
+  ],
+  "family": "qwen35",
+  "min_shiso_version": "0.2.1",
+  "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now",
+  "tags": [
+    "tools",
+    "reasoning"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
+    ],
+    "default_reasoning_effort": "xhigh",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "iq2-mix",
+      "backends": [
+        "metal"
+      ],
+      "quant": "IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)",
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "recommended_ram_bytes": 34359738368,
+        "disk_bytes": 7911222589
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "ConwayResearch/Underdog-Saluki-27B-1.0",
+          "revision": "1336c0b5d74dfe6ad7f793577092f5effd9f97c6",
+          "entry": "Underdog-Saluki-27B-1.0-IQ2-mix.gguf",
+          "files": [
+            {
+              "name": "Underdog-Saluki-27B-1.0-IQ2-mix.gguf",
+              "size": 7898369152,
+              "sha256": "4a673518b11b1c4445f9b9a9d3c40356f5ba39f6a6260dcb25f3fbfd475d9efb"
+            },
+            {
+              "name": "LICENSE",
+              "size": 11358,
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "name": "NOTICE",
+              "size": 590,
+              "sha256": "3c202e89a77d1540553cb12fb518220170227979974ad83e0563822fa969857b"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen3.8-27B",
+          "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 8952,
+              "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+            },
+            {
+              "name": "config.json",
+              "size": 4312,
+              "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 17928,
+              "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      },
+      "server_defaults": {}
+    }
+  ]
+}
