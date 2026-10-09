@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07T20:20:13.973548Z",
+  "generated_at": "2026-10-09T06:29:19.864337Z",
   "models": [
     {
       "name": "clef",
@@ -409,6 +409,42 @@
           "quant": "mlx-2bit (ternary, text only)",
           "min_ram_bytes": 17179869184,
           "disk_bytes": 9751688616
+        }
+      ]
+    },
+    {
+      "name": "underdog-saluki-27b",
+      "aliases": [
+        "saluki-27b"
+      ],
+      "family": "qwen35",
+      "min_shiso_version": "0.2.1",
+      "description": "Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now",
+      "tags": [
+        "tools",
+        "reasoning"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-09T09:29:14+03:00",
+      "manifest": "models/underdog-saluki-27b/index.json",
+      "manifest_sha256": "3466e5d153810fcc685eb2672fbf538547fbb3608e9036aab3969559fcaddef5",
+      "variants": [
+        {
+          "key": "iq2-mix",
+          "backends": [
+            "metal"
+          ],
+          "quant": "IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)",
+          "min_ram_bytes": 17179869184,
+          "disk_bytes": 7911222589
         }
       ]
     }

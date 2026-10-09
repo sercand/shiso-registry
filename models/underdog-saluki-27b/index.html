@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>underdog-saluki-27b · shiso hub</title>
+<meta name="description" content="Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> underdog-saluki-27b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>underdog-saluki-27b</h1>
+    <p class="aliases">also <code>saluki-27b</code></p>
+    <p class="lede">Underdog Saluki 27B: Qwen3.8-27B quantized with GSQ-RCO mixed i-quants (IQ2-mix, ~2.3 bits/weight), tuned to keep tool calling intact; text-only for now</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill soft">tools</span><span class="pill soft">reasoning</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull underdog-saluki-27b</code><button class="copy" data-copy="shiso pull underdog-saluki-27b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve underdog-saluki-27b</code><button class="copy" data-copy="shiso serve underdog-saluki-27b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-09</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>iq2-mix</code></td>
+        <td>IQ2-mix (GSQ-RCO mixed i-quants, ~2.3 bpw)</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td class="num">7.4 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull underdog-saluki-27b" type="button" title="shiso pull underdog-saluki-27b">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench underdog-saluki-27b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>iq2-mix</code> <span class="muted">7.4 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0/tree/1336c0b5d74dfe6ad7f793577092f5effd9f97c6" rel="noopener noreferrer">ConwayResearch/Underdog-Saluki-27B-1.0@1336c0b5d7</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Underdog-Saluki-27B-1.0-IQ2-mix.gguf</code> <span class="pill soft">entry</span></td><td class="num">7.4 GiB</td><td><code title="4a673518b11b1c4445f9b9a9d3c40356f5ba39f6a6260dcb25f3fbfd475d9efb">4a673518b11b…</code></td></tr>
+      
+        <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30">cfc7749b96f6…</code></td></tr>
+      
+        <tr><td><code>NOTICE</code></td><td class="num">0 GiB</td><td><code title="3c202e89a77d1540553cb12fb518220170227979974ad83e0563822fa969857b">3c202e89a77d…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/Qwen/Qwen3.8-27B/tree/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0" rel="noopener noreferrer">Qwen/Qwen3.8-27B@1d4bf0f2ff</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab">191e0af23210…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27">b11349aafa7c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/underdog-saluki-27b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0/blob/1336c0b5d74dfe6ad7f793577092f5effd9f97c6/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>Underdog Saluki 27B 1.0</h1>
+<p>Qwen3.8-27B in under 8 GB, tuned to keep tool calling intact. A standard GGUF for stock llama.cpp.</p>
+<table><thead><tr><th>Tool calling (Underdog Bench)</th><th>Parallel tool calls</th><th>Average retention</th><th>Size</th></tr></thead><tbody>
+<tr><td><strong>88</strong> vs 84 for the full model</td><td><strong>42</strong> vs 35 for the full model</td><td><strong>96%</strong> across 9 benchmarks</td><td><strong>7.89 GB</strong> vs 54 GB</td></tr>
+</tbody></table>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Base model</td><td>Qwen3.8-27B</td></tr>
+<tr><td>File</td><td><code>Underdog-Saluki-27B-1.0-IQ2-mix.gguf</code>, 7.89 GB</td></tr>
+<tr><td>Runtime</td><td>stock llama.cpp, and apps built on it</td></tr>
+<tr><td>Modality</td><td>text, plus images with the optional vision add-on</td></tr>
+<tr><td>Vision add-on</td><td><code>mmproj-Underdog-Saluki-27B-1.0-F16.gguf</code> (928 MB) or <code>-Q8_0.gguf</code> (629 MB)</td></tr>
+<tr><td>Thinking</td><td>on by default, switchable per request, same as Qwen3.8</td></tr>
+</tbody></table>
+<h2>Quickstart</h2>
+<pre><code>huggingface-cli download ConwayResearch/Underdog-Saluki-27B-1.0 Underdog-Saluki-27B-1.0-IQ2-mix.gguf --local-dir .
+</code></pre>
+<pre><code>llama-server -m Underdog-Saluki-27B-1.0-IQ2-mix.gguf --jinja -ngl 99 -fa on -c 32768
+</code></pre>
+<p><strong>Add vision.</strong> Download the vision add-on too, and pass it with <code>--mmproj</code>. Then send images through the OpenAI chat API as usual.</p>
+<pre><code>huggingface-cli download ConwayResearch/Underdog-Saluki-27B-1.0 mmproj-Underdog-Saluki-27B-1.0-F16.gguf --local-dir .
+</code></pre>
+<pre><code>llama-server -m Underdog-Saluki-27B-1.0-IQ2-mix.gguf --mmproj mmproj-Underdog-Saluki-27B-1.0-F16.gguf --jinja -ngl 99 -fa on -c 32768
+</code></pre>
+<p><code>--jinja</code> turns on the Qwen3.8 chat template, which handles tool calls and thinking. The server speaks the OpenAI chat API on port 8080.</p>
+<table><thead><tr><th>Use</th><th>Settings</th></tr></thead><tbody>
+<tr><td>General use, reasoning, instructions</td><td>thinking on (default), temperature 0.6, top_p 0.95, top_k 20</td></tr>
+<tr><td>Fast, direct tool calls</td><td>thinking off with <code>"chat_template_kwargs": {"enable_thinking": false}</code>, temperature 0</td></tr>
+</tbody></table>
+<h2>Benchmarks</h2>
+<p>Saluki ran in stock llama.cpp. Where we ran the full-size Qwen3.8-27B ourselves, it used the same harness and settings.</p>
+<p><strong>Tool calling.</strong> Underdog Bench is 120 tasks from the Berkeley Function Calling Leaderboard (BFCL v4), frozen before any model was tested. Thinking off, temperature 0.</p>
+<table><thead><tr><th>Model</th><th>Size</th><th>Passed (of 120)</th></tr></thead><tbody>
+<tr><td><strong>Underdog Saluki 27B 1.0</strong></td><td>7.89 GB</td><td><strong>88</strong></td></tr>
+<tr><td>Qwen3.8-27B, full size</td><td>54 GB</td><td>84</td></tr>
+<tr><td>Bonsai 2</td><td>5.95 GB</td><td>70</td></tr>
+</tbody></table>
+<p><strong>Parallel tool calls.</strong> 100 BFCL v4 parallel tasks, official checker, thinking off: Saluki 42, full size 35.</p>
+<p><strong>Agents, instructions, coding and reasoning.</strong></p>
+<table><thead><tr><th>Benchmark</th><th>Saluki</th><th>Full size</th></tr></thead><tbody>
+<tr><td>SWE-bench Verified (50 issues fixed)</td><td>30</td><td>33</td></tr>
+<tr><td>IFEval (prompt-loose)</td><td><strong>93.5</strong></td><td>91.5 (public)</td></tr>
+<tr><td>IFBench (prompt-loose)</td><td><strong>72.7</strong></td><td>71.0 (public)</td></tr>
+<tr><td>MBPP+</td><td>78.0</td><td>83.9 (public)</td></tr>
+<tr><td>MuSR</td><td>67.5</td><td>79.6 (public)</td></tr>
+<tr><td>AIME 2025 (avg@4)</td><td>79.2</td><td>96.7 (public)</td></tr>
+<tr><td>AIME 2026 (avg@4)</td><td>80.0</td><td>94.6 (public)</td></tr>
+</tbody></table>
+<p>Public scores come from a different harness than ours. 120 tasks is a modest test, and a few tasks of any gap is run-to-run variation.</p>
+<h2>Limitations</h2>
+<ul>
+<li>Keeps about 82 to 85% of the full model's competition math score.</li>
+<li>Weakest on letter-level instruction puzzles (palindromes, vowel rules, alphabetical order).</li>
+<li>About a fifth of parallel-call replies have small formatting slips.</li>
+<li>With thinking on, it often reasons at length before answering.</li>
+<li>Vision is an add-on. The main file is text only; add the 0.6 to 0.9 GB vision file when you need images.</li>
+</ul>
+<h2>Credits and license</h2>
+<p>Apache 2.0. Built on <strong>Qwen3.8-27B</strong> by the Qwen team and <strong>Qwen3.8-27B-GSQ-RCO-GGUF</strong> by ISTA-DASLab, both Apache 2.0. Underdog Bench tasks come from the Berkeley Function Calling Leaderboard. See <code>NOTICE</code>.</p>
+<p>Built by Underdog.</p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
