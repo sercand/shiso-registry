@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T04:14:23.347186Z",
+  "generated_at": "2026-10-10T07:04:30.286584Z",
   "models": [
     {
       "name": "clef",
@@ -223,6 +223,41 @@
           "quant": "int8-convrot",
           "min_ram_bytes": 17179869184,
           "disk_bytes": 17294526207
+        }
+      ]
+    },
+    {
+      "name": "qwen-image-2.1-viggle-turbo",
+      "aliases": [],
+      "family": "qwen_image21",
+      "min_shiso_version": "0.2.1",
+      "description": "Viggle's 6-step distillation (v0.3) of Qwen-Image-2.1, INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder; schedule shipped as hub configs. Qwen Research License: non-commercial use only.",
+      "tags": [
+        "image-generation",
+        "rgba",
+        "non-commercial"
+      ],
+      "tasks": [
+        "image_generation"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "image"
+      ],
+      "updated_at": "2026-10-10T10:04:29+03:00",
+      "manifest": "models/qwen-image-2.1-viggle-turbo/index.json",
+      "manifest_sha256": "74c0d2bb40602a4e9f117c2e7e05820e4066b760059c87ea90a1d6602b331dec",
+      "variants": [
+        {
+          "key": "int8",
+          "backends": [
+            "metal"
+          ],
+          "quant": "int8-convrot",
+          "min_ram_bytes": 17179869184,
+          "disk_bytes": 17294518745
         }
       ]
     },

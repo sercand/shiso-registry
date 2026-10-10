@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwen-image-2.1-viggle-turbo · shiso hub</title>
+<meta name="description" content="Viggle&#39;s 6-step distillation (v0.3) of Qwen-Image-2.1, INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder; schedule shipped as hub configs. Qwen Research License: non-commercial use only.">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> qwen-image-2.1-viggle-turbo</nav>
+
+<section class="model-head">
+  <div>
+    <h1>qwen-image-2.1-viggle-turbo</h1>
+    
+    <p class="lede">Viggle&#39;s 6-step distillation (v0.3) of Qwen-Image-2.1, INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder; schedule shipped as hub configs. Qwen Research License: non-commercial use only.</p>
+    <div class="pills">
+      <span class="pill task">Image generation</span>
+      <span class="pill soft">image-generation</span><span class="pill soft">rgba</span><span class="pill soft">non-commercial</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull qwen-image-2.1-viggle-turbo</code><button class="copy" data-copy="shiso pull qwen-image-2.1-viggle-turbo" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve qwen-image-2.1-viggle-turbo</code><button class="copy" data-copy="shiso serve qwen-image-2.1-viggle-turbo" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen_image21</dd></div>
+    <div><dt>Publisher</dt><dd>Viggle</dd></div>
+    <div><dt>Parameters</dt><dd>7.1B</dd></div>
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>image</dd></div>
+    
+    <div><dt>License</dt><dd>other</dd></div>
+    <div><dt>Homepage</dt><dd><a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo" rel="noopener noreferrer">https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo</a></dd></div>
+    <div><dt>Updated</dt><dd>2026-10-10</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>int8</code></td>
+        <td>int8-convrot</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB</td>
+        <td class="num">16.1 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen-image-2.1-viggle-turbo" type="button" title="shiso pull qwen-image-2.1-viggle-turbo">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen-image-2.1-viggle-turbo</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>int8</code> <span class="muted">16.1 GiB · 4 components</span></summary>
+    
+    
+    <h3>image <a class="small" href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/009a44a895ef85f7e643c80fdca9543795248867" rel="noopener noreferrer">Viggle/Qwen-Image-2.1-viggle-turbo@009a44a895</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen-Image-2.1-viggle-turbo-v0.3-6step-int8_convrot.safetensors</code> <span class="pill soft">entry</span></td><td class="num">6.8 GiB</td><td><code title="2c9e9f0052f85140ca389d0cde190b49a08a53ad7a4ad7d08a51884c1ed652c2">2c9e9f0052f8…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>image_assets <a class="small" href="../../registry/v1/models/qwen-image-2.1-viggle-turbo/model_index.json" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>model_index.json</code></td><td class="num">0 GiB</td><td><code title="66b0dacfdc303f9a188b44d968ddbe317e44013aafb98db4bf7643d2bff24af3">66b0dacfdc30…</code></td></tr>
+      
+        <tr><td><code>scheduler/scheduler_config.json</code></td><td class="num">0 GiB</td><td><code title="5d6ddf326e7a1f63a7920dac94f70df2adf3710a92fe7ce3f7bfd30d559f37e4">5d6ddf326e7a…</code></td></tr>
+      
+        <tr><td><code>transformer/config.json</code></td><td class="num">0 GiB</td><td><code title="c593aee6c1794a69741a442bcedc7a9f04dc6e8759a7886266dd3bf3b732f816">c593aee6c179…</code></td></tr>
+      
+        <tr><td><code>text_encoder/config.json</code></td><td class="num">0 GiB</td><td><code title="6001331949f7f86ab6d791a80b12246d4f8da5159fa08c3e62368a39f36d63a9">6001331949f7…</code></td></tr>
+      
+        <tr><td><code>vae/config.json</code></td><td class="num">0 GiB</td><td><code title="9785d527b278cb8b210e9f48a8028d92a4190968ce7e24c8fc85d9d1b82f6ba2">9785d527b278…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>image_text_encoder <a class="small" href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/a3c1a9e2efcba96124a9dc8600c0c07d6f5e68aa" rel="noopener noreferrer">Comfy-Org/Qwen-Image-2.1@a3c1a9e2ef</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>text_encoders/qwen3vl_8b_int8_convrot.safetensors</code> <span class="pill soft">entry</span></td><td class="num">8.7 GiB</td><td><code title="8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f">8bfd0f6e12ab…</code></td></tr>
+      
+        <tr><td><code>vae/qwen_image_2.1_vae_bf16.safetensors</code> <span class="pill soft">→ image_vae</span></td><td class="num">0.6 GiB</td><td><code title="bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9">bb21f7473051…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>image_tokenizer <a class="small" href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/tree/d65dbc9a7e8f6b5479e33dee6030eaab2a906509" rel="noopener noreferrer">Qwen/Qwen-Image-2.1-Turbo@d65dbc9a7e</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>processor/tokenizer.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506">be75606093db…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/qwen-image-2.1-viggle-turbo/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/blob/009a44a895ef85f7e643c80fdca9543795248867/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>Qwen-Image-2.1-viggle-turbo — v0.3</h1>
+<p><strong>Built with Qwen.</strong> A few-step distilled version of <a href="https://huggingface.co/Qwen/Qwen-Image-2.1" rel="noopener noreferrer nofollow">Qwen/Qwen-Image-2.1</a>
+by Viggle. Text-to-image and instruction-driven editing with 1–3 reference images in <strong>6 steps instead of 40</strong>, with
+<strong>no classifier-free guidance</strong>.</p>
+<p></p>
+<p>About <strong>5× faster</strong> than the 40-step base model end to end, and very competitive with it in quality: on the official
+Qwen examples the two are hard to tell apart on most prompts. The clearest gaps are small, dense text and complicated
+edits (<a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/#known-limitations" rel="noopener noreferrer nofollow">Known limitations</a>). Compare them yourself in the <strong>Comparison</strong> tab of the
+<a href="https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo" rel="noopener noreferrer nofollow">demo Space</a>.</p>
+<h2>v0.3 (2026-09-29)</h2>
+<ul>
+<li><strong>6 steps, a different balance.</strong> Against v0.2.1: less grain and cleaner surfaces, fine texture a little softer;
+diversity (still close to the base model's) and small-text accuracy about the same. It is not a strict upgrade: if
+you prefer the crisper look, v0.2.1 is still in the repository.</li>
+<li><strong>New 9-step mode:</strong> 7 turbo steps, then the LoRA is switched off and the base model finishes the last two.
+Finer detail, and small text comes out right more often (not always). It takes about 1.4–1.5× as long as 6 steps
+(still about 3.5× faster than the base model). It works in diffusers and the demo Space only (<a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/#9-steps" rel="noopener noreferrer nofollow">9 steps</a>).</li>
+<li><strong>We think 6 steps is close to its capacity.</strong> Since v0.2.1, every gain we found at 6 steps cost something
+elsewhere: sharper came with more grain, less grain came with a softer look. Beyond this point, quality most likely
+has to be paid for with steps, which is what the 9-step mode does.</li>
+</ul>
+<table><thead><tr><th>file</th><th></th></tr></thead><tbody>
+<tr><td><code>Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r256.safetensors</code></td><td><strong>v0.3 LoRA</strong> (rank 256, bf16, 1.3 GB), loaded on the base transformer at runtime. <strong>Use this.</strong></td></tr>
+<tr><td><code>Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r128.safetensors</code></td><td>the same adapter cut to rank 128 (0.7 GB), used by the <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/#comfyui" rel="noopener noreferrer nofollow">ComfyUI workflows</a></td></tr>
+<tr><td><code>peft_v0.3/</code></td><td>the v0.3 adapter in peft key format</td></tr>
+<tr><td><code>...-{v0.3,v0.2.1}-6step-{int8_convrot,fp8_e4m3fn}.safetensors</code>, <code>...-{Q8_0,Q6_K,Q5_K_M,Q4_K_M}.gguf</code></td><td>the LoRA merged into the base transformer, one file per format, for ComfyUI (<a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/#single-file-transformers" rel="noopener noreferrer nofollow">single-file transformers</a>)</td></tr>
+<tr><td><code>comfyui/</code></td><td>ComfyUI custom nodes, text-to-image / edit workflows, example inputs</td></tr>
+<tr><td><code>scheduler/</code></td><td>the base scheduler config with <code>shift_terminal: null</code></td></tr>
+<tr><td><code>...-v0.2.1-6step-lora-r256/r128.safetensors</code>, <code>peft_v0.2.1/</code></td><td>v0.2.1 (2026-09-24), same usage</td></tr>
+<tr><td><code>...-v0.2-5step-lora-r256/r128.safetensors</code>, <code>peft_v0.2/</code></td><td>v0.2 (2026-09-23), same usage (6 steps)</td></tr>
+</tbody></table>
+<h2>Install</h2>
+<pre><code>pip install -U torch "transformers&gt;=5.17,&lt;6" accelerate safetensors peft pillow
+pip install "git+https://github.com/huggingface/diffusers.git@80c7ed262aeffbeb43ef13ae04baeb9b84515a69"
+</code></pre>
+<p><code>QwenImage21Pipeline</code> is not in a released <code>diffusers</code> yet, hence the pinned git install. <code>peft</code> is required.</p>
+<h2>Usage</h2>
+<pre><code>import torch
+from diffusers import QwenImage21Pipeline, FlowMatchEulerDiscreteScheduler
+
+pipe = QwenImage21Pipeline.from_pretrained("Qwen/Qwen-Image-2.1", dtype=torch.bfloat16)
+pipe.load_lora_weights(
+    "Viggle/Qwen-Image-2.1-viggle-turbo",
+    weight_name="Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r256.safetensors",
+)
+pipe.scheduler = FlowMatchEulerDiscreteScheduler.from_pretrained(
+    "Viggle/Qwen-Image-2.1-viggle-turbo", subfolder="scheduler"
+)
+pipe.to("cuda")
+
+STEPS, SIGMAS = 6, [1.0, 0.9375, 0.875, 0.75, 0.5, 0.25]   # pass both to every call
+</code></pre>
+<h3>Text to image</h3>
+<pre><code>image = pipe(
+    prompt="A studio portrait of an old fisherman mending a net, warm rim light, 85mm.",
+    height=1024,
+    width=1024,
+    num_inference_steps=STEPS,
+    sigmas=SIGMAS,
+    true_cfg_scale=1.0,                                   # no CFG (also the default)
+    generator=torch.Generator("cuda").manual_seed(0),
+).images[0]
+image.save("out.png")
+</code></pre>
+<h3>Image editing (1–3 reference images)</h3>
+<pre><code>from diffusers.utils import load_image
+
+image = pipe(                                             # same pipe object as above
+    prompt="Replace the background with a sunset beach, keep the subject unchanged.",
+    image=[load_image("input.png")],                      # list; order fixes &lt;image1&gt;, &lt;image2&gt;, ...
+    output_resolution=1024,
+    num_inference_steps=STEPS,
+    sigmas=SIGMAS,
+    true_cfg_scale=1.0,
+    generator=torch.Generator("cuda").manual_seed(0),
+).images[0]
+</code></pre>
+<h3>9 steps</h3>
+<pre><code>SIGMAS_9 = [1.0, 0.9583, 0.9167, 0.875, 0.75, 0.5, 0.25, 1 / 6, 1 / 12]
+
+# The pipeline computes the text/reference K/V once and reuses them; those come from the turbo, so the first
+# base-model step computes them again.
+forward = pipe.transformer.forward
+reextract = [False]
+
+def transformer_forward(*args, kv_cache_mode=None, **kwargs):
+    if reextract[0] and kv_cache_mode == "cached":
+        kv_cache_mode, reextract[0] = "extract", False
+    return forward(*args, kv_cache_mode=kv_cache_mode, **kwargs)
+
+pipe.transformer.forward = transformer_forward
+
+def base_tail(pipe, i, t, kwargs):
+    if i == 6:                      # runs after the 7th step; the base model takes the last two
+        pipe.disable_lora()
+        reextract[0] = True
+    return kwargs
+
+image = pipe(
+    prompt="...",                                         # works for editing too
+    num_inference_steps=9,
+    sigmas=SIGMAS_9,
+    true_cfg_scale=1.0,
+    callback_on_step_end=base_tail,
+    generator=torch.Generator("cuda").manual_seed(0),
+).images[0]
+pipe.enable_lora()                                        # back to the turbo for the next call
+</code></pre>
+<h3>Rules that matter</h3>
+<ul>
+<li><strong>6 steps with <code>sigmas=[1.0, 0.9375, 0.875, 0.75, 0.5, 0.25]</code>, <code>true_cfg_scale=1.0</code>, no negative prompt.</strong> These
+are raw nodes: the pipeline applies its resolution-dependent shift to them, so pass them as written at every size.</li>
+<li><strong>To change the step count, add or remove steps at the high-noise end only</strong>, and keep <code>0.875, 0.75, 0.5, 0.25</code>:
+5 steps <code>[1, 0.875, 0.75, 0.5, 0.25]</code>, 7 steps <code>[1, 0.9583, 0.9167, 0.875, 0.75, 0.5, 0.25]</code>. Moving the low-noise
+nodes makes images softer; plain <code>num_inference_steps</code> without <code>sigmas=</code> and CFG do not help.</li>
+<li><strong>Use the shipped scheduler config.</strong> The base config's <code>shift_terminal: 0.02</code> wrecks the last step.</li>
+<li><strong>Keep the LoRA unmerged and at scale 1.0.</strong> Merging it into bf16 weights loses part of the update. For ComfyUI there
+are also <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/#single-file-transformers" rel="noopener noreferrer nofollow">single-file transformers</a> with the LoRA merged in fp32, then quantized once.</li>
+<li>Reference order decides which image <code>image 1</code> / <code>image 2</code> in the prompt refers to. Without <code>height</code>/<code>width</code>, the
+output aspect ratio follows the <strong>last</strong> reference (in ComfyUI: the <strong>first</strong>).</li>
+<li>Prompt rewriting with the official <a href="https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I" rel="noopener noreferrer nofollow">PE-T2I</a> /
+<a href="https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I" rel="noopener noreferrer nofollow">PE-I2I</a> rewriters helps composition and rendered text. Raw
+prompts work too.</li>
+<li>About 1 MP is the sweet spot; up to about 4 MP works. Keep width and height at multiples of 16.</li>
+<li><code>peft</code> users can load <code>peft_v0.3/</code> instead:
+<code>pipe.transformer.load_lora_adapter("Viggle/Qwen-Image-2.1-viggle-turbo", subfolder="peft_v0.3", weight_name="adapter_model.safetensors", prefix=None)</code>.
+It holds the same weights under different key names, so pick one of the two, not both.</li>
+</ul>
+<h3>Rank 128</h3>
+<p>The r128 file is the r256 adapter truncated by an exact per-layer SVD of its update. What the cut drops is about ten
+times smaller than bf16 rounding of the base weights.</p>
+<h2>ComfyUI</h2>
+<blockquote>
+<p>The ComfyUI port is mostly vibe-coded with an AI coding assistant, and I don't use ComfyUI day to day. The sigma
+schedule matches diffusers to float precision and the workflows run end to end, but expect rough edges. Issues
+and fixes are very welcome.</p>
+</blockquote>
+<p>Tested with ComfyUI 0.37.0 (frontend 1.53.6), which has native Qwen-Image-2.1 support. In <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/comfyui" rel="noopener noreferrer nofollow"><code>comfyui/</code></a>:</p>
+<ul>
+<li><code>viggle_turbo.py</code> — two custom nodes. Copy it into <code>ComfyUI/custom_nodes/</code> and restart ComfyUI.</li>
+<li><code>Qwen-Image-2.1-viggle-turbo-t2i.json</code>, <code>Qwen-Image-2.1-viggle-turbo-edit.json</code> — the workflows (drag into ComfyUI).</li>
+<li><code>input/woman2.webp</code>, <code>input/cat.webp</code> — the edit workflow's example references (from the
+<a href="https://huggingface.co/spaces/black-forest-labs/flux-klein-9b-kv" rel="noopener noreferrer nofollow">black-forest-labs/flux-klein-9b-kv</a> Space); copy
+them into <code>ComfyUI/input/</code>.</li>
+</ul>
+<table><thead><tr><th>ComfyUI folder</th><th>file</th><th>size</th></tr></thead><tbody>
+<tr><td><code>diffusion_models/</code></td><td><a href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1" rel="noopener noreferrer nofollow"><code>qwen_image_2.1_int8_convrot.safetensors</code></a> or <code>qwen_image_2.1_bf16.safetensors</code></td><td>7.3 / 14.2 GB</td></tr>
+<tr><td><code>text_encoders/</code></td><td><a href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1" rel="noopener noreferrer nofollow"><code>qwen3vl_8b_int8_convrot.safetensors</code></a> or <code>qwen3vl_8b_bf16.safetensors</code></td><td>9.4 / 17.5 GB</td></tr>
+<tr><td><code>vae/</code></td><td><a href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1" rel="noopener noreferrer nofollow"><code>qwen_image_2.1_vae_bf16.safetensors</code></a></td><td>0.7 GB</td></tr>
+<tr><td><code>loras/</code></td><td><code>Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r128.safetensors</code> (this repo) or the r256 file</td><td>0.7 / 1.3 GB</td></tr>
+</tbody></table>
+<p>The workflows default to the int8 files, the r128 LoRA and the prompt enhancer on; this peaks at about 26 GB of VRAM
+at 1248 × 832.</p>
+<ul>
+<li><strong>Viggle Turbo Sigmas</strong> — the 6-step schedule with the pipeline's resolution-dependent shift. Use it instead of a
+KSampler scheduler, with euler and <code>BasicGuider</code> (no CFG, no negative prompt).</li>
+<li><strong>Viggle Turbo LoRA (unmerged)</strong> — applies the LoRA at runtime, as diffusers does. The stock LoRA loaders merge it
+into the weights, which drops about 30% of this adapter's update on bf16 and adds noise on int8. The unmerged node
+costs 10–25% more time per step. Keep its strength at 1.0.</li>
+</ul>
+<p>The 9-step mode is not in the workflows. In the edit workflow the output size follows <strong>image 1</strong>, at about 1 MP.</p>
+<p><strong>Troubleshooting:</strong> with <code>comfy_kitchen</code> 0.2.35 on an NVIDIA driver older than 580, <code>TextGenerate</code> (the prompt
+enhancer) fails with a CUDA driver error. Update the driver, or turn <em>Enhance prompt</em> off.</p>
+<h3>Single-file transformers</h3>
+<p>If you would rather not load a LoRA, these files are the base transformer with the r256 LoRA already merged in
+(in fp32, then quantized once). Put the file in <code>models/diffusion_models/</code> (<code>.gguf</code> files need the
+<a href="https://github.com/city96/ComfyUI-GGUF" rel="noopener noreferrer nofollow">ComfyUI-GGUF</a> nodes) and open the matching workflow in <code>comfyui/</code>. The text
+encoder and VAE are the same Comfy-Org files as above, and you still need <strong>Viggle Turbo Sigmas</strong> from
+<code>comfyui/viggle_turbo.py</code>. Only the 6-step mode is available as a single file.</p>
+<table><thead><tr><th>format</th><th>file suffix</th><th>size</th><th>ComfyUI loader</th><th>LPIPS ¹ v0.3</th><th>LPIPS ¹ v0.2.1</th></tr></thead><tbody>
+<tr><td>GGUF Q8_0</td><td><code>-6step-Q8_0.gguf</code></td><td>7.7 GB</td><td>Unet Loader (GGUF)</td><td>0.051</td><td>0.054</td></tr>
+<tr><td>int8 (Comfy-Org convrot recipe)</td><td><code>-6step-int8_convrot.safetensors</code></td><td>7.3 GB</td><td>Load Diffusion Model</td><td>0.057</td><td>0.060</td></tr>
+<tr><td>GGUF Q6_K</td><td><code>-6step-Q6_K.gguf</code></td><td>6.0 GB</td><td>Unet Loader (GGUF)</td><td>0.055</td><td>0.067</td></tr>
+<tr><td>fp8 e4m3fn, weight-only</td><td><code>-6step-fp8_e4m3fn.safetensors</code></td><td>7.3 GB</td><td>Load Diffusion Model</td><td>0.068</td><td>0.070</td></tr>
+<tr><td>GGUF Q5_K_M</td><td><code>-6step-Q5_K_M.gguf</code></td><td>5.1 GB</td><td>Unet Loader (GGUF)</td><td>0.076</td><td>0.083</td></tr>
+<tr><td>GGUF Q4_K_M ²</td><td><code>-6step-Q4_K_M.gguf</code></td><td>4.3 GB</td><td>Unet Loader (GGUF)</td><td>0.100</td><td>0.118</td></tr>
+<tr><td><em>reference:</em> Comfy-Org int8 + LoRA r128 (the LoRA workflows)</td><td></td><td>7.3 + 0.7 GB</td><td></td><td>0.041</td><td>0.044</td></tr>
+</tbody></table>
+<p>Full names are <code>Qwen-Image-2.1-viggle-turbo-v0.3</code> or <code>-v0.2.1</code> followed by the suffix. Workflows:
+<code>comfyui/Qwen-Image-2.1-viggle-turbo-{v0.3,v0.2.1}-6step-merged-{t2i,edit}.json</code> (int8 by default; pick the fp8 file
+in the loader) and <code>…-6step-gguf-{t2i,edit}.json</code> (Q8_0 by default; pick another GGUF in the loader).</p>
+<p><strong>Merged is close to, but not the same as, the LoRA path.</strong> On most requests the image matches the LoRA workflow up to
+fine detail, but on a few (about 8 in 96 at int8 or Q8_0, against 3–5 in 96 for the LoRA workflow) the merged model
+settles on a different composition or outfit. The result is not necessarily worse, just different. If you need
+outputs that match diffusers, use the LoRA workflows.</p>
+<p>² <strong>Q4_K_M drifts visibly more</strong> (23–29 of 96 requests change noticeably). Use it only if nothing larger fits in memory.</p>
+<p>¹ mean LPIPS (VGG, ≤512 px) against diffusers with the r256 LoRA on our 96 held-out requests, same prompt, inputs,
+seed and noise; lower is closer. For scale, ComfyUI and diffusers differ by about 0.03–0.04 with no LoRA at all.</p>
+<h2>Known limitations</h2>
+<ul>
+<li><strong>Complicated edits</strong> (multi-reference composition, face swaps, identity-preserving edits, instructions with
+several constraints) can still fall short of the base model: duplicated or ghosted figures, identity drift.</li>
+<li><strong>Small or long rendered text</strong> garbles more often than with the base model. 9 steps often helps, not always.</li>
+<li>Colours come out a few percent less saturated than the base model's.</li>
+<li>At 6 steps, v0.3 is a little softer on fine texture than v0.2.1.</li>
+<li>2K output, RGBA output, mask-guided edits and edits with more than 3 references are checked only by eye on the
+Comparison tab examples. No standard benchmark is claimed.</li>
+</ul>
+<h2>License</h2>
+<p>This model is a derivative work of Qwen-Image-2.1 and is distributed under the <strong>Qwen RESEARCH LICENSE AGREEMENT</strong>
+(<a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/LICENSE" rel="noopener noreferrer nofollow"><code>LICENSE</code></a>): <strong>non-commercial use only</strong> — research or evaluation purposes. Commercial use requires a
+separate licence from the licensor (<code>model-business@notice.qwencloud.com</code>). See <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/NOTICE" rel="noopener noreferrer nofollow"><code>NOTICE</code></a> for the required
+attribution.</p>
+<blockquote>
+<p>Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT, Copyright (c) 2026 Hangzhou Tongyi Laboratory Technology
+Co., Ltd. All Rights Reserved.</p>
+</blockquote>
+<p>Relative to <a href="https://huggingface.co/Qwen/Qwen-Image-2.1" rel="noopener noreferrer nofollow"><code>Qwen/Qwen-Image-2.1</code></a> this repository <strong>adds</strong> LoRA
+adapters (v0.3, v0.2.1 and v0.2, at rank 256 and 128), single-file transformers (the base transformer with the v0.3 or
+v0.2.1 adapter merged in, quantized to int8, fp8 or GGUF), ComfyUI nodes, workflows and two example input photos, and a
+scheduler config with <code>shift_terminal</code> changed from <code>0.02</code> to <code>null</code>. Text encoder, VAE and processor are not
+redistributed; the base transformer only in modified form (see <a href="https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/009a44a895ef85f7e643c80fdca9543795248867/NOTICE" rel="noopener noreferrer nofollow"><code>NOTICE</code></a>).</p>
+<p>Distillation and release by <strong>Viggle</strong>. <strong>Built with Qwen.</strong></p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
