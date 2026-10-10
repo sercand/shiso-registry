@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "name": "qwen-image-2.1-viggle-turbo",
+  "aliases": [],
+  "family": "qwen_image21",
+  "min_shiso_version": "0.2.1",
+  "description": "Viggle's 6-step distillation (v0.3) of Qwen-Image-2.1, INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder; schedule shipped as hub configs. Qwen Research License: non-commercial use only.",
+  "tags": [
+    "image-generation",
+    "rgba",
+    "non-commercial"
+  ],
+  "tasks": [
+    "image_generation"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "image"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "int8",
+      "backends": [
+        "metal"
+      ],
+      "quant": "int8-convrot",
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "disk_bytes": 17294518745
+      },
+      "components": {
+        "image": {
+          "provider": "huggingface",
+          "repo": "Viggle/Qwen-Image-2.1-viggle-turbo",
+          "revision": "009a44a895ef85f7e643c80fdca9543795248867",
+          "entry": "Qwen-Image-2.1-viggle-turbo-v0.3-6step-int8_convrot.safetensors",
+          "files": [
+            {
+              "name": "Qwen-Image-2.1-viggle-turbo-v0.3-6step-int8_convrot.safetensors",
+              "size": 7256783064,
+              "sha256": "2c9e9f0052f85140ca389d0cde190b49a08a53ad7a4ad7d08a51884c1ed652c2"
+            }
+          ]
+        },
+        "image_text_encoder": {
+          "provider": "huggingface",
+          "repo": "Comfy-Org/Qwen-Image-2.1",
+          "revision": "a3c1a9e2efcba96124a9dc8600c0c07d6f5e68aa",
+          "entry": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+          "files": [
+            {
+              "name": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+              "size": 9350798360,
+              "sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f"
+            },
+            {
+              "name": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "size": 675509688,
+              "sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+              "binds": "image_vae"
+            }
+          ]
+        },
+        "image_tokenizer": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen-Image-2.1-Turbo",
+          "revision": "d65dbc9a7e8f6b5479e33dee6030eaab2a906509",
+          "entry": "processor/tokenizer.json",
+          "files": [
+            {
+              "name": "processor/tokenizer.json",
+              "size": 11422650,
+              "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+            }
+          ]
+        },
+        "image_assets": {
+          "provider": "shiso",
+          "files": [
+            {
+              "name": "model_index.json",
+              "size": 534,
+              "sha256": "66b0dacfdc303f9a188b44d968ddbe317e44013aafb98db4bf7643d2bff24af3"
+            },
+            {
+              "name": "scheduler/scheduler_config.json",
+              "size": 484,
+              "sha256": "5d6ddf326e7a1f63a7920dac94f70df2adf3710a92fe7ce3f7bfd30d559f37e4"
+            },
+            {
+              "name": "transformer/config.json",
+              "size": 369,
+              "sha256": "c593aee6c1794a69741a442bcedc7a9f04dc6e8759a7886266dd3bf3b732f816"
+            },
+            {
+              "name": "text_encoder/config.json",
+              "size": 1517,
+              "sha256": "6001331949f7f86ab6d791a80b12246d4f8da5159fa08c3e62368a39f36d63a9"
+            },
+            {
+              "name": "vae/config.json",
+              "size": 2079,
+              "sha256": "9785d527b278cb8b210e9f48a8028d92a4190968ce7e24c8fc85d9d1b82f6ba2"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "info": {
+    "publisher": "Viggle",
+    "license": "other",
+    "homepage": "https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo",
+    "card": {
+      "provider": "huggingface",
+      "repo": "Viggle/Qwen-Image-2.1-viggle-turbo",
+      "revision": "009a44a895ef85f7e643c80fdca9543795248867"
+    },
+    "parameters": 7115124736
+  }
+}

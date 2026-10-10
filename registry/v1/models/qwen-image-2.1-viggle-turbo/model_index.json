@@ -1,0 +1,32 @@
+{
+  "_class_name": "QwenImage21Pipeline",
+  "_diffusers_version": "0.37.0.dev0",
+  "processor": [
+    "transformers",
+    "Qwen3VLProcessor"
+  ],
+  "scheduler": [
+    "diffusers",
+    "FlowMatchEulerDiscreteScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "Qwen3VLForConditionalGeneration"
+  ],
+  "transformer": [
+    "diffusers",
+    "QwenImage21Transformer2DModel"
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKLQwenImage21"
+  ],
+  "sample_sigmas": [
+    1.0,
+    0.9375,
+    0.875,
+    0.75,
+    0.5,
+    0.25
+  ]
+}
