@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T14:30:15.094303Z",
+  "generated_at": "2026-10-10T04:14:23.347186Z",
   "models": [
     {
       "name": "clef",
@@ -186,6 +186,43 @@
           "min_ram_bytes": 8589934592,
           "disk_bytes": 6178692489,
           "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "qwen-image-2.1-turbo",
+      "aliases": [
+        "qwen-image-2.1"
+      ],
+      "family": "qwen_image21",
+      "min_shiso_version": "0.2.1",
+      "description": "Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only.",
+      "tags": [
+        "image-generation",
+        "rgba",
+        "non-commercial"
+      ],
+      "tasks": [
+        "image_generation"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "image"
+      ],
+      "updated_at": "2026-10-10T07:14:22+03:00",
+      "manifest": "models/qwen-image-2.1-turbo/index.json",
+      "manifest_sha256": "ac0bcf55ae2719438608ecf9d73121ae6df2f83c102922eca6d5ace06498b3ec",
+      "variants": [
+        {
+          "key": "int8",
+          "backends": [
+            "metal"
+          ],
+          "quant": "int8-convrot",
+          "min_ram_bytes": 17179869184,
+          "disk_bytes": 17294526207
         }
       ]
     },

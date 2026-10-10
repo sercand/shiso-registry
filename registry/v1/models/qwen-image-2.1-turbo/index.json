@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "name": "qwen-image-2.1-turbo",
+  "aliases": [
+    "qwen-image-2.1"
+  ],
+  "family": "qwen_image21",
+  "min_shiso_version": "0.2.1",
+  "description": "Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only.",
+  "tags": [
+    "image-generation",
+    "rgba",
+    "non-commercial"
+  ],
+  "tasks": [
+    "image_generation"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "image"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "reasoning_efforts": [],
+    "default_reasoning_effort": null,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "int8",
+      "backends": [
+        "metal"
+      ],
+      "quant": "int8-convrot",
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "disk_bytes": 17294526207
+      },
+      "components": {
+        "image": {
+          "provider": "huggingface",
+          "repo": "Comfy-Org/Qwen-Image-2.1",
+          "revision": "a3c1a9e2efcba96124a9dc8600c0c07d6f5e68aa",
+          "entry": "diffusion_models/qwen_image_2.1_turbo_int8_convrot.safetensors",
+          "files": [
+            {
+              "name": "diffusion_models/qwen_image_2.1_turbo_int8_convrot.safetensors",
+              "size": 7256783064,
+              "sha256": "85d3244148cc294581844d310a7338fed26d056e470666ec84cf1525b876fdab"
+            },
+            {
+              "name": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+              "size": 9350798360,
+              "sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f",
+              "binds": "image_text_encoder"
+            },
+            {
+              "name": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "size": 675509688,
+              "sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+              "binds": "image_vae"
+            }
+          ]
+        },
+        "image_assets": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen-Image-2.1-Turbo",
+          "revision": "d65dbc9a7e8f6b5479e33dee6030eaab2a906509",
+          "files": [
+            {
+              "name": "model_index.json",
+              "size": 578,
+              "sha256": "97e2febeb19d93cb41fa44807cde8bd42757950b5dffeacdb0331fb2d390cf20"
+            },
+            {
+              "name": "transformer/config.json",
+              "size": 370,
+              "sha256": "2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3"
+            },
+            {
+              "name": "text_encoder/config.json",
+              "size": 1542,
+              "sha256": "89050cba6b66c4f68f52305b54fc37efe28d95232246b94aa8dc0cfa36f3b734"
+            },
+            {
+              "name": "vae/config.json",
+              "size": 2172,
+              "sha256": "42bfdec412459bbb7bc38a0617ab70edcfc873f84ec47e0c7d01c53ba09885a5"
+            },
+            {
+              "name": "scheduler/scheduler_config.json",
+              "size": 486,
+              "sha256": "16c948c71f9152a34cce6e3a2f309e97ad2dca32beecbe5e2fd3a7925b7eb4bb"
+            },
+            {
+              "name": "processor/tokenizer.json",
+              "size": 11422650,
+              "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+            },
+            {
+              "name": "processor/tokenizer_config.json",
+              "size": 705,
+              "sha256": "fd42a0b35a8d13cd473e88e310b50cbf1bccaa9eb60ed0fd873af5f8f0c59307"
+            },
+            {
+              "name": "processor/processor_config.json",
+              "size": 1300,
+              "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+            },
+            {
+              "name": "processor/chat_template.jinja",
+              "size": 5292,
+              "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "info": {
+    "publisher": "Qwen",
+    "license": "other",
+    "homepage": "https://qwen.ai/blog?id=qwen-image-2.1",
+    "card": {
+      "provider": "huggingface",
+      "repo": "Qwen/Qwen-Image-2.1-Turbo",
+      "revision": "d65dbc9a7e8f6b5479e33dee6030eaab2a906509"
+    },
+    "parameters": 7115124736
+  },
+  "published_at": "2026-10-10T07:14:22+03:00",
+  "updated_at": "2026-10-10T07:14:22+03:00"
+}
