@@ -4,8 +4,9 @@
   "aliases": [],
   "family": "qwen35",
   "min_shiso_version": "0.1.0",
-  "description": "Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions",
+  "description": "Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) and its vision tower, for /v1/systemone and /v1/decisions",
   "tags": [
+    "vision",
     "decision",
     "systemone"
   ],
@@ -14,7 +15,8 @@
   ],
   "modalities": {
     "inputs": [
-      "text"
+      "text",
+      "image"
     ],
     "outputs": [
       "text"
@@ -39,19 +41,25 @@
       "requirements": {
         "min_ram_bytes": 34359738368,
         "recommended_ram_bytes": 51539607552,
-        "disk_bytes": 19252222358
+        "disk_bytes": 20183368790
       },
       "components": {
         "base": {
           "provider": "huggingface",
           "repo": "ggml-org/Clef-GGUF",
-          "revision": "5f70656b6670c65eb85ad07a11efe211b5f211bd",
+          "revision": "d2aa75cb425ae922b5c3c15ef3157d417b7f7641",
           "entry": "Clef-Q4_K_M.gguf",
           "files": [
             {
               "name": "Clef-Q4_K_M.gguf",
-              "size": 19232219104,
-              "sha256": "3d16919ab2c7de7b5f3343e2e29cb31b12ba9f30eb6c6bbac257157f5a279c7a"
+              "size": 19232219200,
+              "sha256": "9997675e4c9e9016273372b5fdedbdda7ad14285bc722949e4b9daca62bf3822"
+            },
+            {
+              "name": "mmproj-Clef-BF16.gguf",
+              "size": 931146336,
+              "sha256": "cbcc18d1ae7354d843865dbc1c6b494d2d6204329973ee4567e9790548bdb0e4",
+              "binds": "vision"
             }
           ]
         },
