@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>clef · shiso hub</title>
-<meta name="description" content="Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions">
+<meta name="description" content="Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) and its vision tower, for /v1/systemone and /v1/decisions">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -25,10 +25,10 @@
   <div>
     <h1>clef</h1>
     
-    <p class="lede">Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) for /v1/systemone and /v1/decisions</p>
+    <p class="lede">Cloudflare Clef decision model (Qwen3.8-27B backbone with a joint schema head) and its vision tower, for /v1/systemone and /v1/decisions</p>
     <div class="pills">
       <span class="pill task">Decision</span>
-      <span class="pill soft">decision</span><span class="pill soft">systemone</span>
+      <span class="pill soft">vision</span><span class="pill soft">decision</span><span class="pill soft">systemone</span>
     </div>
   </div>
   <div class="quick">
@@ -44,12 +44,12 @@
     
     
     
-    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Input</dt><dd>text, image</dd></div>
     <div><dt>Output</dt><dd>text</dd></div>
     
     <div><dt>License</dt><dd>apache-2.0</dd></div>
     
-    <div><dt>Updated</dt><dd>2026-10-04</dd></div>
+    <div><dt>Updated</dt><dd>2026-10-12 <span class="muted">(first published 2026-10-04)</span></dd></div>
   </dl>
 </section>
 
@@ -65,7 +65,7 @@
         <td>Q4_K_M</td>
         <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
         <td class="num">32 GiB<span class="muted"> · 48 GiB rec.</span></td>
-        <td class="num">17.9 GiB</td>
+        <td class="num">18.8 GiB</td>
         <td>CUDA sm80+</td>
         <td><button class="copy small" data-copy="shiso pull clef" type="button" title="shiso pull clef">Copy pull</button></td>
       </tr>
@@ -88,16 +88,18 @@
   <h2 id="files">Files</h2>
   
   <details class="files">
-    <summary><code>q4_k_m</code> <span class="muted">17.9 GiB · 2 components</span></summary>
+    <summary><code>q4_k_m</code> <span class="muted">18.8 GiB · 2 components</span></summary>
     
     
-    <h3>base <a class="small" href="https://huggingface.co/ggml-org/Clef-GGUF/tree/5f70656b6670c65eb85ad07a11efe211b5f211bd" rel="noopener noreferrer">ggml-org/Clef-GGUF@5f70656b66</a></h3>
+    <h3>base <a class="small" href="https://huggingface.co/ggml-org/Clef-GGUF/tree/d2aa75cb425ae922b5c3c15ef3157d417b7f7641" rel="noopener noreferrer">ggml-org/Clef-GGUF@d2aa75cb42</a></h3>
     <div class="table-wrap">
     <table class="compact">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Clef-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">17.9 GiB</td><td><code title="3d16919ab2c7de7b5f3343e2e29cb31b12ba9f30eb6c6bbac257157f5a279c7a">3d16919ab2c7…</code></td></tr>
+        <tr><td><code>Clef-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">17.9 GiB</td><td><code title="9997675e4c9e9016273372b5fdedbdda7ad14285bc722949e4b9daca62bf3822">9997675e4c9e…</code></td></tr>
+      
+        <tr><td><code>mmproj-Clef-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="cbcc18d1ae7354d843865dbc1c6b494d2d6204329973ee4567e9790548bdb0e4">cbcc18d1ae73…</code></td></tr>
       
       </tbody>
     </table>
@@ -131,7 +133,7 @@
 
 <section>
   <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/ggml-org/Clef-GGUF/blob/5f70656b6670c65eb85ad07a11efe211b5f211bd/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <p class="hint">From <a href="https://huggingface.co/ggml-org/Clef-GGUF/blob/d2aa75cb425ae922b5c3c15ef3157d417b7f7641/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
   <article class="readme"><h1>Clef</h1>
 <p>Run with https://llama.app</p>
 <pre><code>llama serve -hf ggml-org/Clef-GGUF
