@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>d1-3b · shiso hub</title>
+<meta name="description" content="Liquid AI d1-3B decision model (LFM2.5-VL-3B backbone, answers read from the next-token row) and its vision tower, for /v1/systemone and /v1/decisions">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> d1-3b</nav>
+
+<section class="model-head">
+  <div>
+    <h1>d1-3b</h1>
+    
+    <p class="lede">Liquid AI d1-3B decision model (LFM2.5-VL-3B backbone, answers read from the next-token row) and its vision tower, for /v1/systemone and /v1/decisions</p>
+    <div class="pills">
+      <span class="pill task">Decision</span>
+      <span class="pill soft">vision</span><span class="pill soft">decision</span><span class="pill soft">systemone</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull d1-3b</code><button class="copy" data-copy="shiso pull d1-3b" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve d1-3b</code><button class="copy" data-copy="shiso serve d1-3b" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>lfm2</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    
+    <div><dt>License</dt><dd>other</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-13</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>q4_k_m</code></td>
+        <td>Q4_K_M</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">4 GiB<span class="muted"> · 8 GiB rec.</span></td>
+        <td class="num">2.1 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull d1-3b" type="button" title="shiso pull d1-3b">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>q8_0</code></td>
+        <td>Q8_0</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">6 GiB<span class="muted"> · 8 GiB rec.</span></td>
+        <td class="num">3.2 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull d1-3b:q8_0" type="button" title="shiso pull d1-3b:q8_0">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench d1-3b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>q4_k_m</code> <span class="muted">2.1 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/LiquidAI/d1-3B-GGUF/tree/bb1e436ea78eb96a3f1acb6da865f70c2fbeb563" rel="noopener noreferrer">LiquidAI/d1-3B-GGUF@bb1e436ea7</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>d1-3B-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.6 GiB</td><td><code title="16aff27ea2eefdc32b9897f43854a5d3170c1dc8dccb9c756905af30a4e22402">16aff27ea2ee…</code></td></tr>
+      
+        <tr><td><code>mmproj-d1-3B-Q8_0.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.5 GiB</td><td><code title="2505920ce464b7c54acd8b7b74a931c0c671f06d0c8833760b2fbceeb253e92a">2505920ce464…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/LiquidAI/d1-3B/tree/051bcc464b01b9f92942b364d9586b0ef5912432" rel="noopener noreferrer">LiquidAI/d1-3B@051bcc464b</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="86f4770449a4797c9b4212d110b0cc70fb993c1ce960095bcfb12eea22f61cca">86f4770449a4…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="0cbac0f580bd8036ef94ac83aa632a57a170e66d20f381ef47c3f6486c9a3e8c">0cbac0f580bd…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="8096ecb9f54599d756c8de728a598a340bc1e43c0deb77ddd62456c38349fcee">8096ecb9f545…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="ef6770d12dd9ac58d334e979bf160c5cdfd41f13d205fd5d5516857645feb0ea">ef6770d12dd9…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>q8_0</code> <span class="muted">3.2 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/LiquidAI/d1-3B-GGUF/tree/bb1e436ea78eb96a3f1acb6da865f70c2fbeb563" rel="noopener noreferrer">LiquidAI/d1-3B-GGUF@bb1e436ea7</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>d1-3B-Q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">2.7 GiB</td><td><code title="2f0942d5a5f64cf69c3356d2be439b71644b1f0eb3a580912a5a0179eeaba77d">2f0942d5a5f6…</code></td></tr>
+      
+        <tr><td><code>mmproj-d1-3B-Q8_0.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.5 GiB</td><td><code title="2505920ce464b7c54acd8b7b74a931c0c671f06d0c8833760b2fbceeb253e92a">2505920ce464…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/LiquidAI/d1-3B/tree/051bcc464b01b9f92942b364d9586b0ef5912432" rel="noopener noreferrer">LiquidAI/d1-3B@051bcc464b</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="86f4770449a4797c9b4212d110b0cc70fb993c1ce960095bcfb12eea22f61cca">86f4770449a4…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="0cbac0f580bd8036ef94ac83aa632a57a170e66d20f381ef47c3f6486c9a3e8c">0cbac0f580bd…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="8096ecb9f54599d756c8de728a598a340bc1e43c0deb77ddd62456c38349fcee">8096ecb9f545…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="ef6770d12dd9ac58d334e979bf160c5cdfd41f13d205fd5d5516857645feb0ea">ef6770d12dd9…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/d1-3b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/LiquidAI/d1-3B-GGUF/blob/bb1e436ea78eb96a3f1acb6da865f70c2fbeb563/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><div>
+  <img src="https://cdn-uploads.huggingface.co/production/uploads/61b8e2ba285851687028d395/2b08LKpev0DNEk6DlnWkY.png" alt="Liquid AI">
+  <div>
+    <a href="https://playground.liquid.ai/" rel="noopener noreferrer nofollow"><strong>Try LFM</strong></a> •
+    <a href="https://docs.liquid.ai/lfm/getting-started/welcome" rel="noopener noreferrer nofollow"><strong>Docs</strong></a> •
+    <a href="https://discord.com/invite/liquid-ai" rel="noopener noreferrer nofollow"><strong>Discord</strong></a>
+  </div>
+</div>
+<h1>d1-3B-GGUF</h1>
+<p>d1-3B is a decision model developed by <a href="https://www.liquid.ai/" rel="noopener noreferrer nofollow">Liquid AI</a>: it answers named, typed questions over a state (text, JSON or images) in one forward pass, with no generated tokens.</p>
+<p>Find more details in the original model card: https://huggingface.co/LiquidAI/d1-3B</p>
+<h2>🏃 How to run d1-3B</h2>
+<p>Example usage with <a href="https://github.com/ggml-org/llama.cpp" rel="noopener noreferrer nofollow">llama.cpp</a>:</p>
+<pre><code>llama-server -hf LiquidAI/d1-3B-GGUF:Q8_0
+</code></pre>
+<p>Then send questions to the <code>/v1/systemone</code> endpoint.</p>
+<h3>Text</h3>
+<pre><code>curl http://127.0.0.1:8080/v1/systemone -H "Content-Type: application/json" -d '{
+  "state": "I was charged twice this month, please refund one of them.",
+  "questions": {
+    "refund":  {"type": "noul", "instructions": "Is the customer asking for a refund?"},
+    "team":    {"type": "choice", "instructions": "Which team should handle this?",
+                "criteria": {"billing": "Charges, refunds, invoices", "technical": "App or site faults",
+                             "fraud": "Suspected unauthorised use"}},
+    "urgency": {"type": "score", "instructions": "How urgent is this?",
+                "criteria": ["Can wait", "Today", "Blocking the customer now"]}
+  }
+}'
+</code></pre>
+<h3>Image + Text</h3>
+<pre><code>curl -sL -o cats.jpg http://images.cocodataset.org/val2017/000000039769.jpg  # two cats on a sofa
+
+curl http://127.0.0.1:8080/v1/systemone -H "Content-Type: application/json" -d @- &lt;&lt;JSON
+{
+  "state": "Photo attached to a pet-sitting request.",
+  "images": ["data:image/jpeg;base64,$(base64 &lt; cats.jpg | tr -d '\n')"],
+  "questions": {
+    "pet":  {"type": "choice", "instructions": "Which animals are in the photo?",
+             "criteria": {"cats": "Cats", "dogs": "Dogs", "birds": "Birds"}},
+    "sofa": {"type": "noul", "instructions": "Are the animals on a sofa?"}
+  }
+}
+JSON
+</code></pre>
+<p>The state can be <code>null</code> when the images are the whole state.</p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

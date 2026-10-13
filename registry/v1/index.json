@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12T13:38:06.936397Z",
+  "generated_at": "2026-10-13T03:09:02.291578Z",
   "models": [
     {
       "name": "clef",
@@ -75,6 +75,51 @@
           "min_ram_bytes": 8589934592,
           "disk_bytes": 7428154320,
           "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "d1-3b",
+      "aliases": [],
+      "family": "lfm2",
+      "min_shiso_version": "0.2.2",
+      "description": "Liquid AI d1-3B decision model (LFM2.5-VL-3B backbone, answers read from the next-token row) and its vision tower, for /v1/systemone and /v1/decisions",
+      "tags": [
+        "vision",
+        "decision",
+        "systemone"
+      ],
+      "tasks": [
+        "decision"
+      ],
+      "inputs": [
+        "text",
+        "image"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-13T06:09:00+03:00",
+      "manifest": "models/d1-3b/index.json",
+      "manifest_sha256": "001d5d0a952814b1393c72f2c2d323d49b41b363784e243fb50994237be2a7ba",
+      "variants": [
+        {
+          "key": "q4_k_m",
+          "backends": [
+            "metal"
+          ],
+          "quant": "Q4_K_M",
+          "min_ram_bytes": 4294967296,
+          "disk_bytes": 2275480866
+        },
+        {
+          "key": "q8_0",
+          "backends": [
+            "metal"
+          ],
+          "quant": "Q8_0",
+          "min_ram_bytes": 6442450944,
+          "disk_bytes": 3475805474
         }
       ]
     },
