@@ -9,21 +9,21 @@
   "ram_bytes": 68719476736,
   "os": "macOS 27.0",
   "shiso_version": "0.2.2",
-  "measured_at": "2026-10-13T03:19:10.936912Z",
+  "measured_at": "2026-10-13T10:15:11.973282Z",
   "runs": 3,
   "context_length": 8192,
   "results": [
     {
       "kind": "decision",
       "prompt_tokens": 514,
-      "latency_ms": 586.76,
-      "prompt_tokens_per_second": 852.14
+      "latency_ms": 449.74,
+      "prompt_tokens_per_second": 1105.09
     },
     {
       "kind": "decision",
       "prompt_tokens": 4071,
-      "latency_ms": 13653.03,
-      "prompt_tokens_per_second": 298.18
+      "latency_ms": 7409.72,
+      "prompt_tokens_per_second": 549.41
     }
   ]
 }
