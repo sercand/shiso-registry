@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T03:09:02.291578Z",
+  "generated_at": "2026-10-13T10:32:03.210696Z",
   "models": [
     {
       "name": "clef",
@@ -99,19 +99,10 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-13T06:09:00+03:00",
+      "updated_at": "2026-10-13T13:32:01+03:00",
       "manifest": "models/d1-3b/index.json",
-      "manifest_sha256": "001d5d0a952814b1393c72f2c2d323d49b41b363784e243fb50994237be2a7ba",
+      "manifest_sha256": "e7301151f6982e11e00099b34df3cc1f0c6268674193c3c686f826c2cfc0f567",
       "variants": [
-        {
-          "key": "q4_k_m",
-          "backends": [
-            "metal"
-          ],
-          "quant": "Q4_K_M",
-          "min_ram_bytes": 4294967296,
-          "disk_bytes": 2275480866
-        },
         {
           "key": "q8_0",
           "backends": [
