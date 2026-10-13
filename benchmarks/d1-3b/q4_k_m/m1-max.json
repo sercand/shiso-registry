@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "model": "d1-3b",
+  "variant": "q4_k_m",
+  "variant_fingerprint": "87b0073b7c7d1c8a5a0a0fcf5f03f46ce6478d20a1dcb8324e664de894d07b52",
+  "device": "m1-max",
+  "chip": "Apple M1 Max",
+  "backend": "metal",
+  "ram_bytes": 68719476736,
+  "os": "macOS 27.0",
+  "shiso_version": "0.2.2",
+  "measured_at": "2026-10-13T03:21:01.187488Z",
+  "runs": 3,
+  "context_length": 8192,
+  "results": [
+    {
+      "kind": "decision",
+      "prompt_tokens": 514,
+      "latency_ms": 1674.09,
+      "prompt_tokens_per_second": 296.88
+    },
+    {
+      "kind": "decision",
+      "prompt_tokens": 4071,
+      "latency_ms": 17560.7,
+      "prompt_tokens_per_second": 228.69
+    }
+  ]
+}
