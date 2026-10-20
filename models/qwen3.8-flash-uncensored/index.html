@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwen3.8-flash-uncensored · shiso hub</title>
+<meta name="description" content="Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model&#39;s vision tower. Safety alignment is substantially removed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> qwen3.8-flash-uncensored</nav>
+
+<section class="model-head">
+  <div>
+    <h1>qwen3.8-flash-uncensored</h1>
+    <p class="aliases">also <code>qwen3.8-flash-next-uncensored</code></p>
+    <p class="lede">Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model&#39;s vision tower. Safety alignment is substantially removed</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull qwen3.8-flash-uncensored</code><button class="copy" data-copy="shiso pull qwen3.8-flash-uncensored" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve qwen3.8-flash-uncensored</code><button class="copy" data-copy="shiso serve qwen3.8-flash-uncensored" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen4exp</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>License</dt><dd>other</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-10-20 <span class="muted">(first published 2026-10-04)</span></dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>exl3-405</code></td>
+        <td>exl3-4.05bpw</td>
+        <td><span class="be be-cuda">cuda</span></td>
+        <td class="num">64 GiB</td>
+        <td class="num">102 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.8-flash-uncensored" type="button" title="shiso pull qwen3.8-flash-uncensored">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen3.8-flash-uncensored</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>exl3-405</code> <span class="muted">102 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>ctx = 262000</code>, <code>max_num_seqs = 4</code>, <code>spec_k = 4</code>, <code>spec_lookup = 8</code>, <code>capture_verify = true</code>, <code>capture_batch = true</code>, <code>gpu_memory_utilization = 0.88</code>, <code>solo_prefill_chunk = 4096</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/Lygodactylus/Qwen3.8-Flash-Next-Uncensored-exl3-4bpw/tree/9c715c0b1a745b7db1c335347e8d45595b3cad3a" rel="noopener noreferrer">Lygodactylus/Qwen3.8-Flash-Next-Uncensored-exl3-4bpw@9c715c0b1a</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="3a309c5f4892849cb92c57e7636f7fb2592a6835cb25edd20675f4c447d7f6a2">3a309c5f4892…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>merges.txt</code></td><td class="num">0 GiB</td><td><code title="a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d">a9d356d7bdf1…</code></td></tr>
+      
+        <tr><td><code>model-00001-of-00009.safetensors</code></td><td class="num">7.8 GiB</td><td><code title="abcc7f315f3436c3e47b0dd5b26fdd85f6ee324e2b07b64e84586da916e9d522">abcc7f315f34…</code></td></tr>
+      
+        <tr><td><code>model-00002-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="45d8be43f2ec076378464d3688eb6466178e4ce4c281fcb6dda449d88d0cdfd7">45d8be43f2ec…</code></td></tr>
+      
+        <tr><td><code>model-00003-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="1fa494485042a21894667a039c83de63e9ab661668422a70a2dd7aa261ddbe44">1fa494485042…</code></td></tr>
+      
+        <tr><td><code>model-00004-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="a66464efaa22a41b8c368c5b1202f8a9754b41fe2b2ee5a0dfe9898135103410">a66464efaa22…</code></td></tr>
+      
+        <tr><td><code>model-00005-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="bbef948b45dae500447e8aceb794ad9225eca81738795cc0acec576f4b3e5e3d">bbef948b45da…</code></td></tr>
+      
+        <tr><td><code>model-00006-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="1102f8b7aef81c46664873f613fd2360737bb98fd6010b91e9c55202ee26585b">1102f8b7aef8…</code></td></tr>
+      
+        <tr><td><code>model-00007-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="01d075e16ad6a9d6dd6f5938bb64039c35ae62b6a2302fe0e2f1d14948dc7600">01d075e16ad6…</code></td></tr>
+      
+        <tr><td><code>model-00008-of-00009.safetensors</code></td><td class="num">7.5 GiB</td><td><code title="f8f53bf2d0909ab8dfa66f67ab2a81f4f7c9db5e8db8cc19d54b54042a589186">f8f53bf2d090…</code></td></tr>
+      
+        <tr><td><code>model-00009-of-00009.safetensors</code></td><td class="num">5 GiB</td><td><code title="ae3f2dde5a71f4d0ba9124993f32a8be0ce8a3eb6dbdef280c82ba24e4a6feef">ae3f2dde5a71…</code></td></tr>
+      
+        <tr><td><code>model.safetensors.index.json</code></td><td class="num">0 GiB</td><td><code title="7d3d126046f3d5e569e0b39fc2165d9b05dffe4393d10018d64494e827a57703">7d3d126046f3…</code></td></tr>
+      
+        <tr><td><code>ngram_embedding.safetensors</code> <span class="pill soft">→ ngram</span></td><td class="num">36.4 GiB</td><td><code title="45237a092e234c7665999256966671c04419fa1e0b21f917689bd93eb7ffb3f1">45237a092e23…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>quantization_config.json</code></td><td class="num">0.1 GiB</td><td><code title="3f29b6714f8d472ae2b71713036ae1ebf0b5da9ce0e1db801b4c1f91740bf207">3f29b6714f8d…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27">b11349aafa7c…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+        <tr><td><code>vocab.json</code></td><td class="num">0 GiB</td><td><code title="ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003">ce99b4cb2983…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>draft_vocab <a class="small" href="../../registry/v1/models/qwen3.8-flash-uncensored/draft_vocab_en_tr_code.txt" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>draft_vocab_en_tr_code.txt</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="f6371cfff16e83c2202fb237744f225620dc78063f8bd69995e438f2c6264d41">f6371cfff16e…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>vision <a class="small" href="https://huggingface.co/turboderp/Qwen3.8-Flash-Next-exl3/tree/55a732e0c4c3d4614bc42b68493bb930d9b02c0a" rel="noopener noreferrer">turboderp/Qwen3.8-Flash-Next-exl3@55a732e0c4</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="2ff43c0d52242195071dbb6b190f358eaf74d54ba64abdd780d4776c102ed719">2ff43c0d5224…</code></td></tr>
+      
+        <tr><td><code>vision_k6.safetensors</code> <span class="pill soft">entry</span></td><td class="num">0.5 GiB</td><td><code title="04a66385d96ee7015dab2202615de786319d6219cd70b5208ef00f363b34b620">04a66385d96e…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/qwen3.8-flash-uncensored/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/Lygodactylus/Qwen3.8-Flash-Next-Uncensored-exl3-4bpw/blob/9c715c0b1a745b7db1c335347e8d45595b3cad3a/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><p>
+  <img src="https://cdn-uploads.huggingface.co/production/uploads/67fcdd9530700089d649ed6e/xHG-9ipsnpjtplgIU2aWr.png" width="200" alt="Qwen3.8-Flash-Next-Uncensored EXL3">
+</p>
+<h1>Qwen3.8-Flash-Next-Uncensored — EXL3 4.05 bpw</h1>
+<p>EXL3 quantization of
+<a href="https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored" rel="noopener noreferrer nofollow">orcarouter/Qwen3.8-Flash-Next-Uncensored</a>,
+an abliterated (refusal-removed) build of Qwen/Qwen3.8-Flash-Next.
+Built with <a href="https://github.com/turboderp-org/exllamav3" rel="noopener noreferrer nofollow">ExLlamaV3</a> 1.4.6.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Size on disk</td><td>102 GB</td></tr>
+<tr><td>Language model</td><td>4.05 bpw</td></tr>
+<tr><td><code>lm_head</code></td><td>6 bpw</td></tr>
+<tr><td>MTP layers</td><td>8 bpw</td></tr>
+<tr><td>n-gram (PLE) tables</td><td>6 bpw</td></tr>
+<tr><td>Vision tower</td><td>unquantized (16-bit)</td></tr>
+<tr><td>VRAM when loaded</td><td>~66 GB (FP16 cache) / ~71 GB (8-bit cache, 1.4.8)</td></tr>
+</tbody></table>
+<h2>Config</h2>
+<pre><code>model:
+  model_name: Qwen3.8-Flash-Next-Uncensored-exl3-4bpw
+  cache_size: 16384
+  ngram_ram: true
+  tensor_parallel: false  # true needs ExLlamaV3 1.5.1+
+
+draft_model:
+  draft_mode: mtp
+</code></pre>
+<p><strong><code>tensor_parallel</code> needs ExLlamaV3 1.5.1 or later</strong> for
+<code>Qwen4ExpForConditionalGeneration</code> (QSA layers are not split). On earlier
+versions it fails with <code>NotImplementedError: Tensor-parallel is not currently implemented for Qwen4ExpForConditionalGeneration</code> and you must use autosplit.
+Not tested on my side.</p>
+<p><strong>Cache quantization needs ExLlamaV3 ≥ 1.4.8.</strong> Below that, <code>cache_mode</code>
+other than FP16 is rejected with <code>QSA attention currently supports only the fp16 cache layer</code>. On 1.4.8 <code>"8,8"</code> loads fine — but it buys nothing here:
+the KV cache is ~2 kB per token per attention layer, so a few hundred MB at
+16k context. VRAM went <em>up</em> (66 → 71 GB) with the new expandable-segment
+allocator, and throughput moved &lt;5%. Use FP16 unless you have a reason not
+to.</p>
+<p><code>ngram_ram: true</code> loads the n-gram table into system RAM instead of
+streaming it from disk per forward.</p>
+<p>MTP is preserved; TabbyAPI logs <code>Using main model MTP component for drafting</code> on load.</p>
+<h2>Conversion</h2>
+<pre><code>python convert.py \
+  -i Qwen3.8-Flash-Next-Uncensored \
+  -o Qwen3.8-Flash-Next-Uncensored-exl3-4bpw \
+  -w /tmp/exl3-work \
+  -b 4.05 -hb 6 -ngb 6 -mb 8 -vb 16 \
+  -d 0,1,2,3 -v
+</code></pre>
+<p>Default calibration corpus, 250 rows x 2048 columns.</p>
+<h2>Measurements</h2>
+<p>4x RTX 4000 Ada (20 GiB, sm89), PCIe, no NVLink, 2x Xeon Gold 5318Y.
+ExLlamaV3 1.4.6 + TabbyAPI, autosplit, MTP on, FP16 cache. AIPerf,
+streaming, <code>ignore_eos</code>, seed 42, with warmup.</p>
+<p>ISL 1000 / OSL 500 / concurrency 4 / 20 requests:</p>
+<table><thead><tr><th>Metric</th><th>value</th></tr></thead><tbody>
+<tr><td>Request latency</td><td>25,508 ms</td></tr>
+<tr><td>Inter-token latency</td><td>46.6 ms</td></tr>
+<tr><td>Time to first token</td><td>2,484 ms</td></tr>
+<tr><td>Output throughput</td><td>76 tok/s</td></tr>
+</tbody></table>
+<p>Same run on 1.4.8 with an 8-bit cache: 26,129 ms / 47.1 ms / 2,620 ms /
+73 tok/s.</p>
+<p>ISL 8000 / OSL 200 / concurrency 2 / 12 requests:</p>
+<table><thead><tr><th>Metric</th><th>value</th></tr></thead><tbody>
+<tr><td>Time to first token</td><td>12,724 ms</td></tr>
+<tr><td>Active prefill</td><td>760 tok/s</td></tr>
+<tr><td>Inter-token latency</td><td>37.3 ms</td></tr>
+<tr><td>Request latency</td><td>19,957 ms</td></tr>
+</tbody></table>
+<p>Single stream via <code>chat.py</code>: 34.5 tok/s with MTP (70% acceptance on code),
+20.8 tok/s without.</p>
+<p>Same box and tooling, my EXL3 6.0bpw of the dense
+<a href="https://huggingface.co/Lygodactylus/Qwen3.8-27B-Uncensored-exl3-6bpw" rel="noopener noreferrer nofollow">Qwen3.8-27B-Uncensored</a>
+gives 20,816 ms / 35.0 ms ITL / 91 tok/s on the first run.</p>
+<p>20 requests per run, so gaps under ~5% are noise.</p>
+<h2>Quality</h2>
+<p>Not benchmarked at 4.05 bpw. Abliteration figures are orcarouter's, measured
+on the BF16 source, not on this quant.</p>
+<h2>Safety</h2>
+<p>Safety alignment has been substantially removed via abliteration. It will
+comply with requests the original Qwen3.8-Flash-Next refuses, and has no
+meaningful built-in guardrails. Add your own moderation layer before any
+deployment.</p>
+<h2>License</h2>
+<p>Qwen Community License 1.0, inherited from Qwen/Qwen3.8-Flash-Next.</p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
