@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-20T13:24:54.510822614Z",
+  "generated_at": "2026-10-23T10:51:22.402081Z",
   "models": [
     {
       "name": "clef",
@@ -495,6 +495,40 @@
           "quant": "exl3-4.05bpw",
           "min_ram_bytes": 68719476736,
           "disk_bytes": 109685410201
+        }
+      ]
+    },
+    {
+      "name": "smollm2-135m-decision",
+      "aliases": [],
+      "family": "llama",
+      "min_shiso_version": "0.2.4",
+      "description": "SmolLM2-135M-Instruct fine-tuned as a Clef decision model (dense llama backbone with a joint schema head), for /v1/systemone and /v1/decisions",
+      "tags": [
+        "decision",
+        "systemone"
+      ],
+      "tasks": [
+        "decision"
+      ],
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-10-23T13:51:20+03:00",
+      "manifest": "models/smollm2-135m-decision/index.json",
+      "manifest_sha256": "db3e7b7cd985c6c519dad8295f15ea57c4476c4f068b243248c9593fbd334802",
+      "variants": [
+        {
+          "key": "q8_0",
+          "backends": [
+            "metal"
+          ],
+          "quant": "Q8_0",
+          "min_ram_bytes": 2147483648,
+          "disk_bytes": 176100588
         }
       ]
     },
