@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "name": "smollm2-135m-decision",
+  "aliases": [],
+  "family": "llama",
+  "min_shiso_version": "0.2.4",
+  "description": "SmolLM2-135M-Instruct fine-tuned as a Clef decision model (dense llama backbone with a joint schema head), for /v1/systemone and /v1/decisions",
+  "tags": [
+    "decision",
+    "systemone"
+  ],
+  "tasks": [
+    "decision"
+  ],
+  "modalities": {
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "reasoning_efforts": [],
+    "default_reasoning_effort": null,
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "q8_0",
+      "backends": [
+        "metal"
+      ],
+      "quant": "Q8_0",
+      "requirements": {
+        "min_ram_bytes": 2147483648,
+        "recommended_ram_bytes": 4294967296,
+        "disk_bytes": 176100588
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "sercand/SmolLM2-135M-Instruct",
+          "revision": "432f97d64918756e7bf48dcb639c30f21f4a8c1d",
+          "entry": "SmolLM2-135M-Instruct-clef-Q8_0.gguf",
+          "files": [
+            {
+              "name": "SmolLM2-135M-Instruct-clef-Q8_0.gguf",
+              "size": 172572256,
+              "sha256": "35d670cc57bcfccd7bd1898627146d808f9f97adc04738794e89fbf0dc9c9f2a"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "sercand/SmolLM2-135M-Instruct",
+          "revision": "432f97d64918756e7bf48dcb639c30f21f4a8c1d",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "config.json",
+              "size": 941,
+              "sha256": "653cf58b3dcaef04a581486f154e96ed6e36c9987f21e39ef6921e0aa995e310"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 158,
+              "sha256": "afb4d81568aa62eee418471ca6973ce906e0d21c1737aa3a6a4c697e00872e8d"
+            },
+            {
+              "name": "special_tokens_map.json",
+              "size": 423,
+              "sha256": "8d39b597d486de3dd50200e067b418cb42ed5fd9b9fd0b4cfd8871eae9c65e1c"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 3522845,
+              "sha256": "66bfc9a0d05ad54eef8e1f906d77fd37663e8a51eb1c56b44d2e4227448f91fb"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 3965,
+              "sha256": "bf4e0fd676862c396f9c6317c11fe3b395dc1f8fd5e6b48265d4a8d39e500588"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "published_at": "2026-10-23T13:51:20+03:00",
+  "updated_at": "2026-10-23T13:51:20+03:00"
+}

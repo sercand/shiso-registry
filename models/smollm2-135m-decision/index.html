@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smollm2-135m-decision · shiso hub</title>
+<meta name="description" content="SmolLM2-135M-Instruct fine-tuned as a Clef decision model (dense llama backbone with a joint schema head), for /v1/systemone and /v1/decisions">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> smollm2-135m-decision</nav>
+
+<section class="model-head">
+  <div>
+    <h1>smollm2-135m-decision</h1>
+    
+    <p class="lede">SmolLM2-135M-Instruct fine-tuned as a Clef decision model (dense llama backbone with a joint schema head), for /v1/systemone and /v1/decisions</p>
+    <div class="pills">
+      <span class="pill task">Decision</span>
+      <span class="pill soft">decision</span><span class="pill soft">systemone</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull smollm2-135m-decision</code><button class="copy" data-copy="shiso pull smollm2-135m-decision" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve smollm2-135m-decision</code><button class="copy" data-copy="shiso serve smollm2-135m-decision" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>llama</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    
+    
+    
+    <div><dt>Updated</dt><dd>2026-10-23</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>q8_0</code></td>
+        <td>Q8_0</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">2 GiB<span class="muted"> · 4 GiB rec.</span></td>
+        <td class="num">0.2 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull smollm2-135m-decision" type="button" title="shiso pull smollm2-135m-decision">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench smollm2-135m-decision</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>q8_0</code> <span class="muted">0.2 GiB · 2 components</span></summary>
+    
+    
+    <h3>base <a class="small" href="https://huggingface.co/sercand/SmolLM2-135M-Instruct/tree/432f97d64918756e7bf48dcb639c30f21f4a8c1d" rel="noopener noreferrer">sercand/SmolLM2-135M-Instruct@432f97d649</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>SmolLM2-135M-Instruct-clef-Q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">0.2 GiB</td><td><code title="35d670cc57bcfccd7bd1898627146d808f9f97adc04738794e89fbf0dc9c9f2a">35d670cc57bc…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/sercand/SmolLM2-135M-Instruct/tree/432f97d64918756e7bf48dcb639c30f21f4a8c1d" rel="noopener noreferrer">sercand/SmolLM2-135M-Instruct@432f97d649</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="653cf58b3dcaef04a581486f154e96ed6e36c9987f21e39ef6921e0aa995e310">653cf58b3dca…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="afb4d81568aa62eee418471ca6973ce906e0d21c1737aa3a6a4c697e00872e8d">afb4d81568aa…</code></td></tr>
+      
+        <tr><td><code>special_tokens_map.json</code></td><td class="num">0 GiB</td><td><code title="8d39b597d486de3dd50200e067b418cb42ed5fd9b9fd0b4cfd8871eae9c65e1c">8d39b597d486…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="66bfc9a0d05ad54eef8e1f906d77fd37663e8a51eb1c56b44d2e4227448f91fb">66bfc9a0d05a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="bf4e0fd676862c396f9c6317c11fe3b395dc1f8fd5e6b48265d4a8d39e500588">bf4e0fd67686…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/smollm2-135m-decision/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/sercand/SmolLM2-135M-Instruct/blob/432f97d64918756e7bf48dcb639c30f21f4a8c1d/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>SmolLM2-135M-Instruct (decision model)</h1>
+<p>Fine-tuned from <code>unsloth/SmolLM2-135M-Instruct</code> (QLoRA, 3 epochs) with a Clef-style joint decision head
+(held-out accuracy 0.8715, ECE 0.0284; see <code>unsloth_decision_config.json</code>).</p>
+<ul>
+<li><code>model.safetensors</code>, <code>joint_head.safetensors</code>, <code>joint_head_config.json</code>: full bf16 checkpoint.</li>
+<li><code>SmolLM2-135M-Instruct-clef-Q8_0.gguf</code>: backbone and head in one GGUF, architecture name <code>clef</code>, produced by <code>convert_clef_llama.py</code>.
+<ul>
+<li>Backbone is a stock Llama (q/k kept in the half-split rotary layout (not llama.cpp's permuted one)). Tied embeddings: there is no <code>output.weight</code>, use <code>token_embd.weight</code>.</li>
+<li>Large linears are Q8_0. Norms, biases, <code>token_types</code>, <code>decision.scorer_out</code> and <code>decision.scales</code> stay F32.</li>
+<li>Head tensors use the <code>dec.blk.N</code> / <code>decision.*</code> layout of llama.cpp's <code>conversion/clef.py</code>.</li>
+<li><strong>Not loadable by llama.cpp</strong>: its <code>clef</code> arch assumes a Qwen3.5 backbone. Intended for the shiso engine.</li>
+</ul>
+</li>
+</ul>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
