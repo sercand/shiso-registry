@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "name": "qwen3.5-4b-glb-3d-coder",
+  "aliases": [
+    "glb-3d-coder"
+  ],
+  "family": "qwen35",
+  "min_shiso_version": "0.2.5",
+  "description": "Qwen3.5-4B fine-tune that writes game assets as one standalone Three.js HTML file with a GLB export, for Godot. Early preview checkpoint; ships the base model's vision tower",
+  "tags": [
+    "vision",
+    "code"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "medium"
+    ],
+    "default_reasoning_effort": "medium",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "q4_k_m",
+      "backends": [
+        "metal"
+      ],
+      "quant": "Q4_K_M",
+      "requirements": {
+        "min_ram_bytes": 8589934592,
+        "recommended_ram_bytes": 17179869184,
+        "disk_bytes": 3397209374
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "ccore/Qwen3.5-4B-GLB-3D-Coder",
+          "revision": "541152f42ceb889252554ad6d569f7142e3ed5c3",
+          "entry": "Qwen3.5-4B-GLB-3D-Coder-Q4_K_M.gguf",
+          "files": [
+            {
+              "name": "Qwen3.5-4B-GLB-3D-Coder-Q4_K_M.gguf",
+              "size": 2708804128,
+              "sha256": "91328e3f6d0aff4c05c59168fe455d98cf3952c888f322693566192b230a661f"
+            },
+            {
+              "name": "mmproj-Qwen3.5-4B-BF16.gguf",
+              "size": 675568768,
+              "sha256": "ae08d9d7eceb8f2d0672d61b5e6aa78b611f2942b55ed71d21414980cc454b91",
+              "binds": "vision"
+            }
+          ]
+        },
+        "generation_config": {
+          "provider": "shiso",
+          "entry": "generation_config.json",
+          "files": [
+            {
+              "name": "generation_config.json",
+              "size": 94,
+              "sha256": "4233c076a5743afc52ce534bcdae64a18beedf36ae8e9c5dfba76c8a6e887d7c"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen3.5-4B",
+          "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "config.json",
+              "size": 3161,
+              "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "ctx": 32768,
+        "kv_cache_tokens": 98304
+      }
+    },
+    {
+      "key": "q8_0",
+      "backends": [
+        "metal"
+      ],
+      "quant": "Q8_0",
+      "requirements": {
+        "min_ram_bytes": 8589934592,
+        "recommended_ram_bytes": 17179869184,
+        "disk_bytes": 5170808094
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "ccore/Qwen3.5-4B-GLB-3D-Coder",
+          "revision": "541152f42ceb889252554ad6d569f7142e3ed5c3",
+          "entry": "Qwen3.5-4B-GLB-3D-Coder-Q8_0.gguf",
+          "files": [
+            {
+              "name": "Qwen3.5-4B-GLB-3D-Coder-Q8_0.gguf",
+              "size": 4482402848,
+              "sha256": "901f7eabc4612120908aa922c4fa8d2a3559bf186bfb1bbddcf631687778eb56"
+            },
+            {
+              "name": "mmproj-Qwen3.5-4B-BF16.gguf",
+              "size": 675568768,
+              "sha256": "ae08d9d7eceb8f2d0672d61b5e6aa78b611f2942b55ed71d21414980cc454b91",
+              "binds": "vision"
+            }
+          ]
+        },
+        "generation_config": {
+          "provider": "shiso",
+          "entry": "generation_config.json",
+          "files": [
+            {
+              "name": "generation_config.json",
+              "size": 94,
+              "sha256": "4233c076a5743afc52ce534bcdae64a18beedf36ae8e9c5dfba76c8a6e887d7c"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen3.5-4B",
+          "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "config.json",
+              "size": 3161,
+              "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "ctx": 32768,
+        "max_num_seqs": 2,
+        "kv_cache_tokens": 65536
+      }
+    }
+  ],
+  "published_at": "2026-11-03T15:18:23.989059Z",
+  "updated_at": "2026-11-03T15:18:23.989059Z"
+}

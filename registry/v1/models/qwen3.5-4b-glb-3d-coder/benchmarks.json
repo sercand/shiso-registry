@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "model": "qwen3.5-4b-glb-3d-coder",
+  "records": [
+    {
+      "schema_version": 1,
+      "model": "qwen3.5-4b-glb-3d-coder",
+      "variant": "q4_k_m",
+      "variant_fingerprint": "56bb97785b918cb1b406200f581a3eae8068ddb3cbf4ab308e8fcb608c2a43de",
+      "device": "m4",
+      "chip": "Apple M4",
+      "backend": "metal",
+      "ram_bytes": 17179869184,
+      "os": "macOS 26.6.2",
+      "shiso_version": "0.2.2",
+      "measured_at": "2026-11-03T15:07:32.000204Z",
+      "runs": 3,
+      "context_length": 32768,
+      "results": [
+        {
+          "kind": "chat",
+          "prompt_tokens": 516,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 345.25,
+          "decode_tokens_per_second": 29.44,
+          "time_to_first_token_ms": 1439.55
+        },
+        {
+          "kind": "chat",
+          "prompt_tokens": 4086,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 336.38,
+          "decode_tokens_per_second": 28.24,
+          "time_to_first_token_ms": 12146.9
+        }
+      ],
+      "notes": "split-K decode attention, simdgroup-matrix prefill attention, two-row q4_K matvec (unreleased branch)",
+      "stale": false
+    },
+    {
+      "schema_version": 1,
+      "model": "qwen3.5-4b-glb-3d-coder",
+      "variant": "q8_0",
+      "variant_fingerprint": "92e757fbcc8952c035f7117f6d83e87c8a733b295b30a65c53714e61bb8651bb",
+      "device": "m4",
+      "chip": "Apple M4",
+      "backend": "metal",
+      "ram_bytes": 17179869184,
+      "os": "macOS 26.6.2",
+      "shiso_version": "0.2.2",
+      "measured_at": "2026-11-03T15:14:47.610075Z",
+      "runs": 3,
+      "context_length": 32768,
+      "results": [
+        {
+          "kind": "chat",
+          "prompt_tokens": 516,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 365.2,
+          "decode_tokens_per_second": 21.05,
+          "time_to_first_token_ms": 1366.64
+        },
+        {
+          "kind": "chat",
+          "prompt_tokens": 4086,
+          "decode_tokens": 128,
+          "prefill_tokens_per_second": 357.2,
+          "decode_tokens_per_second": 20.47,
+          "time_to_first_token_ms": 11439.1
+        }
+      ],
+      "notes": "split-K decode attention, simdgroup-matrix prefill attention, two-row q4_K matvec (unreleased branch)",
+      "stale": false
+    }
+  ]
+}

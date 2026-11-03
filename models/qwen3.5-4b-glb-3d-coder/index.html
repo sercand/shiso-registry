@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwen3.5-4b-glb-3d-coder · shiso hub</title>
+<meta name="description" content="Qwen3.5-4B fine-tune that writes game assets as one standalone Three.js HTML file with a GLB export, for Godot. Early preview checkpoint; ships the base model&#39;s vision tower">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> qwen3.5-4b-glb-3d-coder</nav>
+
+<section class="model-head">
+  <div>
+    <h1>qwen3.5-4b-glb-3d-coder</h1>
+    <p class="aliases">also <code>glb-3d-coder</code></p>
+    <p class="lede">Qwen3.5-4B fine-tune that writes game assets as one standalone Three.js HTML file with a GLB export, for Godot. Early preview checkpoint; ships the base model&#39;s vision tower</p>
+    <div class="pills">
+      <span class="pill task">Chat</span>
+      <span class="pill soft">vision</span><span class="pill soft">code</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull qwen3.5-4b-glb-3d-coder</code><button class="copy" data-copy="shiso pull qwen3.5-4b-glb-3d-coder" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve qwen3.5-4b-glb-3d-coder</code><button class="copy" data-copy="shiso serve qwen3.5-4b-glb-3d-coder" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>qwen35</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Reasoning <span class="muted">(effort: none, medium)</span></dd></div>
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-11-03</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>q4_k_m</code></td>
+        <td>Q4_K_M</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td class="num">3.2 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.5-4b-glb-3d-coder" type="button" title="shiso pull qwen3.5-4b-glb-3d-coder">Copy pull</button></td>
+      </tr>
+    
+      <tr>
+        <td><code>q8_0</code></td>
+        <td>Q8_0</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td class="num">4.8 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull qwen3.5-4b-glb-3d-coder:q8_0" type="button" title="shiso pull qwen3.5-4b-glb-3d-coder:q8_0">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  
+  
+  <p class="hint">Batch 1, recipe defaults. Prefill comes from the time to first token; decode is tokens a second after it.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Prefill tok/s</th><th class="num">Decode tok/s</th><th class="num">TTFT ms</th><th>Measured</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td rowspan="2"><strong>m4</strong><div class="muted small">Apple M4 · 16 GiB · metal</div></td>
+        <td rowspan="2"><code>q4_k_m</code></td>
+        <td class="">516</td><td class="num">345</td><td class="num strong">29.4</td><td class="num">1440</td>
+        <td rowspan="2">2026-11-03<div class="muted small">shiso 0.2.2 · 3 runs · ctx 32K</div><div class="muted small">split-K decode attention, simdgroup-matrix prefill attention, two-row q4_K matvec (unreleased branch)</div></td>
+      </tr>
+    
+      <tr>
+        
+        <td class="">4086</td><td class="num">336</td><td class="num strong">28.2</td><td class="num">12147</td>
+        
+      </tr>
+    
+      <tr>
+        <td rowspan="2"><strong>m4</strong><div class="muted small">Apple M4 · 16 GiB · metal</div></td>
+        <td rowspan="2"><code>q8_0</code></td>
+        <td class="">516</td><td class="num">365</td><td class="num strong">21.1</td><td class="num">1367</td>
+        <td rowspan="2">2026-11-03<div class="muted small">shiso 0.2.2 · 3 runs · ctx 32K</div><div class="muted small">split-K decode attention, simdgroup-matrix prefill attention, two-row q4_K matvec (unreleased branch)</div></td>
+      </tr>
+    
+      <tr>
+        
+        <td class="">4086</td><td class="num">357</td><td class="num strong">20.5</td><td class="num">11439</td>
+        
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+  
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>q4_k_m</code> <span class="muted">3.2 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>ctx = 32768</code>, <code>kv_cache_tokens = 98304</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/tree/541152f42ceb889252554ad6d569f7142e3ed5c3" rel="noopener noreferrer">ccore/Qwen3.5-4B-GLB-3D-Coder@541152f42c</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.5-4B-GLB-3D-Coder-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">2.5 GiB</td><td><code title="91328e3f6d0aff4c05c59168fe455d98cf3952c888f322693566192b230a661f">91328e3f6d0a…</code></td></tr>
+      
+        <tr><td><code>mmproj-Qwen3.5-4B-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.6 GiB</td><td><code title="ae08d9d7eceb8f2d0672d61b5e6aa78b611f2942b55ed71d21414980cc454b91">ae08d9d7eceb…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>generation_config <a class="small" href="../../registry/v1/models/qwen3.5-4b-glb-3d-coder/generation_config.json" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>generation_config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="4233c076a5743afc52ce534bcdae64a18beedf36ae8e9c5dfba76c8a6e887d7c">4233c076a574…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a" rel="noopener noreferrer">Qwen/Qwen3.5-4B@851bf6e806</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670">ddc63e1c717a…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42">5f9e4d4901a9…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8">316230d6a809…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <details class="files">
+    <summary><code>q8_0</code> <span class="muted">4.8 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>ctx = 32768</code>, <code>max_num_seqs = 2</code>, <code>kv_cache_tokens = 65536</code></p>
+    
+    <h3>base <a class="small" href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/tree/541152f42ceb889252554ad6d569f7142e3ed5c3" rel="noopener noreferrer">ccore/Qwen3.5-4B-GLB-3D-Coder@541152f42c</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>Qwen3.5-4B-GLB-3D-Coder-Q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">4.2 GiB</td><td><code title="901f7eabc4612120908aa922c4fa8d2a3559bf186bfb1bbddcf631687778eb56">901f7eabc461…</code></td></tr>
+      
+        <tr><td><code>mmproj-Qwen3.5-4B-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.6 GiB</td><td><code title="ae08d9d7eceb8f2d0672d61b5e6aa78b611f2942b55ed71d21414980cc454b91">ae08d9d7eceb…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>generation_config <a class="small" href="../../registry/v1/models/qwen3.5-4b-glb-3d-coder/generation_config.json" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>generation_config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="4233c076a5743afc52ce534bcdae64a18beedf36ae8e9c5dfba76c8a6e887d7c">4233c076a574…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>config <a class="small" href="https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a" rel="noopener noreferrer">Qwen/Qwen3.5-4B@851bf6e806</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670">ddc63e1c717a…</code></td></tr>
+      
+        <tr><td><code>preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516">27225450ac9c…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42">5f9e4d4901a9…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8">316230d6a809…</code></td></tr>
+      
+        <tr><td><code>video_preprocessor_config.json</code></td><td class="num">0 GiB</td><td><code title="7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13">7768af27c1fa…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/qwen3.5-4b-glb-3d-coder/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/blob/541152f42ceb889252554ad6d569f7142e3ed5c3/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>Qwen3.5-4B-GLB-3D-Coder</h1>
+<h3>Early preview · Create 3D scenes and assets you can export as GLB</h3>
+<p>A small <strong>4B coding model</strong> being trained to generate <strong>Three.js scenes and assets with GLB export</strong>, so you can bring the results into editors such as <strong>Godot</strong>.</p>
+<p>This is an independent model by <strong>CCORE</strong>, based on <a href="https://huggingface.co/Qwen/Qwen3.5-4B" rel="noopener noreferrer nofollow">Qwen/Qwen3.5-4B</a>. It is not an official Qwen release.</p>
+<p><strong>Dataset release update:</strong> The training dataset will be released tomorrow, <strong>November 3</strong>. Training is still in progress: I’ve extended the run to aim for a stronger checkpoint than the current preview.</p>
+<h2>Community showcase: A 3D RPG built with GLB-3D-Coder!</h2>
+<p>One of the coolest things about releasing this model is seeing what people are building with it!</p>
+<p><strong>Naoki Kishida (@kis)</strong> created a <strong>playable 3D RPG demo using assets generated with GLB-3D-Coder</strong>.</p>
+<p>It's a great example of what I had in mind when developing this model: generating reusable 3D assets that can be used in games and interactive environments.</p>
+<p><a href="https://kishida.github.io/webdemos/rpg-3d-glb/" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/community-rpg-naoki-kishida.gif" alt="Gameplay from Naoki Kishida's 3D RPG demo, featuring assets generated with GLB-3D-Coder"></a></p>
+<p><a href="https://kishida.github.io/webdemos/rpg-3d-glb/" rel="noopener noreferrer nofollow"><strong>Play the 3D RPG demo</strong></a></p>
+<p>Huge thanks to <strong>@kis</strong> for experimenting with the model and sharing this project with the community!</p>
+<h2>Latest checkpoint update</h2>
+<p><strong>Updated November 2, 2026 at 04:50 UTC.</strong></p>
+<p>Both <strong>Q4_K_M</strong> and <strong>Q8_0</strong> have been replaced with a newer checkpoint. In my latest tests, <strong>generation quality has improved substantially</strong> over the previous preview. The gallery below now shows new results, including the exported assets imported into <strong>Godot</strong>.</p>
+<p><strong>If you downloaded either GGUF before the UTC timestamp above, delete the old weights from LM Studio or whichever app you use and download them again. The filenames have not changed, so make sure you are loading the updated files.</strong></p>
+<p><strong>The optional vision projector is now included</strong> for image-reference inputs; see <a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/#optional-vision-support" rel="noopener noreferrer nofollow">Optional vision support</a> below.</p>
+<p>The <strong>sampling settings and system prompt remain unchanged</strong>. Training is still running, and the full Safetensors weights and training dataset will follow once it finishes.</p>
+<h2>Preview status and release plans</h2>
+<p>This is an <strong>updated preview</strong> from the ongoing training run. Training is still in progress. Once training finishes, I plan to release the <strong>full Safetensors weights and the training dataset</strong>, just as I did with the previous 3D Coder release.</p>
+<p>In my tests, the model already generates useful scenes and assets, and <strong>most generations work on the first attempt</strong>, especially with <strong>English prompts</strong>. Some generations still need another attempt or a correction.</p>
+<p>I am releasing this preview so people can start experimenting while training continues. I expect quality to improve with later checkpoints, and feedback on both successful results and failures is welcome.</p>
+<h2>Training domains and prompt ideas</h2>
+<p>The training dataset for this GLB model spans <strong>25 game-asset domains</strong>. The examples below are <strong>prompt ideas to try</strong> in these areas. Use the <a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/#system-prompt" rel="noopener noreferrer nofollow">system prompt</a>, then send a short English request describing the asset you want.</p>
+<table><thead><tr><th>Domain represented in the training data</th><th>Example prompt to try</th></tr></thead><tbody>
+<tr><td>Characters and NPCs</td><td><code>Create a village blacksmith wearing a blue apron.</code></td></tr>
+<tr><td>Enemies</td><td><code>Create a swamp goblin scout with a wooden shield.</code></td></tr>
+<tr><td>Bosses</td><td><code>Create a stone golem boss with glowing green crystals.</code></td></tr>
+<tr><td>Companions and creatures</td><td><code>Create a tiny fox companion wearing a red scarf.</code></td></tr>
+<tr><td>Weapons and armor</td><td><code>Create a short iron sword with a leather-wrapped grip.</code></td></tr>
+<tr><td>Items, tools, and pickups</td><td><code>Create a blue mana potion in a hexagonal glass bottle.</code></td></tr>
+<tr><td>Props and furniture</td><td><code>Create a weathered wooden workbench with a small lantern.</code></td></tr>
+<tr><td>Nature and environment</td><td><code>Create a pine tree growing on a rocky mound.</code></td></tr>
+<tr><td>Modular architecture</td><td><code>Create a stone dungeon doorway module with an iron frame.</code></td></tr>
+<tr><td>Interactive objects</td><td><code>Create a wooden gate with an opening animation.</code></td></tr>
+<tr><td>Ground transport</td><td><code>Create a compact courier motorcycle with cargo boxes.</code></td></tr>
+<tr><td>Air and space transport</td><td><code>Create a small cargo airship with twin propellers.</code></td></tr>
+<tr><td>Watercraft</td><td><code>Create a weathered fishing skiff with nets and wooden crates.</code></td></tr>
+<tr><td>Industrial machinery</td><td><code>Create a compact mining conveyor with metal support legs.</code></td></tr>
+<tr><td>Laboratory and medical assets</td><td><code>Create a portable botanical analysis station with sample jars.</code></td></tr>
+<tr><td>Urban services</td><td><code>Create a modern bus stop with a bench and route sign.</code></td></tr>
+<tr><td>Sports and playgrounds</td><td><code>Create a small playground climbing wall with colorful holds.</code></td></tr>
+<tr><td>Farming and homestead</td><td><code>Create an orchard harvest cart filled with wooden fruit crates.</code></td></tr>
+<tr><td>Cuisine and markets</td><td><code>Create a bakery display counter with bread baskets.</code></td></tr>
+<tr><td>Museums and field research</td><td><code>Create an ancient artifact display case on a stone pedestal.</code></td></tr>
+<tr><td>Traps and hazards</td><td><code>Create a hidden spiked floor trap with stone tiles.</code></td></tr>
+<tr><td>Festivals and ceremonies</td><td><code>Create a harvest festival booth with colorful banners.</code></td></tr>
+<tr><td>Battlefield scenery</td><td><code>Create a reinforced frontier command post with sandbag defenses.</code></td></tr>
+<tr><td>Underwater structures</td><td><code>Create a coral observation dome with a small docking platform.</code></td></tr>
+<tr><td>Puzzles and gameplay markers</td><td><code>Create a glowing rune sequence console with three stone buttons.</code></td></tr>
+</tbody></table>
+<p>You can vary the style, setting, materials, colors, and details. For assets that need movement, explicitly request the animation; the system prompt asks for it to be included in the exported GLB.</p>
+<h2>From a prompt to a GLB asset</h2>
+<p>Describe the scene or asset you want. The model generates HTML/JavaScript that builds it in Three.js, with a GLB export option. Open the generated scene, export the asset, and import the <code>.glb</code> file into your editor.</p>
+<p>The screenshots below show generated assets in the browser and exported assets imported into <strong>Godot</strong>.</p>
+<p><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/godot-imported-assets-01.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/godot-imported-assets-01.png" alt="New checkpoint assets exported as GLB and imported into Godot"></a></p>
+<h2>Example results — updated checkpoint</h2>
+<p><strong>The assets below were generated by this updated GLB-3D-Coder checkpoint using prompts that were not used in its training.</strong> These example prompts are not included in the training dataset I plan to release.</p>
+<p>The captions show the user prompts used for these examples. Short English prompts are enough; use the system prompt listed below.</p>
+<table><thead><tr><th>Jungle siege platform</th><th>Weathered snow siege platform</th></tr></thead><tbody>
+<tr><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/jungle-siege-platform.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/jungle-siege-platform.png" alt="Jungle siege platform generated by the updated checkpoint"></a></td><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/snow-siege-platform.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/snow-siege-platform.png" alt="Weathered snow siege platform generated by the updated checkpoint"></a></td></tr>
+<tr><td><strong>Prompt:</strong> <code>Build a jungle siege platform</code></td><td><strong>Prompt:</strong> <code>Build a weathered snow siege platform</code></td></tr>
+<tr><td><strong>Blue goblin brute</strong></td><td><strong>Red orc leader</strong></td></tr>
+<tr><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/blue-goblin-brute.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/blue-goblin-brute.png" alt="Blue goblin brute generated by the updated checkpoint"></a></td><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/red-orc-leader.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/red-orc-leader.png" alt="Red orc leader generated by the updated checkpoint"></a></td></tr>
+<tr><td><strong>Prompt:</strong> <code>Create a blue goblin brute</code></td><td><strong>Prompt:</strong> <code>Create a red orc Leader</code></td></tr>
+<tr><td><strong>Reinforced mountain command post — result 1</strong></td><td><strong>Reinforced mountain command post — result 2</strong></td></tr>
+<tr><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/mountain-command-post-01.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/mountain-command-post-01.png" alt="Reinforced mountain command post, first example"></a></td><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/mountain-command-post-02.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/mountain-command-post-02.png" alt="Reinforced mountain command post, second example"></a></td></tr>
+<tr><td><strong>Prompt:</strong> <code>Make a reinforced montain command post</code></td><td><strong>Same prompt:</strong> <code>Make a reinforced montain command post</code></td></tr>
+</tbody></table>
+<h3>Exported assets in Godot</h3>
+<p>The images named <strong>Godot</strong> show how the exported GLB assets look after import into the Godot editor.</p>
+<p><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/godot-imported-assets-02.png" rel="noopener noreferrer nofollow"><img src="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/images/godot-imported-assets-02.png" alt="Updated checkpoint assets after import into the Godot editor"></a></p>
+<p>Click any image to view it at full size.</p>
+<h2>Available GGUF files</h2>
+<table><thead><tr><th>Quantization</th><th>File</th></tr></thead><tbody>
+<tr><td>Q8_0</td><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/Qwen3.5-4B-GLB-3D-Coder-Q8_0.gguf" rel="noopener noreferrer nofollow">Qwen3.5-4B-GLB-3D-Coder-Q8_0.gguf</a></td></tr>
+<tr><td>Q4_K_M</td><td><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/541152f42ceb889252554ad6d569f7142e3ed5c3/Qwen3.5-4B-GLB-3D-Coder-Q4_K_M.gguf" rel="noopener noreferrer nofollow">Qwen3.5-4B-GLB-3D-Coder-Q4_K_M.gguf</a></td></tr>
+</tbody></table>
+<p>The full Safetensors weights and training dataset will follow when training is complete.</p>
+<h2>Optional vision support</h2>
+<p>For <strong>image-reference inputs</strong> in a runtime that supports Qwen3.5 multimodal GGUF, download the optional vision encoder/projector and load it alongside the model:</p>
+<p><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/resolve/main/mmproj-Qwen3.5-4B-BF16.gguf?download=true" rel="noopener noreferrer nofollow"><strong>Download mmproj-Qwen3.5-4B-BF16.gguf</strong></a> — approximately <strong>644 MiB</strong>.</p>
+<p><strong>The same projector is used with either Q4_K_M or Q8_0.</strong> It is an optional companion file for image inputs; it is not needed for text-only prompts.</p>
+<p>This is the <strong>original, unmodified Qwen3.5-4B BF16 vision encoder/projector</strong>, also provided with <a href="https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/blob/main/mmproj-Qwen3.5-4B-BF16.gguf" rel="noopener noreferrer nofollow">CCORE's previous 3D Coder model</a>. It comes from <a href="https://huggingface.co/lmstudio-community/Qwen3.5-4B-GGUF/tree/f9f88ac3e234be915e23811a6d28ea287bdb927e" rel="noopener noreferrer nofollow">lmstudio-community/Qwen3.5-4B-GGUF</a>, based on <a href="https://huggingface.co/Qwen/Qwen3.5-4B" rel="noopener noreferrer nofollow">Qwen/Qwen3.5-4B</a>, under Apache 2.0.</p>
+<h2>Generation settings</h2>
+<p>These are the settings I am currently using:</p>
+<table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
+<tr><td>Temperature</td><td><strong>0.8</strong></td></tr>
+<tr><td>Top K</td><td><strong>40</strong></td></tr>
+<tr><td>Top P</td><td><strong>0.95</strong></td></tr>
+<tr><td>Min P</td><td><strong>0.0</strong></td></tr>
+</tbody></table>
+<p>This is a preview, and these settings are a starting point. Feel free to test other combinations and share your results.</p>
+<h2>System prompt</h2>
+<p>Use the following as the system message, then send your asset request as the user message.</p>
+<pre><code>Create game assets for the Godot editor, which uses GLB files. Create whatever the user requests as a good-quality low-poly asset using only Three.js in one complete standalone HTML file. The HTML must show the asset and include an Export GLB button that downloads a working GLB. If the requested asset needs animation, add it and include the animation in the exported GLB; otherwise make it static.
+</code></pre>
+<h2>Current limitations</h2>
+<ul>
+<li>Some generations can need a retry or a small code correction.</li>
+<li>English prompts currently work better in my tests.</li>
+<li>This is an early checkpoint, and behavior may change as training progresses.</li>
+</ul>
+<p>Please share what you create, which settings you use, and any issues you find. Community testing will help guide the next updates.</p>
+<h2>❤️ Support Future Open-Source AI Models</h2>
+<p>I'm independently developing and releasing specialized AI models and datasets for 3D generation, procedural environments, and creative coding, with the goal of making these tools accessible to everyone.</p>
+<p>Training new models, generating high-quality datasets, validating thousands of examples, and running experiments require significant GPU resources, time, and effort.</p>
+<p><strong>If you enjoy this project and would like to help me train more models, expand the datasets, and explore new capabilities, any contribution is greatly appreciated!</strong></p>
+<p>My goal is to keep sharing models, weights, datasets, and improvements openly with the community.</p>
+<h3>☕ Support via Ko-fi</h3>
+<p><a href="https://ko-fi.com/ccorecaio" rel="noopener noreferrer nofollow">https://ko-fi.com/ccorecaio</a></p>
+<h3>Crypto Donations</h3>
+<p><strong>Bitcoin (BTC) — Bitcoin Network (SegWit)</strong></p>
+<p><code>bc1qr2gnr9g0uzk8rmsq0k6xpjgg4l7r0rfyrq69e6</code></p>
+<p><strong>Ethereum (ETH) — Ethereum Mainnet (ERC20)</strong></p>
+<p><code>0xa17608FCdeAd9e717Cd42e04127175527b4E75CB</code></p>
+<p><strong>Solana (SOL / USDC / USDT) — Solana Network</strong></p>
+<p><code>GhNmYmezKi1uWGKZeVxgddjiRW2rYNHZrf84ZaMcnha</code></p>
+<p>Every contribution helps fund more GPU compute, better datasets, new training runs, and future public releases.</p>
+<p><strong>Thank you for supporting independent open-source AI research!</strong></p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
