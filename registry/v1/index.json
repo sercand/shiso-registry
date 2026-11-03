@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T10:51:22.402081Z",
+  "generated_at": "2026-11-03T15:18:24.194492Z",
   "models": [
     {
       "name": "clef",
@@ -382,6 +382,53 @@
           "min_ram_bytes": 8589934592,
           "disk_bytes": 3426197888,
           "min_cuda_sm": 80
+        }
+      ]
+    },
+    {
+      "name": "qwen3.5-4b-glb-3d-coder",
+      "aliases": [
+        "glb-3d-coder"
+      ],
+      "family": "qwen35",
+      "min_shiso_version": "0.2.5",
+      "description": "Qwen3.5-4B fine-tune that writes game assets as one standalone Three.js HTML file with a GLB export, for Godot. Early preview checkpoint; ships the base model's vision tower",
+      "tags": [
+        "vision",
+        "code"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-11-03T15:18:23.989059Z",
+      "manifest": "models/qwen3.5-4b-glb-3d-coder/index.json",
+      "manifest_sha256": "a4f0c1da8967046717bac6ff49427c765a6ceea2db98257071300e0c5bf2122b",
+      "variants": [
+        {
+          "key": "q4_k_m",
+          "backends": [
+            "metal"
+          ],
+          "quant": "Q4_K_M",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 3397209374
+        },
+        {
+          "key": "q8_0",
+          "backends": [
+            "metal"
+          ],
+          "quant": "Q8_0",
+          "min_ram_bytes": 8589934592,
+          "disk_bytes": 5170808094
         }
       ]
     },
