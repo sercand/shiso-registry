@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>qwen3.8-flash-uncensored · shiso hub</title>
-<meta name="description" content="Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model&#39;s vision tower. Safety alignment is substantially removed">
+<meta name="description" content="Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, DFlash 2 block drafter and the base model&#39;s vision tower. Safety alignment is substantially removed">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
   <div>
     <h1>qwen3.8-flash-uncensored</h1>
     <p class="aliases">also <code>qwen3.8-flash-next-uncensored</code></p>
-    <p class="lede">Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model&#39;s vision tower. Safety alignment is substantially removed</p>
+    <p class="lede">Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, DFlash 2 block drafter and the base model&#39;s vision tower. Safety alignment is substantially removed</p>
     <div class="pills">
       <span class="pill task">Chat</span>
       
@@ -49,7 +49,7 @@
     <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
     <div><dt>License</dt><dd>other</dd></div>
     
-    <div><dt>Updated</dt><dd>2026-10-20 <span class="muted">(first published 2026-10-04)</span></dd></div>
+    <div><dt>Updated</dt><dd>2026-11-03 <span class="muted">(first published 2026-10-04)</span></dd></div>
   </dl>
 </section>
 
@@ -89,7 +89,7 @@
   
   <details class="files">
     <summary><code>exl3-405</code> <span class="muted">102 GiB · 3 components</span></summary>
-    <p class="small">Server defaults: <code>ctx = 262000</code>, <code>max_num_seqs = 4</code>, <code>spec_k = 4</code>, <code>spec_lookup = 8</code>, <code>capture_verify = true</code>, <code>capture_batch = true</code>, <code>gpu_memory_utilization = 0.88</code>, <code>solo_prefill_chunk = 4096</code></p>
+    <p class="small">Server defaults: <code>ctx = 262000</code>, <code>max_num_seqs = 4</code>, <code>spec_k = 7</code>, <code>spec_lookup = 8</code>, <code>spec_confidence = 0.5</code>, <code>capture_verify = true</code>, <code>capture_batch = true</code>, <code>gpu_memory_utilization = 0.88</code>, <code>solo_prefill_chunk = 4096</code></p>
     
     <h3>base <a class="small" href="https://huggingface.co/Lygodactylus/Qwen3.8-Flash-Next-Uncensored-exl3-4bpw/tree/9c715c0b1a745b7db1c335347e8d45595b3cad3a" rel="noopener noreferrer">Lygodactylus/Qwen3.8-Flash-Next-Uncensored-exl3-4bpw@9c715c0b1a</a></h3>
     <div class="table-wrap">
@@ -143,13 +143,13 @@
     </table>
     </div>
     
-    <h3>draft_vocab <a class="small" href="../../registry/v1/models/qwen3.8-flash-uncensored/draft_vocab_en_tr_code.txt" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <h3>draft <a class="small" href="https://huggingface.co/nazeshinjite/Qwen3.8-Flash-Next-DFlash2-GGUF/tree/cbe1b23f1466458b9d839f6cbaef7d3b52d8cc9b" rel="noopener noreferrer">nazeshinjite/Qwen3.8-Flash-Next-DFlash2-GGUF@cbe1b23f14</a></h3>
     <div class="table-wrap">
     <table class="compact">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>draft_vocab_en_tr_code.txt</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="f6371cfff16e83c2202fb237744f225620dc78063f8bd69995e438f2c6264d41">f6371cfff16e…</code></td></tr>
+        <tr><td><code>Qwen3.8-Flash-Next-DFlash2-Q4_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">0.3 GiB</td><td><code title="459ab2b234895060ea5a07714341a0cf548a00e57c9ab0d068cc89c5c5ac19c7">459ab2b23489…</code></td></tr>
       
       </tbody>
     </table>

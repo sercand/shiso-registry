@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T15:18:24.194492Z",
+  "generated_at": "2026-11-03T16:17:58.129240617Z",
   "models": [
     {
       "name": "clef",
@@ -516,8 +516,8 @@
         "qwen3.8-flash-next-uncensored"
       ],
       "family": "qwen4exp",
-      "min_shiso_version": "0.2.3",
-      "description": "Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model's vision tower. Safety alignment is substantially removed",
+      "min_shiso_version": "0.2.5",
+      "description": "Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, DFlash 2 block drafter and the base model's vision tower. Safety alignment is substantially removed",
       "tags": [],
       "tasks": [
         "chat"
@@ -530,9 +530,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-10-20T16:24:40+03:00",
+      "updated_at": "2026-11-03T19:17:03+03:00",
       "manifest": "models/qwen3.8-flash-uncensored/index.json",
-      "manifest_sha256": "20c27082e5ae6fc1df5be395cc654d2db260dbf79b616d95916d8a7cc073a8b5",
+      "manifest_sha256": "7d04a94ec778ed8395d0c1f75e4c3e7f5bba13877d19e02360cfddf4f9b54cb5",
       "variants": [
         {
           "key": "exl3-405",
@@ -541,7 +541,7 @@
           ],
           "quant": "exl3-4.05bpw",
           "min_ram_bytes": 68719476736,
-          "disk_bytes": 109685410201
+          "disk_bytes": 110035045724
         }
       ]
     },

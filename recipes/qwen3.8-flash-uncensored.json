@@ -5,8 +5,8 @@
     "qwen3.8-flash-next-uncensored"
   ],
   "family": "qwen4exp",
-  "min_shiso_version": "0.2.3",
-  "description": "Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, built-in MTP draft head and the base model's vision tower. Safety alignment is substantially removed",
+  "min_shiso_version": "0.2.5",
+  "description": "Abliterated (refusal-removed) Qwen3.8-Flash-Next: sparse hybrid-attention MoE with n-gram embeddings, DFlash 2 block drafter and the base model's vision tower. Safety alignment is substantially removed",
   "tags": [],
   "tasks": [
     "chat"
@@ -43,7 +43,7 @@
       "requires": {},
       "requirements": {
         "min_ram_bytes": 68719476736,
-        "disk_bytes": 109685410201
+        "disk_bytes": 110035045724
       },
       "components": {
         "base": {
@@ -177,14 +177,16 @@
             }
           ]
         },
-        "draft_vocab": {
-          "provider": "shiso",
-          "entry": "draft_vocab_en_tr_code.txt",
+        "draft": {
+          "provider": "huggingface",
+          "repo": "nazeshinjite/Qwen3.8-Flash-Next-DFlash2-GGUF",
+          "revision": "cbe1b23f1466458b9d839f6cbaef7d3b52d8cc9b",
+          "entry": "Qwen3.8-Flash-Next-DFlash2-Q4_0.gguf",
           "files": [
             {
-              "name": "draft_vocab_en_tr_code.txt",
-              "size": 999997,
-              "sha256": "f6371cfff16e83c2202fb237744f225620dc78063f8bd69995e438f2c6264d41"
+              "name": "Qwen3.8-Flash-Next-DFlash2-Q4_0.gguf",
+              "size": 350635520,
+              "sha256": "459ab2b234895060ea5a07714341a0cf548a00e57c9ab0d068cc89c5c5ac19c7"
             }
           ]
         }
@@ -192,12 +194,13 @@
       "server_defaults": {
         "ctx": 262000,
         "max_num_seqs": 4,
-        "spec_k": 4,
+        "spec_k": 7,
         "spec_lookup": 8,
         "capture_verify": true,
         "capture_batch": true,
         "gpu_memory_utilization": 0.88,
-        "solo_prefill_chunk": 4096
+        "solo_prefill_chunk": 4096,
+        "spec_confidence": 0.5
       }
     }
   ]
