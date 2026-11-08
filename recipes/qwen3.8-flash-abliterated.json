@@ -54,7 +54,7 @@
         "base": {
           "provider": "huggingface",
           "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
-          "revision": "0000000000000000000000000000000000000000",
+          "revision": "2524ee85acb3f57aaf9c7fa8da3f73504bb49621",
           "entry": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00004.gguf",
           "files": [
             {
@@ -114,7 +114,7 @@
         "draft": {
           "provider": "huggingface",
           "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
-          "revision": "0000000000000000000000000000000000000000",
+          "revision": "2524ee85acb3f57aaf9c7fa8da3f73504bb49621",
           "entry": "MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf",
           "files": [
             {
@@ -139,7 +139,7 @@
     "card": {
       "provider": "huggingface",
       "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
-      "revision": "0000000000000000000000000000000000000000"
+      "revision": "2524ee85acb3f57aaf9c7fa8da3f73504bb49621"
     }
   }
 }
