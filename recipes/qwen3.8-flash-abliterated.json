@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "name": "qwen3.8-flash-abliterated",
+  "aliases": [
+    "qwen3.8-flash-next-abliterated"
+  ],
+  "family": "qwen4exp",
+  "min_shiso_version": "0.3.0",
+  "description": "Qwen3.8-Flash-Next with the refusal direction removed in the quantized codes of Unsloth's UD-IQ3_XXS; MTP draft head and vision projector included",
+  "tags": [
+    "abliterated",
+    "uncensored",
+    "vision",
+    "tools"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
+    ],
+    "default_reasoning_effort": "medium",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "metal-ud-iq3-xxs",
+      "backends": [
+        "metal"
+      ],
+      "quant": "UD-IQ3_XXS",
+      "requires": {},
+      "requirements": {
+        "min_ram_bytes": 68719476736,
+        "disk_bytes": 87329842960
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
+          "revision": "0000000000000000000000000000000000000000",
+          "entry": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00004.gguf",
+          "files": [
+            {
+              "name": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00004.gguf",
+              "size": 10945641,
+              "sha256": "8209c24dcce2562e0c2467f0466c387c80f84219ffd3c6d0a95c5384c0112a61"
+            },
+            {
+              "name": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00002-of-00004.gguf",
+              "size": 49946027488,
+              "sha256": "198a6ca9ab576ad0946a9591a36256b8f16a21d290d10180ced4902984dc4f27"
+            },
+            {
+              "name": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00003-of-00004.gguf",
+              "size": 4869325888,
+              "sha256": "be5740f908a9e11d5b56467ca2b636423b41f689e69cdfe3f0cae9b484ab4c9f"
+            },
+            {
+              "name": "UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00004-of-00004.gguf",
+              "size": 28800138432,
+              "sha256": "5de8b5dbf89409acc39468decafd4a4a95b13c29d88a14b0356107897829ec36"
+            },
+            {
+              "name": "config.json",
+              "size": 4745,
+              "sha256": "889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b",
+              "binds": "config"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 9984,
+              "sha256": "207c03c41a06a9c3b0cc527d8a56115159c1eac6b59a4ffae85b646e773d074e"
+            },
+            {
+              "name": "chat_template.jinja",
+              "size": 9004,
+              "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "mmproj-F16.gguf",
+              "size": 904004000,
+              "sha256": "1f7b7f0b984cf065c604360c29c8098362ed61b290db0ff12c6f360bb1a8a980",
+              "binds": "vision"
+            }
+          ]
+        },
+        "draft": {
+          "provider": "huggingface",
+          "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
+          "revision": "0000000000000000000000000000000000000000",
+          "entry": "MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf",
+          "files": [
+            {
+              "name": "MTP/mtp-Qwen3.8-Flash-Next-shared-Q8_0.gguf",
+              "size": 2786568256,
+              "sha256": "56cc32ea8ce831305f1040bd6f5a59e3ba828df565b396d2b4efd2c904e1b62c"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "ctx": 32768,
+        "max_num_seqs": 1,
+        "spec_k": 2,
+        "expert_residency": "stream"
+      }
+    }
+  ],
+  "info": {
+    "publisher": "Qwen",
+    "license": "qwen-community-1.0",
+    "card": {
+      "provider": "huggingface",
+      "repo": "sercand/Qwen3.8-Flash-Next-Abliterated-GGUF",
+      "revision": "0000000000000000000000000000000000000000"
+    }
+  }
+}
