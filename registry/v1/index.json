@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T16:17:58.129240617Z",
+  "generated_at": "2026-11-11T17:48:59.154127Z",
   "models": [
     {
       "name": "clef",
@@ -230,6 +230,41 @@
       ]
     },
     {
+      "name": "idol",
+      "aliases": [],
+      "family": "idol",
+      "min_shiso_version": "0.2.5",
+      "description": "Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License",
+      "tags": [
+        "3d",
+        "gaussian-splatting",
+        "image-to-3d"
+      ],
+      "tasks": [
+        "splat_generation"
+      ],
+      "inputs": [
+        "image"
+      ],
+      "outputs": [
+        "3d"
+      ],
+      "updated_at": "2026-11-11T20:48:44+03:00",
+      "manifest": "models/idol/index.json",
+      "manifest_sha256": "557f38061d16f05e18a103744cf44ceb50672e84b0ed05fea506b2c2e3f15f69",
+      "variants": [
+        {
+          "key": "f32",
+          "backends": [
+            "metal"
+          ],
+          "quant": "f32",
+          "min_ram_bytes": 17179869184,
+          "disk_bytes": 6609195628
+        }
+      ]
+    },
+    {
       "name": "qwen-image-2.1-turbo",
       "aliases": [
         "qwen-image-2.1"
@@ -408,9 +443,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-11-03T15:18:23.989059Z",
+      "updated_at": "2026-11-03T18:29:08+03:00",
       "manifest": "models/qwen3.5-4b-glb-3d-coder/index.json",
-      "manifest_sha256": "a4f0c1da8967046717bac6ff49427c765a6ceea2db98257071300e0c5bf2122b",
+      "manifest_sha256": "3b60869128a88f3f24b73f7081587f70f14dfa2a13f438390d9a85fc645e3528",
       "variants": [
         {
           "key": "q4_k_m",
@@ -530,9 +565,9 @@
       "outputs": [
         "text"
       ],
-      "updated_at": "2026-11-03T19:17:03+03:00",
+      "updated_at": "2026-11-03T22:04:45+03:00",
       "manifest": "models/qwen3.8-flash-uncensored/index.json",
-      "manifest_sha256": "7d04a94ec778ed8395d0c1f75e4c3e7f5bba13877d19e02360cfddf4f9b54cb5",
+      "manifest_sha256": "fedbf032928f7edad02c3032119efd3fa321ab8041491484a5dd609157c37d7f",
       "variants": [
         {
           "key": "exl3-405",
