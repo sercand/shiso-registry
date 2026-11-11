@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "name": "idol",
+  "aliases": [],
+  "family": "idol",
+  "min_shiso_version": "0.2.5",
+  "description": "Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License",
+  "tags": [
+    "3d",
+    "gaussian-splatting",
+    "image-to-3d"
+  ],
+  "tasks": [
+    "splat_generation"
+  ],
+  "modalities": {
+    "inputs": [
+      "image"
+    ],
+    "outputs": [
+      "3d"
+    ]
+  },
+  "features": {
+    "tools": false,
+    "reasoning": false,
+    "structured_output": false
+  },
+  "info": {
+    "publisher": "speridlabs",
+    "license": "apache-2.0",
+    "homepage": "https://speridlabs.com/research/idol",
+    "card": {
+      "provider": "huggingface",
+      "repo": "speridlabs/idol",
+      "revision": "2731c2291fc65a797c5cb627a5e5526fc1490902"
+    },
+    "parameters": 658700000
+  },
+  "variants": [
+    {
+      "key": "f32",
+      "backends": [
+        "metal"
+      ],
+      "quant": "f32",
+      "requirements": {
+        "min_ram_bytes": 17179869184,
+        "recommended_ram_bytes": 25769803776,
+        "disk_bytes": 6609195628
+      },
+      "components": {
+        "splat": {
+          "provider": "huggingface",
+          "repo": "speridlabs/idol",
+          "revision": "2731c2291fc65a797c5cb627a5e5526fc1490902",
+          "files": [
+            {
+              "name": "config.json",
+              "size": 1335,
+              "sha256": "ddd89dcc6dcf4a5ac8d951b8c59afa1eceafe377615c5912c59f4e1f5ae35b32"
+            },
+            {
+              "name": "denoiser.safetensors",
+              "size": 1482258308,
+              "sha256": "ded2cacf671bf3978ebc62729087abdbd318ef4752e6805b4c9fc8ffa51fe716"
+            },
+            {
+              "name": "decoder.safetensors",
+              "size": 203171696,
+              "sha256": "9da4d7676bfcadb1c3fdfbff796e6257dadf82d26ec05be7717c79b2b13a1c4e"
+            },
+            {
+              "name": "decoder_gs.safetensors",
+              "size": 949083036,
+              "sha256": "3087eb8ee5763206a53e4078acf2a1bf382dab5147d407ec13a2cf39c04cc544"
+            },
+            {
+              "name": "birefnet.safetensors",
+              "size": 444466856,
+              "sha256": "44bbc97b041f879975d0d6d538b8e66a25eb04d1f49aab40697544cdd97eaa8e"
+            }
+          ]
+        },
+        "splat_encoder": {
+          "provider": "huggingface",
+          "repo": "timm/vit_huge_plus_patch16_dinov3.lvd1689m",
+          "revision": "dd0addc09788111fa893d24799a44744ba022eee",
+          "files": [
+            {
+              "name": "config.json",
+              "size": 675,
+              "sha256": "c22d89c036033b9f22445c136e6e050a27dd7f3bff26566b9dad0c66c9c84a83"
+            },
+            {
+              "name": "model.safetensors",
+              "size": 3362084520,
+              "sha256": "0d54131c846c91a78ec7641482f32e45b27cb4895f83653c038f305f18c7e61c"
+            },
+            {
+              "name": "LICENSE.md",
+              "size": 7503,
+              "sha256": "25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e"
+            }
+          ]
+        },
+        "splat_vae": {
+          "provider": "huggingface",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+          "files": [
+            {
+              "name": "vae/config.json",
+              "size": 821,
+              "sha256": "0d6dfb69ae95a5e2ac9836284bbb63d8b38ce67b25ba2dff380752b2a10ab948"
+            },
+            {
+              "name": "vae/diffusion_pytorch_model.safetensors",
+              "size": 168120878,
+              "sha256": "ca70d2202afe6415bdbcb8793ba8cd99fd159cfe6192381504d6c4d3036e0f04"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "splat_default_steps": 25,
+        "splat_refresh_every": 2
+      }
+    }
+  ]
+}
