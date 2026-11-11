@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>idol · shiso hub</title>
+<meta name="description" content="Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
+    <nav class="top-nav">
+      <a href="../../">Models</a>
+      <a href="../../registry/v1/index.json">Index JSON</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> idol</nav>
+
+<section class="model-head">
+  <div>
+    <h1>idol</h1>
+    
+    <p class="lede">Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License</p>
+    <div class="pills">
+      <span class="pill task">Splat generation</span>
+      <span class="pill soft">3d</span><span class="pill soft">gaussian-splatting</span><span class="pill soft">image-to-3d</span>
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd"><code>shiso pull idol</code><button class="copy" data-copy="shiso pull idol" type="button">Copy</button></div>
+    <div class="cmd"><code>shiso serve idol</code><button class="copy" data-copy="shiso serve idol" type="button">Copy</button></div>
+    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="sheet">
+  <dl class="spec">
+    <div><dt>Family</dt><dd>idol</dd></div>
+    <div><dt>Publisher</dt><dd>speridlabs</dd></div>
+    <div><dt>Parameters</dt><dd>658.7M</dd></div>
+    
+    <div><dt>Input</dt><dd>image</dd></div>
+    <div><dt>Output</dt><dd>3d</dd></div>
+    
+    <div><dt>License</dt><dd>apache-2.0</dd></div>
+    <div><dt>Homepage</dt><dd><a href="https://speridlabs.com/research/idol" rel="noopener noreferrer">https://speridlabs.com/research/idol</a></dd></div>
+    <div><dt>Updated</dt><dd>2026-11-11</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2 id="variants">Variants</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>f32</code></td>
+        <td>f32</td>
+        <td><span class="be be-metal">metal</span></td>
+        <td class="num">16 GiB<span class="muted"> · 24 GiB rec.</span></td>
+        <td class="num">6.2 GiB</td>
+        <td>—</td>
+        <td><button class="copy small" data-copy="shiso pull idol" type="button" title="shiso pull idol">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="benchmarks">Throughput</h2>
+  
+  <p class="muted">Not measured yet. Run <code>shiso-registry bench idol</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section>
+  <h2 id="files">Files</h2>
+  
+  <details class="files">
+    <summary><code>f32</code> <span class="muted">6.2 GiB · 3 components</span></summary>
+    <p class="small">Server defaults: <code>splat_default_steps = 25</code>, <code>splat_refresh_every = 2</code></p>
+    
+    <h3>splat <a class="small" href="https://huggingface.co/speridlabs/idol/tree/2731c2291fc65a797c5cb627a5e5526fc1490902" rel="noopener noreferrer">speridlabs/idol@2731c2291f</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="ddd89dcc6dcf4a5ac8d951b8c59afa1eceafe377615c5912c59f4e1f5ae35b32">ddd89dcc6dcf…</code></td></tr>
+      
+        <tr><td><code>denoiser.safetensors</code></td><td class="num">1.4 GiB</td><td><code title="ded2cacf671bf3978ebc62729087abdbd318ef4752e6805b4c9fc8ffa51fe716">ded2cacf671b…</code></td></tr>
+      
+        <tr><td><code>decoder.safetensors</code></td><td class="num">0.2 GiB</td><td><code title="9da4d7676bfcadb1c3fdfbff796e6257dadf82d26ec05be7717c79b2b13a1c4e">9da4d7676bfc…</code></td></tr>
+      
+        <tr><td><code>decoder_gs.safetensors</code></td><td class="num">0.9 GiB</td><td><code title="3087eb8ee5763206a53e4078acf2a1bf382dab5147d407ec13a2cf39c04cc544">3087eb8ee576…</code></td></tr>
+      
+        <tr><td><code>birefnet.safetensors</code></td><td class="num">0.4 GiB</td><td><code title="44bbc97b041f879975d0d6d538b8e66a25eb04d1f49aab40697544cdd97eaa8e">44bbc97b041f…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>splat_encoder <a class="small" href="https://huggingface.co/timm/vit_huge_plus_patch16_dinov3.lvd1689m/tree/dd0addc09788111fa893d24799a44744ba022eee" rel="noopener noreferrer">timm/vit_huge_plus_patch16_dinov3.lvd1689m@dd0addc097</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>config.json</code></td><td class="num">0 GiB</td><td><code title="c22d89c036033b9f22445c136e6e050a27dd7f3bff26566b9dad0c66c9c84a83">c22d89c03603…</code></td></tr>
+      
+        <tr><td><code>model.safetensors</code></td><td class="num">3.1 GiB</td><td><code title="0d54131c846c91a78ec7641482f32e45b27cb4895f83653c038f305f18c7e61c">0d54131c846c…</code></td></tr>
+      
+        <tr><td><code>LICENSE.md</code></td><td class="num">0 GiB</td><td><code title="25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e">25d122eb8f5b…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3>splat_vae <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
+    <div class="table-wrap">
+    <table class="compact">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>vae/config.json</code></td><td class="num">0 GiB</td><td><code title="0d6dfb69ae95a5e2ac9836284bbb63d8b38ce67b25ba2dff380752b2a10ab948">0d6dfb69ae95…</code></td></tr>
+      
+        <tr><td><code>vae/diffusion_pytorch_model.safetensors</code></td><td class="num">0.2 GiB</td><td><code title="ca70d2202afe6415bdbcb8793ba8cd99fd159cfe6192381504d6c4d3036e0f04">ca70d2202afe…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="small"><a href="../../registry/v1/models/idol/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section>
+  <h2 id="card">Model card</h2>
+  <p class="hint">From <a href="https://huggingface.co/speridlabs/idol/blob/2731c2291fc65a797c5cb627a5e5526fc1490902/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="readme"><h1>Idol</h1>
+<p><b>A single image to a 3D Gaussian splat.</b><br>One picture of an object in, up to a million 3D Gaussians out, including the sides the picture never showed.</p>
+<p>
+  <a href="https://speridlabs.com/research/idol" rel="noopener noreferrer nofollow"><img alt="Project Page" src="https://img.shields.io/badge/%F0%9F%8C%90%20Project%20Page-1f6feb?style=for-the-badge"></a>
+  <a href="https://github.com/speridlabs/idol-sdk" rel="noopener noreferrer nofollow"><img alt="Code" src="https://img.shields.io/badge/Code-181717?style=for-the-badge&amp;logo=github"></a>
+  <a href="https://huggingface.co/spaces/speridlabs/idol" rel="noopener noreferrer nofollow"><img alt="Demo" src="https://img.shields.io/badge/%F0%9F%A4%97%20Demo-ffcc4d?style=for-the-badge"></a>
+</p>
+<p>Idol turns one picture of an object into a 3D Gaussian splat. Give it a render, a generated image or a photo: it removes the background, frames the object and generates up to 1,048,576
+Gaussians, written as a standard 3DGS <code>.ply</code>. It runs on consumer GPUs, using 7.2 GB of VRAM and can run in under 2 seconds.</p>
+<div>
+  
+</div>
+<h2>Examples</h2>
+<p>Idol turns one picture of an object into a 3D Gaussian splat. Give it a render, a generated image or a photo: it removes the background, frames the object and generates up to 1,048,576 Gaussians, including the sides the picture never showed. It runs on consumer GPUs, using 7.2 GB of VRAM and can run in under 2 seconds.</p>
+<table>
+<tbody><tr>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/armchair.webp"></td>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/avocado.webp"></td>
+</tr>
+<tr>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/lamp.webp"></td>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/axolotl.webp"></td>
+</tr>
+<tr>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/grandma.webp"></td>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/lollipop.webp"></td>
+</tr>
+<tr>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/grapes.webp"></td>
+<td><img src="https://huggingface.co/speridlabs/idol/resolve/2731c2291fc65a797c5cb627a5e5526fc1490902/assets/gallery/castle.webp"></td>
+</tr>
+</tbody></table>
+<h2>Get started</h2>
+<p><strong>1. Get access to the image encoders.</strong> Idol reads its input through two gated models on Hugging Face. Accept their
+terms with your Hugging Face account, then log in once with <code>hf auth login</code> (or set <code>HF_TOKEN</code>):</p>
+<ul>
+<li><a href="https://huggingface.co/facebook/dinov3-vith16plus-pretrain-lvd1689m" rel="noopener noreferrer nofollow">facebook/dinov3-vith16plus-pretrain-lvd1689m</a></li>
+<li><a href="https://huggingface.co/black-forest-labs/FLUX.2-dev" rel="noopener noreferrer nofollow">black-forest-labs/FLUX.2-dev</a> (only its VAE is downloaded)</li>
+</ul>
+<p><strong>2. Install the code</strong></p>
+<pre><code>git clone https://github.com/speridlabs/idol-sdk.git
+cd idol-sdk
+pip install -e .          # Python 3.10+, PyTorch 2.5+, an NVIDIA GPU with CUDA
+</code></pre>
+<p>There is no separate download step: on the first run, Idol's weights (about 3 GB, from this repository) and the two
+image encoders download automatically into the Hugging Face cache. If the encoders are not accessible yet, Idol stops
+before downloading anything and says what is missing.</p>
+<p><strong>3. Generate a 3D object</strong></p>
+<pre><code>python -m idol.sample --image photo.jpg --mode real
+python -m idol.sample --image renders/ --mode synthetic --out outputs
+</code></pre>
+<p>For each image this writes <code>&lt;name&gt;.ply</code> (open it in any Gaussian splat viewer), <code>&lt;name&gt;_input.png</code> (the image the
+model saw, after background removal and cropping) and <code>&lt;name&gt;_camera.json</code> (the predicted camera of the input).</p>
+<p>Pick the mode for your input. It sets how much room the crop leaves around the object:</p>
+<table><thead><tr><th><code>--mode</code></th><th>for</th><th>crop</th></tr></thead><tbody>
+<tr><td><code>synthetic</code> (default)</td><td>renders and generated images of a single object</td><td>object fills 1/1.2 of the frame</td></tr>
+<tr><td><code>real</code></td><td>photographs</td><td>object fills 1/1.7 of the frame</td></tr>
+</tbody></table>
+<p>From Python:</p>
+<pre><code>from idol import IdolPipeline
+
+pipeline = IdolPipeline.from_pretrained("speridlabs/idol")
+output = pipeline("photo.jpg", mode="real", seed=42, num_gaussians=1_048_576)
+output.gaussian.save_ply("photo.ply")
+</code></pre>
+<h2>Flags</h2>
+<table><thead><tr><th>Flag</th><th>Default</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>--seed</code></td><td>42</td><td>Fix it to get the same object again.</td></tr>
+<tr><td><code>--steps</code></td><td>50</td><td>Sampling steps. Fewer are faster but lose some detail.</td></tr>
+<tr><td><code>--cfg_strength</code></td><td>3.0</td><td>Classifier-free guidance: how strictly the object follows the image.</td></tr>
+<tr><td><code>--rescale_t</code></td><td>3.0</td><td>Time shift: higher spends more steps on the overall shape, lower on fine detail.</td></tr>
+<tr><td><code>--num_gaussians</code></td><td>262144</td><td>32,768 to 1,048,576, a multiple of 32.</td></tr>
+<tr><td><code>--dinov3_dtype</code></td><td>bf16</td><td><code>fp32</code> runs the DINOv3 encoder in full precision (1.7 GB more memory).</td></tr>
+<tr><td><code>--weights</code></td><td><code>speridlabs/idol</code></td><td>A Hugging Face repo or a local folder.</td></tr>
+<tr><td><code>--no_optimize</code></td><td>optimized</td><td>Turn off the faster sampling.</td></tr>
+</tbody></table>
+<p>Faster sampling is on by default on GPU (~1.7x, same output quality): the denoiser is compiled with <code>torch.compile</code>,
+the guided and unguided passes run as one batch, and attention uses cuDNN with TF32 matmuls while sampling. The first
+image in a process is slower while it compiles.</p>
+<h2>More details about the model</h2>
+<table><thead><tr><th>Component</th><th>Parameters</th><th>Precision on GPU</th><th>Weights in VRAM</th></tr></thead><tbody>
+<tr><td>DiT (denoiser)</td><td>370.6M</td><td>FP16 transformer blocks; FP32 embeddings and norms</td><td>~0.8–1.0 GB</td></tr>
+<tr><td>Octree decoder</td><td>50.8M</td><td>FP16 transformer blocks; FP32 embeddings and norms</td><td>~0.1–0.2 GB</td></tr>
+<tr><td>Gaussian decoder</td><td>237.3M</td><td>FP16 transformer blocks; FP32 embeddings and norms</td><td>~0.5–0.9 GB</td></tr>
+<tr><td>BiRefNet (background removal)</td><td>220.7M</td><td>FP16</td><td>~0.44 GB</td></tr>
+<tr><td>DINOv3 ViT-H+/16</td><td>840.6M</td><td>bf16</td><td>~1.68 GB</td></tr>
+<tr><td>FLUX.2 VAE</td><td>84.1M</td><td>bf16 (FP32 checkpoint, cast on load)</td><td>~0.17 GB</td></tr>
+<tr><td><strong>Full request</strong></td><td><strong>~1.80B</strong></td><td>mostly FP16 / bf16, some FP32</td><td><strong>~3.7–4.4 GB of weights, 7.2 GB peak</strong></td></tr>
+</tbody></table>
+<h2>Benchmark</h2>
+<p>Idol, TripoSplat, TRELLIS and LGM, scored at the input view (PSNR, SSIM, LPIPS, IoU) and at seven new views
+(DINOv2, CLIP, sharpness distance). Mean scores, 1 × H100 per model. Bold is the best in each column.</p>
+<table><thead><tr><th>Model</th><th>Setting</th><th>PSNR ↑</th><th>SSIM ↑</th><th>LPIPS ↓</th><th>IoU ↑</th><th>DINOv2 ↑</th><th>CLIP ↑</th><th>Sharpness distance ↓</th><th>Request time ↓</th></tr></thead><tbody>
+<tr><td><strong>Idol</strong></td><td>50 steps, 262,144 Gaussians</td><td>12.25</td><td><strong>0.726</strong></td><td><strong>0.213</strong></td><td><strong>0.862</strong></td><td><strong>0.781</strong></td><td><strong>0.885</strong></td><td><strong>0.81</strong></td><td>6.8 s</td></tr>
+<tr><td>TripoSplat</td><td>50 steps, 262,144 Gaussians</td><td>11.76</td><td>0.712</td><td>0.225</td><td>0.860</td><td>0.743</td><td>0.868</td><td>1.03</td><td>9.9 s</td></tr>
+<tr><td>TRELLIS</td><td>Paper setting, 50 + 50 steps</td><td>11.89</td><td>0.716</td><td>0.235</td><td>0.845</td><td>0.754</td><td>0.868</td><td>0.97</td><td>7.1 s</td></tr>
+<tr><td>LGM</td><td>Default, 65,536 Gaussians</td><td><strong>12.46</strong>*</td><td>0.722</td><td>0.237</td><td>0.834</td><td>0.575</td><td>0.784</td><td>1.22</td><td><strong>1.1 s</strong></td></tr>
+</tbody></table>
+<p>* LGM has the highest PSNR despite visibly blurry results, because PSNR averages squared pixel error.</p>
+<h2>Across GPUs</h2>
+<p>One image to 262,144 Gaussians in 3.4 s. Request time at 50 steps: median over 8 images, with the same code and
+settings on every GPU, one GPU per machine.</p>
+<table><thead><tr><th>GPU</th><th>VRAM</th><th>Request time</th></tr></thead><tbody>
+<tr><td>B300</td><td>269 GB</td><td>3.4 s</td></tr>
+<tr><td>B200</td><td>179 GB</td><td>3.6 s</td></tr>
+<tr><td>H200</td><td>140 GB</td><td>6.6 s</td></tr>
+<tr><td>H100</td><td>80 GB</td><td>6.7 s</td></tr>
+<tr><td>RTX 5090</td><td>32 GB</td><td>14.1 s</td></tr>
+<tr><td>A100</td><td>80 GB</td><td>16.3 s</td></tr>
+<tr><td>L40S</td><td>45 GB</td><td>16.6 s</td></tr>
+<tr><td>RTX 4090</td><td>24 GB</td><td>19.1 s</td></tr>
+<tr><td>RTX 3080</td><td>10 GB</td><td>46.2 s</td></tr>
+<tr><td>L4</td><td>22 GB</td><td>54.6 s</td></tr>
+</tbody></table>
+<p><strong>Made with ❤️ by <a href="https://speridlabs.com" rel="noopener noreferrer nofollow">speridlabs.com</a></strong></p>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
