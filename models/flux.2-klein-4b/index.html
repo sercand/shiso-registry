@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>flux.2-klein-4b</h1>
+    <h1 class="s-h1">flux.2-klein-4b</h1>
     
     <p class="lede">FLUX.2 [klein] 4B step-distilled text-to-image model, FP8 transformer with a Qwen3 text encoder</p>
     <div class="pills">
-      <span class="pill task">Image generation</span>
-      <span class="pill soft">image-generation</span>
+      <span class="s-pill s-pill--soft">Image generation</span>
+      <span class="s-pill">image-generation</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull flux.2-klein-4b</code><button class="copy" data-copy="shiso pull flux.2-klein-4b" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve flux.2-klein-4b</code><button class="copy" data-copy="shiso serve flux.2-klein-4b" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull flux.2-klein-4b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull flux.2-klein-4b" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve flux.2-klein-4b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve flux.2-klein-4b" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>flux2</dd></div>
     
     
@@ -53,78 +51,78 @@
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>fp8</code></td>
         <td>fp8</td>
-        <td><span class="be be-metal">metal</span><span class="be be-cuda">cuda</span></td>
-        <td class="num">16 GiB<span class="muted"> · 24 GiB rec.</span></td>
+        <td><span class="s-mono">metal</span>, <span class="s-mono">cuda</span></td>
+        <td class="num">16 GiB<span class="s-muted"> · 24 GiB rec.</span></td>
         <td class="num">11.5 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull flux.2-klein-4b" type="button" title="shiso pull flux.2-klein-4b">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull flux.2-klein-4b" type="button" title="shiso pull flux.2-klein-4b">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  <p class="s-muted s-small" style="margin:0">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
   
   
-  <p class="hint">Wall time of one single-image request at the server&#39;s step count.</p>
-  <div class="table-wrap">
-  <table>
+  <p class="s-muted s-small" style="margin:0">Wall time of one single-image request at the server&#39;s step count.</p>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Device</th><th>Variant</th><th class="">Size</th><th class="num">Steps</th><th class="num">s / image</th><th>Measured</th></tr></thead>
     <tbody>
     
       <tr>
-        <td rowspan="1"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
+        <td rowspan="1"><strong>m1-max</strong><div class="s-muted s-small">Apple M1 Max · 64 GiB · metal</div></td>
         <td rowspan="1"><code>fp8</code></td>
         <td class="">512×512</td><td class="num">4</td><td class="num strong">207.27</td>
-        <td rowspan="1">2026-10-05<div class="muted small">shiso 0.1.0 · 2 runs</div></td>
+        <td rowspan="1">2026-10-05<div class="s-muted s-small">shiso 0.1.0 · 2 runs</div></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
   
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>fp8</code> <span class="muted">11.5 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>fp8</code> <span class="s-muted">11.5 GiB · 2 components</span></summary>
     
     
-    <h3>image <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/tree/5b4408e59397a4a37ccb46afe426d8ed86379441" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4b-fp8@5b4408e593</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">image <a class="s-small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/tree/5b4408e59397a4a37ccb46afe426d8ed86379441" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4b-fp8@5b4408e593</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>flux-2-klein-4b-fp8.safetensors</code> <span class="pill soft">entry</span></td><td class="num">3.8 GiB</td><td><code title="97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6">97ed34fe0567…</code></td></tr>
+        <tr><td><code>flux-2-klein-4b-fp8.safetensors</code> <span class="s-pill">entry</span></td><td class="num">3.8 GiB</td><td><code title="97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6">97ed34fe0567…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>image_assets <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">image_assets <a class="s-small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -162,14 +160,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/flux.2-klein-4b/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/flux.2-klein-4b/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/blob/5b4408e59397a4a37ccb46afe426d8ed86379441/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><p><img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/realism.jpg" alt="Teaser">
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/blob/5b4408e59397a4a37ccb46afe426d8ed86379441/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><p><img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/realism.jpg" alt="Teaser">
 <img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/editing.jpg" alt="Teaser">
 <img src="https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8/resolve/5b4408e59397a4a37ccb46afe426d8ed86379441/others.jpg" alt="Teaser"></p>
 <p><code>FLUX.2 [klein] 4B</code> is a 4 billion parameter rectified flow transformer capable of generating images from text descriptions and supports multi-reference editing capabilities.

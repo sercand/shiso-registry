@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) and its vision tower, for /v1/systemone and /v1/decisions">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>clef-flash</h1>
+    <h1 class="s-h1">clef-flash</h1>
     
     <p class="lede">Cloudflare Clef-Flash decision model (Qwen3.5-9B backbone with a joint schema head) and its vision tower, for /v1/systemone and /v1/decisions</p>
     <div class="pills">
-      <span class="pill task">Decision</span>
-      <span class="pill soft">vision</span><span class="pill soft">decision</span><span class="pill soft">systemone</span>
+      <span class="s-pill s-pill--soft">Decision</span>
+      <span class="s-pill">vision</span><span class="s-pill">decision</span><span class="s-pill">systemone</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull clef-flash</code><button class="copy" data-copy="shiso pull clef-flash" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve clef-flash</code><button class="copy" data-copy="shiso serve clef-flash" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull clef-flash</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull clef-flash" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve clef-flash</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve clef-flash" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>qwen35</dd></div>
     
     
@@ -49,49 +47,49 @@
     
     <div><dt>License</dt><dd>apache-2.0</dd></div>
     
-    <div><dt>Updated</dt><dd>2026-10-12 <span class="muted">(first published 2026-10-04)</span></dd></div>
+    <div><dt>Updated</dt><dd>2026-10-12 <span class="s-muted">(first published 2026-10-04)</span></dd></div>
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>q4_k_m</code></td>
         <td>Q4_K_M</td>
-        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
-        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td><span class="s-mono">cuda</span>, <span class="s-mono">metal</span></td>
+        <td class="num">8 GiB<span class="s-muted"> · 16 GiB rec.</span></td>
         <td class="num">6.9 GiB</td>
         <td>CUDA sm80+</td>
-        <td><button class="copy small" data-copy="shiso pull clef-flash" type="button" title="shiso pull clef-flash">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull clef-flash" type="button" title="shiso pull clef-flash">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  <p class="s-muted s-small" style="margin:0">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
   
   
-  <p class="hint">Wall time of one /v1/decisions request with one yes/no question, batch 1.</p>
-  <div class="table-wrap">
-  <table>
+  <p class="s-muted s-small" style="margin:0">Wall time of one /v1/decisions request with one yes/no question, batch 1.</p>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Latency ms</th><th class="num">Prompt tok/s</th><th>Measured</th></tr></thead>
     <tbody>
     
       <tr class="stale">
-        <td rowspan="2"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div><div class="warn small">measured on older weights</div></td>
+        <td rowspan="2"><strong>m1-max</strong><div class="s-muted s-small">Apple M1 Max · 64 GiB · metal</div><div class="warn s-small">measured on older weights</div></td>
         <td rowspan="2"><code>q4_k_m</code></td>
         <td class="">515</td><td class="num strong">2654</td><td class="num">188</td>
-        <td rowspan="2">2026-10-05<div class="muted small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
+        <td rowspan="2">2026-10-05<div class="s-muted s-small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
       </tr>
     
       <tr class="stale">
@@ -102,43 +100,43 @@
     
     </tbody>
   </table>
-  </div>
+  </div></div>
   
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>q4_k_m</code> <span class="muted">6.9 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>q4_k_m</code> <span class="s-muted">6.9 GiB · 2 components</span></summary>
     
     
-    <h3>base <a class="small" href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/tree/6b4fe4c59098479652d94f0fe11a40facbebd1ec" rel="noopener noreferrer">ggml-org/Clef-Flash-GGUF@6b4fe4c590</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/tree/6b4fe4c59098479652d94f0fe11a40facbebd1ec" rel="noopener noreferrer">ggml-org/Clef-Flash-GGUF@6b4fe4c590</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Clef-Flash-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">6 GiB</td><td><code title="3626116623ca8d89641952471fac9ce12af84fb3517520029a2ac6f5146868a2">3626116623ca…</code></td></tr>
+        <tr><td><code>Clef-Flash-Q4_K_M.gguf</code> <span class="s-pill">entry</span></td><td class="num">6 GiB</td><td><code title="3626116623ca8d89641952471fac9ce12af84fb3517520029a2ac6f5146868a2">3626116623ca…</code></td></tr>
       
-        <tr><td><code>mmproj-Clef-Flash-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="477598b2425d3aea55fefb895c414e04bda1ee2ec55878d78e850cb8b420d8d6">477598b2425d…</code></td></tr>
+        <tr><td><code>mmproj-Clef-Flash-BF16.gguf</code> <span class="s-pill">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="477598b2425d3aea55fefb895c414e04bda1ee2ec55878d78e850cb8b420d8d6">477598b2425d…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>config <a class="small" href="https://huggingface.co/Cloudflare/clef-flash/tree/17f0b0ad64efb65d273590632833508766b2aae6" rel="noopener noreferrer">Cloudflare/clef-flash@17f0b0ad64</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/Cloudflare/clef-flash/tree/17f0b0ad64efb65d273590632833508766b2aae6" rel="noopener noreferrer">Cloudflare/clef-flash@17f0b0ad64</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
         <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715">a4aee8afcf2e…</code></td></tr>
       
-        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238">66f87f6fb261…</code></td></tr>
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238">66f87f6fb261…</code></td></tr>
       
         <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4">45707f8467bf…</code></td></tr>
       
@@ -152,14 +150,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/clef-flash/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/clef-flash/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/blob/6b4fe4c59098479652d94f0fe11a40facbebd1ec/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><h1>Clef-Flash</h1>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/ggml-org/Clef-Flash-GGUF/blob/6b4fe4c59098479652d94f0fe11a40facbebd1ec/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><h1>Clef-Flash</h1>
 <p>Run with https://llama.app</p>
 <pre><code>llama serve -hf ggml-org/Clef-Flash-GGUF
 </code></pre>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,103 +21,103 @@
 
 <section class="model-head">
   <div>
-    <h1>ternary-bonsai-2-27b</h1>
-    <p class="aliases">also <code>bonsai-2-27b</code></p>
+    <h1 class="s-h1">ternary-bonsai-2-27b</h1>
+    <p class="s-muted" style="margin:0">also <code>bonsai-2-27b</code></p>
     <p class="lede">Ternary Bonsai 2 27B: Qwen3.8-27B with Hadamard-rotated ternary weights (1.75-2.13 bits/weight), a DFlash2 block drafter and a vision tower</p>
     <div class="pills">
-      <span class="pill task">Chat</span>
-      <span class="pill soft">vision</span><span class="pill soft">tools</span><span class="pill soft">ternary</span>
+      <span class="s-pill s-pill--soft">Chat</span>
+      <span class="s-pill">vision</span><span class="s-pill">tools</span><span class="s-pill">ternary</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull ternary-bonsai-2-27b</code><button class="copy" data-copy="shiso pull ternary-bonsai-2-27b" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve ternary-bonsai-2-27b</code><button class="copy" data-copy="shiso serve ternary-bonsai-2-27b" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull ternary-bonsai-2-27b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull ternary-bonsai-2-27b" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve ternary-bonsai-2-27b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve ternary-bonsai-2-27b" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>qwen35</dd></div>
     
     
     
     <div><dt>Input</dt><dd>text, image, video</dd></div>
     <div><dt>Output</dt><dd>text</dd></div>
-    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="s-muted">(effort: none, low, medium, xhigh)</span></dd></div>
     <div><dt>License</dt><dd>apache-2.0</dd></div>
     
     <div><dt>Updated</dt><dd>2026-10-04</dd></div>
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>pq2_0</code></td>
         <td>PQ2_0 (ternary, 2-bit slots)</td>
-        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
-        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td><span class="s-mono">cuda</span>, <span class="s-mono">metal</span></td>
+        <td class="num">16 GiB<span class="s-muted"> · 32 GiB rec.</span></td>
         <td class="num">8.7 GiB</td>
         <td>CUDA sm80+</td>
-        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b" type="button" title="shiso pull ternary-bonsai-2-27b">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull ternary-bonsai-2-27b" type="button" title="shiso pull ternary-bonsai-2-27b">Copy pull</button></td>
       </tr>
     
       <tr>
         <td><code>ptq1_0</code></td>
         <td>PTQ1_0 (ternary, packed trits)</td>
-        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
-        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td><span class="s-mono">cuda</span>, <span class="s-mono">metal</span></td>
+        <td class="num">16 GiB<span class="s-muted"> · 32 GiB rec.</span></td>
         <td class="num">7.5 GiB</td>
         <td>CUDA sm80+</td>
-        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b:ptq1_0" type="button" title="shiso pull ternary-bonsai-2-27b:ptq1_0">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull ternary-bonsai-2-27b:ptq1_0" type="button" title="shiso pull ternary-bonsai-2-27b:ptq1_0">Copy pull</button></td>
       </tr>
     
       <tr>
         <td><code>mlx-2bit</code></td>
         <td>mlx-2bit (ternary, text only)</td>
-        <td><span class="be be-metal">metal</span></td>
-        <td class="num">16 GiB<span class="muted"> · 32 GiB rec.</span></td>
+        <td><span class="s-mono">metal</span></td>
+        <td class="num">16 GiB<span class="s-muted"> · 32 GiB rec.</span></td>
         <td class="num">9.1 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull ternary-bonsai-2-27b:mlx-2bit" type="button" title="shiso pull ternary-bonsai-2-27b:mlx-2bit">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull ternary-bonsai-2-27b:mlx-2bit" type="button" title="shiso pull ternary-bonsai-2-27b:mlx-2bit">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench ternary-bonsai-2-27b</code> on a device with the model installed and commit the record.</p>
+  <p class="s-muted">Not measured yet. Run <code>shiso-registry bench ternary-bonsai-2-27b</code> on a device with the model installed and commit the record.</p>
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>pq2_0</code> <span class="muted">8.7 GiB · 3 components</span></summary>
-    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+  <details class="s-card">
+    <summary><code>pq2_0</code> <span class="s-muted">8.7 GiB · 3 components</span></summary>
+    <p class="s-small">Server defaults: <code>spec_k = 7</code></p>
     
-    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Ternary-Bonsai-2-27B-PQ2_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">6.7 GiB</td><td><code title="3907dc1658db1f78a9826bf8d5bcb8dc65db0d466388937af57f2294fae62ec1">3907dc1658db…</code></td></tr>
+        <tr><td><code>Ternary-Bonsai-2-27B-PQ2_0.gguf</code> <span class="s-pill">entry</span></td><td class="num">6.7 GiB</td><td><code title="3907dc1658db1f78a9826bf8d5bcb8dc65db0d466388937af57f2294fae62ec1">3907dc1658db…</code></td></tr>
       
-        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
+        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="s-pill">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
       
         <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b">69849221bfb9…</code></td></tr>
       
@@ -129,27 +127,27 @@
     </table>
     </div>
     
-    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">draft <a class="s-small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="s-pill">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>config <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
         <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
       
-        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
       
         <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
       
@@ -167,19 +165,19 @@
     
   </details>
   
-  <details class="files">
-    <summary><code>ptq1_0</code> <span class="muted">7.5 GiB · 3 components</span></summary>
-    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+  <details class="s-card">
+    <summary><code>ptq1_0</code> <span class="s-muted">7.5 GiB · 3 components</span></summary>
+    <p class="s-small">Server defaults: <code>spec_k = 7</code></p>
     
-    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/tree/b072e1d3b35a0a630cece372c2127528e0994386" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-gguf@b072e1d3b3</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Ternary-Bonsai-2-27B-PTQ1_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">5.5 GiB</td><td><code title="53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3">53107f530aa5…</code></td></tr>
+        <tr><td><code>Ternary-Bonsai-2-27B-PTQ1_0.gguf</code> <span class="s-pill">entry</span></td><td class="num">5.5 GiB</td><td><code title="53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3">53107f530aa5…</code></td></tr>
       
-        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
+        <tr><td><code>Ternary-Bonsai-2-27B-mmproj-BF16.gguf</code> <span class="s-pill">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="e287342d92332fa3577ed1d42e921dac9370c08da58ba9337fa450f6cc76cfd7">e287342d9233…</code></td></tr>
       
         <tr><td><code>LICENSE</code></td><td class="num">0 GiB</td><td><code title="69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b">69849221bfb9…</code></td></tr>
       
@@ -189,27 +187,27 @@
     </table>
     </div>
     
-    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">draft <a class="s-small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="s-pill">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>config <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
         <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041">c3cf9e34abf4…</code></td></tr>
       
-        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="238de7c512cc56a733421e3fd011d88f8260739e3d00e32c5d65b7943cc9f837">238de7c512cc…</code></td></tr>
       
         <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
       
@@ -227,13 +225,13 @@
     
   </details>
   
-  <details class="files">
-    <summary><code>mlx-2bit</code> <span class="muted">9.1 GiB · 2 components</span></summary>
-    <p class="small">Server defaults: <code>spec_k = 7</code></p>
+  <details class="s-card">
+    <summary><code>mlx-2bit</code> <span class="s-muted">9.1 GiB · 2 components</span></summary>
+    <p class="s-small">Server defaults: <code>spec_k = 7</code></p>
     
-    <h3>base <a class="small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/tree/fcba37d2117a7077eac6b613b2668d14d9779edd" rel="noopener noreferrer">prism-ml/Ternary-Bonsai-2-27B-mlx-2bit@fcba37d211</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -263,13 +261,13 @@
     </table>
     </div>
     
-    <h3>draft <a class="small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">draft <a class="s-small" href="https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF/tree/51962825493a48b846b40126d35c799ac4093ad0" rel="noopener noreferrer">incoai/Qwen3.8-27B-DFlash2-GGUF@5196282549</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="pill soft">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
+        <tr><td><code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> <span class="s-pill">entry</span></td><td class="num">1.1 GiB</td><td><code title="1a25c56858e1ebe93f2718ac1d49d1151f9323325c1bbfd6209370f4db131ebd">1a25c56858e1…</code></td></tr>
       
       </tbody>
     </table>
@@ -277,14 +275,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/ternary-bonsai-2-27b/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/ternary-bonsai-2-27b/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/blob/b072e1d3b35a0a630cece372c2127528e0994386/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><p>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/blob/b072e1d3b35a0a630cece372c2127528e0994386/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><p>
   <img src="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/resolve/b072e1d3b35a0a630cece372c2127528e0994386/assets/bonsai-logo.svg" width="280" alt="Bonsai">
 </p>
 <p>

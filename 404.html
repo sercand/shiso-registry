@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,22 +7,20 @@
 <meta name="description" content="Models packaged for the shiso inference server: pinned weights, hardware requirements and measured throughput.">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="/"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="/">Models</a>
-      <a href="/registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="/"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="/">Models</a>
+    <a class="s-btn s-btn--ghost" href="/registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
 <section class="hero">
-  <h1>Not found</h1>
+  <h1 class="s-h1">Not found</h1>
   <p class="lede">There is no page at this address. The model may have been renamed; its old name often still works as an alias in <code>shiso pull</code>.</p>
-  <p><a class="button" href="/">Browse all models</a></p>
+  <p><a class="s-btn s-btn--primary" href="/">Browse all models</a></p>
 </section>
 
 </main>

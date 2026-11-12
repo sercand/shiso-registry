@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>idol</h1>
+    <h1 class="s-h1">idol</h1>
     
     <p class="lede">Idol image-to-3D: one picture of an object in, a 3D Gaussian splat out (.ply or .glb), with its own background remover. DINOv3 ViT-H+ image encoder under the DINOv3 License</p>
     <div class="pills">
-      <span class="pill task">Splat generation</span>
-      <span class="pill soft">3d</span><span class="pill soft">gaussian-splatting</span><span class="pill soft">image-to-3d</span>
+      <span class="s-pill s-pill--soft">Splat generation</span>
+      <span class="s-pill">3d</span><span class="s-pill">gaussian-splatting</span><span class="s-pill">image-to-3d</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull idol</code><button class="copy" data-copy="shiso pull idol" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve idol</code><button class="copy" data-copy="shiso serve idol" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull idol</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull idol" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve idol</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve idol" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>idol</dd></div>
     <div><dt>Publisher</dt><dd>speridlabs</dd></div>
     <div><dt>Parameters</dt><dd>658.7M</dd></div>
@@ -53,47 +51,47 @@
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>f32</code></td>
         <td>f32</td>
-        <td><span class="be be-metal">metal</span></td>
-        <td class="num">16 GiB<span class="muted"> · 24 GiB rec.</span></td>
+        <td><span class="s-mono">metal</span></td>
+        <td class="num">16 GiB<span class="s-muted"> · 24 GiB rec.</span></td>
         <td class="num">6.2 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull idol" type="button" title="shiso pull idol">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull idol" type="button" title="shiso pull idol">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench idol</code> on a device with the model installed and commit the record.</p>
+  <p class="s-muted">Not measured yet. Run <code>shiso-registry bench idol</code> on a device with the model installed and commit the record.</p>
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>f32</code> <span class="muted">6.2 GiB · 3 components</span></summary>
-    <p class="small">Server defaults: <code>splat_default_steps = 25</code>, <code>splat_refresh_every = 2</code></p>
+  <details class="s-card">
+    <summary><code>f32</code> <span class="s-muted">6.2 GiB · 3 components</span></summary>
+    <p class="s-small">Server defaults: <code>splat_default_steps = 25</code>, <code>splat_refresh_every = 2</code></p>
     
-    <h3>splat <a class="small" href="https://huggingface.co/speridlabs/idol/tree/2731c2291fc65a797c5cb627a5e5526fc1490902" rel="noopener noreferrer">speridlabs/idol@2731c2291f</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">splat <a class="s-small" href="https://huggingface.co/speridlabs/idol/tree/2731c2291fc65a797c5cb627a5e5526fc1490902" rel="noopener noreferrer">speridlabs/idol@2731c2291f</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -111,9 +109,9 @@
     </table>
     </div>
     
-    <h3>splat_encoder <a class="small" href="https://huggingface.co/timm/vit_huge_plus_patch16_dinov3.lvd1689m/tree/dd0addc09788111fa893d24799a44744ba022eee" rel="noopener noreferrer">timm/vit_huge_plus_patch16_dinov3.lvd1689m@dd0addc097</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">splat_encoder <a class="s-small" href="https://huggingface.co/timm/vit_huge_plus_patch16_dinov3.lvd1689m/tree/dd0addc09788111fa893d24799a44744ba022eee" rel="noopener noreferrer">timm/vit_huge_plus_patch16_dinov3.lvd1689m@dd0addc097</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -127,9 +125,9 @@
     </table>
     </div>
     
-    <h3>splat_vae <a class="small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">splat_vae <a class="s-small" href="https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294" rel="noopener noreferrer">black-forest-labs/FLUX.2-klein-4B@e7b7dc27f9</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -143,14 +141,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/idol/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/idol/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/speridlabs/idol/blob/2731c2291fc65a797c5cb627a5e5526fc1490902/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><h1>Idol</h1>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/speridlabs/idol/blob/2731c2291fc65a797c5cb627a5e5526fc1490902/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><h1>Idol</h1>
 <p><b>A single image to a 3D Gaussian splat.</b><br>One picture of an object in, up to a million 3D Gaussians out, including the sides the picture never showed.</p>
 <p>
   <a href="https://speridlabs.com/research/idol" rel="noopener noreferrer nofollow"><img alt="Project Page" src="https://img.shields.io/badge/%F0%9F%8C%90%20Project%20Page-1f6feb?style=for-the-badge"></a>

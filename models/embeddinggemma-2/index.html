@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="EmbeddingGemma 2, a 740M multimodal embedding model: text, images, video and audio in one 768-d space (Matryoshka 512/256/128), with task prompts">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>embeddinggemma-2</h1>
-    <p class="aliases">also <code>embedding-gemma-2</code></p>
+    <h1 class="s-h1">embeddinggemma-2</h1>
+    <p class="s-muted" style="margin:0">also <code>embedding-gemma-2</code></p>
     <p class="lede">EmbeddingGemma 2, a 740M multimodal embedding model: text, images, video and audio in one 768-d space (Matryoshka 512/256/128), with task prompts</p>
     <div class="pills">
-      <span class="pill task">Embedding</span>
-      <span class="pill soft">embedding</span><span class="pill soft">multimodal</span><span class="pill soft">vision</span><span class="pill soft">audio</span><span class="pill soft">video</span><span class="pill soft">multilingual</span>
+      <span class="s-pill s-pill--soft">Embedding</span>
+      <span class="s-pill">embedding</span><span class="s-pill">multimodal</span><span class="s-pill">vision</span><span class="s-pill">audio</span><span class="s-pill">video</span><span class="s-pill">multilingual</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull embeddinggemma-2</code><button class="copy" data-copy="shiso pull embeddinggemma-2" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve embeddinggemma-2</code><button class="copy" data-copy="shiso serve embeddinggemma-2" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull embeddinggemma-2</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull embeddinggemma-2" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve embeddinggemma-2</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve embeddinggemma-2" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>embedding_gemma2</dd></div>
     <div><dt>Publisher</dt><dd>Google</dd></div>
     <div><dt>Parameters</dt><dd>740M</dd></div>
@@ -53,65 +51,65 @@
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>q8_0</code></td>
         <td>Q8_0</td>
-        <td><span class="be be-metal">metal</span><span class="be be-cuda">cuda</span></td>
-        <td class="num">4 GiB<span class="muted"> · 8 GiB rec.</span></td>
+        <td><span class="s-mono">metal</span>, <span class="s-mono">cuda</span></td>
+        <td class="num">4 GiB<span class="s-muted"> · 8 GiB rec.</span></td>
         <td class="num">0.8 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull embeddinggemma-2" type="button" title="shiso pull embeddinggemma-2">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull embeddinggemma-2" type="button" title="shiso pull embeddinggemma-2">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench embeddinggemma-2</code> on a device with the model installed and commit the record.</p>
+  <p class="s-muted">Not measured yet. Run <code>shiso-registry bench embeddinggemma-2</code> on a device with the model installed and commit the record.</p>
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>q8_0</code> <span class="muted">0.8 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>q8_0</code> <span class="s-muted">0.8 GiB · 2 components</span></summary>
     
     
-    <h3>base <a class="small" href="https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/tree/bfcd298762cc34d0357ece5ebdd31791a3a374d8" rel="noopener noreferrer">ggml-org/embeddinggemma-2-GGUF@bfcd298762</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/tree/bfcd298762cc34d0357ece5ebdd31791a3a374d8" rel="noopener noreferrer">ggml-org/embeddinggemma-2-GGUF@bfcd298762</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>embeddinggemma-2-Q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">0.3 GiB</td><td><code title="2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135">2188ac1deca4…</code></td></tr>
+        <tr><td><code>embeddinggemma-2-Q8_0.gguf</code> <span class="s-pill">entry</span></td><td class="num">0.3 GiB</td><td><code title="2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135">2188ac1deca4…</code></td></tr>
       
-        <tr><td><code>mmproj-embeddinggemma-2-Q8_0.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.5 GiB</td><td><code title="c4a8a52691ecef40618438928bdf9e68379b854e24166f292592353db0aab64f">c4a8a52691ec…</code></td></tr>
+        <tr><td><code>mmproj-embeddinggemma-2-Q8_0.gguf</code> <span class="s-pill">→ vision</span></td><td class="num">0.5 GiB</td><td><code title="c4a8a52691ecef40618438928bdf9e68379b854e24166f292592353db0aab64f">c4a8a52691ec…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>config <a class="small" href="https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b" rel="noopener noreferrer">google/embeddinggemma-2@914f7f8914</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b" rel="noopener noreferrer">google/embeddinggemma-2@914f7f8914</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3">b8f1e9931b57…</code></td></tr>
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3">b8f1e9931b57…</code></td></tr>
       
         <tr><td><code>config_sentence_transformers.json</code></td><td class="num">0 GiB</td><td><code title="031e56a498d33c349ab489a21885bcfe25b4fcba841149dc99e1e90d4a7c28f5">031e56a498d3…</code></td></tr>
       
@@ -125,14 +123,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/embeddinggemma-2/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/embeddinggemma-2/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/google/embeddinggemma-2/blob/914f7f89142e33e77833254d9c9b90c3cef7303b/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><div>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/google/embeddinggemma-2/blob/914f7f89142e33e77833254d9c9b90c3cef7303b/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><div>
   <img src="https://ai.google.dev/gemma/images/embeddinggemma2_banner.png">
 </div>
 <p>

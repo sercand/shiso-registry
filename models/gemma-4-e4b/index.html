@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,75 +21,75 @@
 
 <section class="model-head">
   <div>
-    <h1>gemma-4-e4b</h1>
+    <h1 class="s-h1">gemma-4-e4b</h1>
     
     <p class="lede">Gemma 4 E4B instruction-tuned, quantization-aware trained Q4_0, with vision and audio towers</p>
     <div class="pills">
-      <span class="pill task">Chat</span>
-      <span class="pill soft">vision</span><span class="pill soft">audio</span><span class="pill soft">tools</span>
+      <span class="s-pill s-pill--soft">Chat</span>
+      <span class="s-pill">vision</span><span class="s-pill">audio</span><span class="s-pill">tools</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull gemma-4-e4b</code><button class="copy" data-copy="shiso pull gemma-4-e4b" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve gemma-4-e4b</code><button class="copy" data-copy="shiso serve gemma-4-e4b" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull gemma-4-e4b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull gemma-4-e4b" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve gemma-4-e4b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve gemma-4-e4b" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>gemma4</dd></div>
     
     
     
     <div><dt>Input</dt><dd>text, image, audio</dd></div>
     <div><dt>Output</dt><dd>text</dd></div>
-    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="muted">(effort: none, medium)</span></dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="s-muted">(effort: none, medium)</span></dd></div>
     <div><dt>License</dt><dd>apache-2.0</dd></div>
     
     <div><dt>Updated</dt><dd>2026-10-04</dd></div>
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>qat-q4_0</code></td>
         <td>Q4_0 (QAT)</td>
-        <td><span class="be be-cuda">cuda</span><span class="be be-metal">metal</span></td>
-        <td class="num">8 GiB<span class="muted"> · 16 GiB rec.</span></td>
+        <td><span class="s-mono">cuda</span>, <span class="s-mono">metal</span></td>
+        <td class="num">8 GiB<span class="s-muted"> · 16 GiB rec.</span></td>
         <td class="num">5.8 GiB</td>
         <td>CUDA sm80+</td>
-        <td><button class="copy small" data-copy="shiso pull gemma-4-e4b" type="button" title="shiso pull gemma-4-e4b">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull gemma-4-e4b" type="button" title="shiso pull gemma-4-e4b">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  <p class="s-muted s-small" style="margin:0">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
   
   
-  <p class="hint">Batch 1, recipe defaults. Prefill comes from the time to first token; decode is tokens a second after it.</p>
-  <div class="table-wrap">
-  <table>
+  <p class="s-muted s-small" style="margin:0">Batch 1, recipe defaults. Prefill comes from the time to first token; decode is tokens a second after it.</p>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Device</th><th>Variant</th><th class="">Prompt</th><th class="num">Prefill tok/s</th><th class="num">Decode tok/s</th><th class="num">TTFT ms</th><th>Measured</th></tr></thead>
     <tbody>
     
       <tr>
-        <td rowspan="2"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
+        <td rowspan="2"><strong>m1-max</strong><div class="s-muted s-small">Apple M1 Max · 64 GiB · metal</div></td>
         <td rowspan="2"><code>qat-q4_0</code></td>
         <td class="">511</td><td class="num">314</td><td class="num strong">29.3</td><td class="num">1610</td>
-        <td rowspan="2">2026-10-05<div class="muted small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
+        <td rowspan="2">2026-10-05<div class="s-muted s-small">shiso 0.1.0 · 3 runs · ctx 8K</div></td>
       </tr>
     
       <tr>
@@ -102,43 +100,43 @@
     
     </tbody>
   </table>
-  </div>
+  </div></div>
   
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>qat-q4_0</code> <span class="muted">5.8 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>qat-q4_0</code> <span class="s-muted">5.8 GiB · 2 components</span></summary>
     
     
-    <h3>base <a class="small" href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/tree/4b4a2c1d584be7264f87aac328a1bc739ce81b6c" rel="noopener noreferrer">google/gemma-4-E4B-it-qat-q4_0-gguf@4b4a2c1d58</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/tree/4b4a2c1d584be7264f87aac328a1bc739ce81b6c" rel="noopener noreferrer">google/gemma-4-E4B-it-qat-q4_0-gguf@4b4a2c1d58</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>gemma-4-E4B_q4_0-it.gguf</code> <span class="pill soft">entry</span></td><td class="num">4.8 GiB</td><td><code title="676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee">676c35070db6…</code></td></tr>
+        <tr><td><code>gemma-4-E4B_q4_0-it.gguf</code> <span class="s-pill">entry</span></td><td class="num">4.8 GiB</td><td><code title="676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee">676c35070db6…</code></td></tr>
       
-        <tr><td><code>gemma-4-E4B-it-mmproj.gguf</code> <span class="pill soft">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="7498a37cb619e55f2fcf87eb931f56e99389ed6d432e4c5c66110694c0d65578">7498a37cb619…</code></td></tr>
+        <tr><td><code>gemma-4-E4B-it-mmproj.gguf</code> <span class="s-pill">→ vision</span></td><td class="num">0.9 GiB</td><td><code title="7498a37cb619e55f2fcf87eb931f56e99389ed6d432e4c5c66110694c0d65578">7498a37cb619…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>config <a class="small" href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized/tree/476025a01dbf99361c062bbeca3d6a76bb4c4566" rel="noopener noreferrer">google/gemma-4-E4B-it-qat-q4_0-unquantized@476025a01d</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized/tree/476025a01dbf99361c062bbeca3d6a76bb4c4566" rel="noopener noreferrer">google/gemma-4-E4B-it-qat-q4_0-unquantized@476025a01d</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
         <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5">0a2c8073c878…</code></td></tr>
       
-        <tr><td><code>config.json</code> <span class="pill soft">entry</span></td><td class="num">0 GiB</td><td><code title="f2db6d6e24cb4b695308897d82c8424fae946e95272a27de68b6e908c77b0f95">f2db6d6e24cb…</code></td></tr>
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="f2db6d6e24cb4b695308897d82c8424fae946e95272a27de68b6e908c77b0f95">f2db6d6e24cb…</code></td></tr>
       
         <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="b69207f9be617e982d13cc273cce6fd88c98dda99a4bdc5e2d52ffe0a0d9f0a9">b69207f9be61…</code></td></tr>
       
@@ -154,14 +152,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/gemma-4-e4b/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/gemma-4-e4b/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/blob/4b4a2c1d584be7264f87aac328a1bc739ce81b6c/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><div>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/blob/4b4a2c1d584be7264f87aac328a1bc739ce81b6c/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><div>
   <img src="https://ai.google.dev/gemma/images/gemma4_banner.png">
 </div>
 <p>

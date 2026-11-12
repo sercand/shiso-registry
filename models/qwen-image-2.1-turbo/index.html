@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only.">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>qwen-image-2.1-turbo</h1>
-    <p class="aliases">also <code>qwen-image-2.1</code></p>
+    <h1 class="s-h1">qwen-image-2.1-turbo</h1>
+    <p class="s-muted" style="margin:0">also <code>qwen-image-2.1</code></p>
     <p class="lede">Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only.</p>
     <div class="pills">
-      <span class="pill task">Image generation</span>
-      <span class="pill soft">image-generation</span><span class="pill soft">rgba</span><span class="pill soft">non-commercial</span>
+      <span class="s-pill s-pill--soft">Image generation</span>
+      <span class="s-pill">image-generation</span><span class="s-pill">rgba</span><span class="s-pill">non-commercial</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull qwen-image-2.1-turbo</code><button class="copy" data-copy="shiso pull qwen-image-2.1-turbo" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve qwen-image-2.1-turbo</code><button class="copy" data-copy="shiso serve qwen-image-2.1-turbo" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull qwen-image-2.1-turbo</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull qwen-image-2.1-turbo" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve qwen-image-2.1-turbo</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve qwen-image-2.1-turbo" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>qwen_image21</dd></div>
     <div><dt>Publisher</dt><dd>Qwen</dd></div>
     <div><dt>Parameters</dt><dd>7.1B</dd></div>
@@ -53,63 +51,63 @@
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>int8</code></td>
         <td>int8-convrot</td>
-        <td><span class="be be-metal">metal</span></td>
+        <td><span class="s-mono">metal</span></td>
         <td class="num">16 GiB</td>
         <td class="num">16.1 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull qwen-image-2.1-turbo" type="button" title="shiso pull qwen-image-2.1-turbo">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull qwen-image-2.1-turbo" type="button" title="shiso pull qwen-image-2.1-turbo">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="muted">Not measured yet. Run <code>shiso-registry bench qwen-image-2.1-turbo</code> on a device with the model installed and commit the record.</p>
+  <p class="s-muted">Not measured yet. Run <code>shiso-registry bench qwen-image-2.1-turbo</code> on a device with the model installed and commit the record.</p>
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>int8</code> <span class="muted">16.1 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>int8</code> <span class="s-muted">16.1 GiB · 2 components</span></summary>
     
     
-    <h3>image <a class="small" href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/a3c1a9e2efcba96124a9dc8600c0c07d6f5e68aa" rel="noopener noreferrer">Comfy-Org/Qwen-Image-2.1@a3c1a9e2ef</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">image <a class="s-small" href="https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/a3c1a9e2efcba96124a9dc8600c0c07d6f5e68aa" rel="noopener noreferrer">Comfy-Org/Qwen-Image-2.1@a3c1a9e2ef</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>diffusion_models/qwen_image_2.1_turbo_int8_convrot.safetensors</code> <span class="pill soft">entry</span></td><td class="num">6.8 GiB</td><td><code title="85d3244148cc294581844d310a7338fed26d056e470666ec84cf1525b876fdab">85d3244148cc…</code></td></tr>
+        <tr><td><code>diffusion_models/qwen_image_2.1_turbo_int8_convrot.safetensors</code> <span class="s-pill">entry</span></td><td class="num">6.8 GiB</td><td><code title="85d3244148cc294581844d310a7338fed26d056e470666ec84cf1525b876fdab">85d3244148cc…</code></td></tr>
       
-        <tr><td><code>text_encoders/qwen3vl_8b_int8_convrot.safetensors</code> <span class="pill soft">→ image_text_encoder</span></td><td class="num">8.7 GiB</td><td><code title="8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f">8bfd0f6e12ab…</code></td></tr>
+        <tr><td><code>text_encoders/qwen3vl_8b_int8_convrot.safetensors</code> <span class="s-pill">→ image_text_encoder</span></td><td class="num">8.7 GiB</td><td><code title="8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f">8bfd0f6e12ab…</code></td></tr>
       
-        <tr><td><code>vae/qwen_image_2.1_vae_bf16.safetensors</code> <span class="pill soft">→ image_vae</span></td><td class="num">0.6 GiB</td><td><code title="bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9">bb21f7473051…</code></td></tr>
+        <tr><td><code>vae/qwen_image_2.1_vae_bf16.safetensors</code> <span class="s-pill">→ image_vae</span></td><td class="num">0.6 GiB</td><td><code title="bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9">bb21f7473051…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>image_assets <a class="small" href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/tree/d65dbc9a7e8f6b5479e33dee6030eaab2a906509" rel="noopener noreferrer">Qwen/Qwen-Image-2.1-Turbo@d65dbc9a7e</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">image_assets <a class="s-small" href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/tree/d65dbc9a7e8f6b5479e33dee6030eaab2a906509" rel="noopener noreferrer">Qwen/Qwen-Image-2.1-Turbo@d65dbc9a7e</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
@@ -137,14 +135,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/qwen-image-2.1-turbo/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/qwen-image-2.1-turbo/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/d65dbc9a7e8f6b5479e33dee6030eaab2a906509/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><p>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/d65dbc9a7e8f6b5479e33dee6030eaab2a906509/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><p>
     <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/image2.1/logo.png" width="400">
 </p>
 <p>

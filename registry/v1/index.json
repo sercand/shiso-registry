@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T17:48:59.154127Z",
+  "generated_at": "2026-11-12T20:29:29.444502Z",
   "models": [
     {
       "name": "clef",
@@ -249,9 +249,9 @@
       "outputs": [
         "3d"
       ],
-      "updated_at": "2026-11-11T20:48:44+03:00",
+      "updated_at": "2026-11-11T20:51:14+03:00",
       "manifest": "models/idol/index.json",
-      "manifest_sha256": "557f38061d16f05e18a103744cf44ceb50672e84b0ed05fea506b2c2e3f15f69",
+      "manifest_sha256": "ceb1d77781d0af5315b75e3314660170e01a032a59552ec1b6d535688f26d232",
       "variants": [
         {
           "key": "f32",

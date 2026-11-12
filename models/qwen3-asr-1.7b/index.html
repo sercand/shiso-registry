@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-density="comfortable">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,15 +7,13 @@
 <meta name="description" content="Qwen3-ASR 1.7B multilingual speech recognizer, Q8_0 GGUF with a Nemotron 3 Diarization speaker sidecar">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="muted">hub</span></a>
-    <nav class="top-nav">
-      <a href="../../">Models</a>
-      <a href="../../registry/v1/index.json">Index JSON</a>
-    </nav>
-  </div>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
 </header>
 <main class="wrap">
 
@@ -23,23 +21,23 @@
 
 <section class="model-head">
   <div>
-    <h1>qwen3-asr-1.7b</h1>
+    <h1 class="s-h1">qwen3-asr-1.7b</h1>
     
     <p class="lede">Qwen3-ASR 1.7B multilingual speech recognizer, Q8_0 GGUF with a Nemotron 3 Diarization speaker sidecar</p>
     <div class="pills">
-      <span class="pill task">Transcription</span><span class="pill task">Diarization</span>
-      <span class="pill soft">speech-recognition</span><span class="pill soft">diarization</span><span class="pill soft">audio</span>
+      <span class="s-pill s-pill--soft">Transcription</span><span class="s-pill s-pill--soft">Diarization</span>
+      <span class="s-pill">speech-recognition</span><span class="s-pill">diarization</span><span class="s-pill">audio</span>
     </div>
   </div>
   <div class="quick">
-    <div class="cmd"><code>shiso pull qwen3-asr-1.7b</code><button class="copy" data-copy="shiso pull qwen3-asr-1.7b" type="button">Copy</button></div>
-    <div class="cmd"><code>shiso serve qwen3-asr-1.7b</code><button class="copy" data-copy="shiso serve qwen3-asr-1.7b" type="button">Copy</button></div>
-    <p class="hint">A bare pull takes the first variant that fits this host.</p>
+    <div class="cmd s-inset"><code>shiso pull qwen3-asr-1.7b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull qwen3-asr-1.7b" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve qwen3-asr-1.7b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve qwen3-asr-1.7b" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
   </div>
 </section>
 
-<section class="sheet">
-  <dl class="spec">
+<section class="s-card">
+  <dl class="s-facts">
     <div><dt>Family</dt><dd>qwen3_asr</dd></div>
     <div><dt>Publisher</dt><dd>Qwen</dd></div>
     <div><dt>Parameters</dt><dd>1.7B</dd></div>
@@ -53,84 +51,84 @@
   </dl>
 </section>
 
-<section>
-  <h2 id="variants">Variants</h2>
-  <div class="table-wrap">
-  <table>
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
     <tbody>
     
       <tr>
         <td><code>q8_0</code></td>
         <td>q8_0</td>
-        <td><span class="be be-metal">metal</span><span class="be be-cuda">cuda</span></td>
-        <td class="num">4 GiB<span class="muted"> · 8 GiB rec.</span></td>
+        <td><span class="s-mono">metal</span>, <span class="s-mono">cuda</span></td>
+        <td class="num">4 GiB<span class="s-muted"> · 8 GiB rec.</span></td>
         <td class="num">2.4 GiB</td>
         <td>—</td>
-        <td><button class="copy small" data-copy="shiso pull qwen3-asr-1.7b" type="button" title="shiso pull qwen3-asr-1.7b">Copy pull</button></td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull qwen3-asr-1.7b" type="button" title="shiso pull qwen3-asr-1.7b">Copy pull</button></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
 </section>
 
-<section>
-  <h2 id="benchmarks">Throughput</h2>
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
   
-  <p class="hint">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
+  <p class="s-muted s-small" style="margin:0">Medians measured with <code>shiso-registry bench</code> against a running <code>shiso serve</code>, after one discarded warm-up.</p>
   
   
-  <p class="hint">One streamed /v1/audio/transcriptions request. × real time is audio seconds per wall second.</p>
-  <div class="table-wrap">
-  <table>
+  <p class="s-muted s-small" style="margin:0">One streamed /v1/audio/transcriptions request. × real time is audio seconds per wall second.</p>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
     <thead><tr><th>Device</th><th>Variant</th><th class="">Clip</th><th class="num">Audio s</th><th class="num">× real time</th><th class="num">First text ms</th><th>Measured</th></tr></thead>
     <tbody>
     
       <tr>
-        <td rowspan="1"><strong>m1-max</strong><div class="muted small">Apple M1 Max · 64 GiB · metal</div></td>
+        <td rowspan="1"><strong>m1-max</strong><div class="s-muted s-small">Apple M1 Max · 64 GiB · metal</div></td>
         <td rowspan="1"><code>q8_0</code></td>
         <td class="">synthesized speech</td><td class="num">46.5</td><td class="num strong">9.7</td><td class="num">3190</td>
-        <td rowspan="1">2026-10-06<div class="muted small">shiso 0.1.0 · 3 runs</div></td>
+        <td rowspan="1">2026-10-06<div class="s-muted s-small">shiso 0.1.0 · 3 runs</div></td>
       </tr>
     
     </tbody>
   </table>
-  </div>
+  </div></div>
   
   
 </section>
 
 
 
-<section>
-  <h2 id="files">Files</h2>
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
   
-  <details class="files">
-    <summary><code>q8_0</code> <span class="muted">2.4 GiB · 2 components</span></summary>
+  <details class="s-card">
+    <summary><code>q8_0</code> <span class="s-muted">2.4 GiB · 2 components</span></summary>
     
     
-    <h3>asr <a class="small" href="https://huggingface.co/unslothai/Qwen3-ASR-1.7B-GGUF/tree/cad2b8497d1541a8b6f9f7ad32e8c6f9c9908da3" rel="noopener noreferrer">unslothai/Qwen3-ASR-1.7B-GGUF@cad2b8497d</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">asr <a class="s-small" href="https://huggingface.co/unslothai/Qwen3-ASR-1.7B-GGUF/tree/cad2b8497d1541a8b6f9f7ad32e8c6f9c9908da3" rel="noopener noreferrer">unslothai/Qwen3-ASR-1.7B-GGUF@cad2b8497d</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>Qwen3-ASR-1.7B-Q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">2 GiB</td><td><code title="58e22d0532d4eacaf034cfac17a6fed159f37c41390c710186783be439d1fc57">58e22d0532d4…</code></td></tr>
+        <tr><td><code>Qwen3-ASR-1.7B-Q8_0.gguf</code> <span class="s-pill">entry</span></td><td class="num">2 GiB</td><td><code title="58e22d0532d4eacaf034cfac17a6fed159f37c41390c710186783be439d1fc57">58e22d0532d4…</code></td></tr>
       
-        <tr><td><code>mmproj-Qwen3-ASR-1.7B-Q8_0.gguf</code> <span class="pill soft">→ asr_mmproj</span></td><td class="num">0.3 GiB</td><td><code title="46c1d533af3f354ceb37ce855dbceff7da7fa7cf1e6a523df3b13440bd164c0d">46c1d533af3f…</code></td></tr>
+        <tr><td><code>mmproj-Qwen3-ASR-1.7B-Q8_0.gguf</code> <span class="s-pill">→ asr_mmproj</span></td><td class="num">0.3 GiB</td><td><code title="46c1d533af3f354ceb37ce855dbceff7da7fa7cf1e6a523df3b13440bd164c0d">46c1d533af3f…</code></td></tr>
       
       </tbody>
     </table>
     </div>
     
-    <h3>diarization <a class="small" href="https://huggingface.co/audio-cpp/Nemotron-3-Diarization-GGUF/tree/647d39feaa0e91dca5ce355a95403837b76dff56" rel="noopener noreferrer">audio-cpp/Nemotron-3-Diarization-GGUF@647d39feaa</a></h3>
-    <div class="table-wrap">
-    <table class="compact">
+    <h3 class="s-h3">diarization <a class="s-small" href="https://huggingface.co/audio-cpp/Nemotron-3-Diarization-GGUF/tree/647d39feaa0e91dca5ce355a95403837b76dff56" rel="noopener noreferrer">audio-cpp/Nemotron-3-Diarization-GGUF@647d39feaa</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
       <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
       <tbody>
       
-        <tr><td><code>nemotron-3-diarization-q8_0.gguf</code> <span class="pill soft">entry</span></td><td class="num">0.1 GiB</td><td><code title="9a737455bd10123bcf1e036d9a0b07b6e8c42e7d0dd1a5ee4141dc386db46d0b">9a737455bd10…</code></td></tr>
+        <tr><td><code>nemotron-3-diarization-q8_0.gguf</code> <span class="s-pill">entry</span></td><td class="num">0.1 GiB</td><td><code title="9a737455bd10123bcf1e036d9a0b07b6e8c42e7d0dd1a5ee4141dc386db46d0b">9a737455bd10…</code></td></tr>
       
       </tbody>
     </table>
@@ -138,14 +136,14 @@
     
   </details>
   
-  <p class="small"><a href="../../registry/v1/models/qwen3-asr-1.7b/index.json">Manifest JSON</a></p>
+  <p class="s-small"><a href="../../registry/v1/models/qwen3-asr-1.7b/index.json">Manifest JSON</a></p>
 </section>
 
 
-<section>
-  <h2 id="card">Model card</h2>
-  <p class="hint">From <a href="https://huggingface.co/Qwen/Qwen3-ASR-1.7B/blob/7278e1e70fe206f11671096ffdd38061171dd6e5/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
-  <article class="readme"><h1>Qwen3-ASR</h1>
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/Qwen/Qwen3-ASR-1.7B/blob/7278e1e70fe206f11671096ffdd38061171dd6e5/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme"><h1>Qwen3-ASR</h1>
 <h2>Overview</h2>
 <h3>Introduction</h3>
 <p>
