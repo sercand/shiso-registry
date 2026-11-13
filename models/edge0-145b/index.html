@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en" data-density="comfortable">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>edge0-145b · shiso hub</title>
+<meta name="description" content="Edge0-145B: a 145B latent-expert Qwen3.8-Flash-Next derivative (NVFP4 experts, FP8 n-gram table), with its own MTP draft head and the base model&#39;s vision tower. CUDA only. Licence: the Edge0 Community Model License 1.0 together with the Qwen Community License. Personal, research, education and internal organisational use are allowed; selling or renting the model, running it as a paid or ad-funded inference service for third parties, or shipping it in a commercial coding or office assistant needs a separate licence from Edge0 (info@edge0.ai), and Qwen&#39;s own terms still apply. Read both licences on the model card before using it commercially">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="shiso">
+<header class="s-topbar wrap">
+  <a class="brand" href="../../"><span class="leaf" aria-hidden="true"></span>shiso <span class="s-muted">hub</span></a>
+  <nav class="s-row">
+    <a class="s-btn s-btn--ghost" href="../../">Models</a>
+    <a class="s-btn s-btn--ghost" href="../../registry/v1/index.json">Index JSON</a>
+  </nav>
+</header>
+<main class="wrap">
+
+<nav class="crumbs"><a href="../../">Models</a> <span aria-hidden="true">/</span> edge0-145b</nav>
+
+<section class="model-head">
+  <div>
+    <h1 class="s-h1">edge0-145b</h1>
+    
+    <p class="lede">Edge0-145B: a 145B latent-expert Qwen3.8-Flash-Next derivative (NVFP4 experts, FP8 n-gram table), with its own MTP draft head and the base model&#39;s vision tower. CUDA only. Licence: the Edge0 Community Model License 1.0 together with the Qwen Community License. Personal, research, education and internal organisational use are allowed; selling or renting the model, running it as a paid or ad-funded inference service for third parties, or shipping it in a commercial coding or office assistant needs a separate licence from Edge0 (info@edge0.ai), and Qwen&#39;s own terms still apply. Read both licences on the model card before using it commercially</p>
+    <div class="pills">
+      <span class="s-pill s-pill--soft">Chat</span>
+      
+    </div>
+  </div>
+  <div class="quick">
+    <div class="cmd s-inset"><code>shiso pull edge0-145b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso pull edge0-145b" type="button">Copy</button></div>
+    <div class="cmd s-inset"><code>shiso serve edge0-145b</code><button class="s-btn s-btn--sm s-btn--outline" data-copy="shiso serve edge0-145b" type="button">Copy</button></div>
+    <p class="s-muted s-small" style="margin:0">A bare pull takes the first variant that fits this host.</p>
+  </div>
+</section>
+
+<section class="s-card">
+  <dl class="s-facts">
+    <div><dt>Family</dt><dd>qwen4exp</dd></div>
+    
+    
+    
+    <div><dt>Input</dt><dd>text, image, video</dd></div>
+    <div><dt>Output</dt><dd>text</dd></div>
+    <div><dt>Features</dt><dd>Tool calls, Reasoning <span class="s-muted">(effort: none, low, medium, xhigh)</span></dd></div>
+    <div><dt>License</dt><dd>other</dd></div>
+    
+    <div><dt>Updated</dt><dd>2026-11-14</dd></div>
+  </dl>
+</section>
+
+<section class="section">
+  <h2 class="s-h2" id="variants">Variants</h2>
+  <div class="s-card"><div class="s-table-wrap">
+  <table class="s-table">
+    <thead><tr><th>Variant</th><th>Quant</th><th>Runs on</th><th class="num">RAM</th><th class="num">Disk</th><th>Needs</th><th>Pull</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><code>nvfp4</code></td>
+        <td>nvfp4</td>
+        <td><span class="s-mono">cuda</span></td>
+        <td class="num">80 GiB<span class="s-muted"> · 96 GiB rec.</span></td>
+        <td class="num">103 GiB</td>
+        <td>—</td>
+        <td><button class="s-btn s-btn--sm" data-copy="shiso pull edge0-145b" type="button" title="shiso pull edge0-145b">Copy pull</button></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  </div></div>
+</section>
+
+<section class="section">
+  <h2 class="s-h2" id="benchmarks">Throughput</h2>
+  
+  <p class="s-muted">Not measured yet. Run <code>shiso-registry bench edge0-145b</code> on a device with the model installed and commit the record.</p>
+  
+</section>
+
+
+
+<section class="section">
+  <h2 class="s-h2" id="files">Files</h2>
+  
+  <details class="s-card">
+    <summary><code>nvfp4</code> <span class="s-muted">103 GiB · 4 components</span></summary>
+    <p class="s-small">Server defaults: <code>ctx = 131072</code>, <code>spec_k = 4</code>, <code>capture_verify = true</code>, <code>capture_batch = true</code>, <code>kv_cache_tokens = 131072</code>, <code>solo_prefill_chunk = 4096</code></p>
+    
+    <h3 class="s-h3">base <a class="s-small" href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/tree/6b6cc9b35ce84c0d244043f772cf584276e91439" rel="noopener noreferrer">Edge0/Edge0-145B-NVFP4@6b6cc9b35c</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>experts.bin</code></td><td class="num">44.3 GiB</td><td><code title="a39b0c127983b85d07326c8bad49260d6b475293b46e4166428c91a765ee593a">a39b0c127983…</code></td></tr>
+      
+        <tr><td><code>labels.bin</code></td><td class="num">0 GiB</td><td><code title="ce9b4a20b92c5c866e65d84a3884c104986522471cf11cc5f797a153affbcc06">ce9b4a20b92c…</code></td></tr>
+      
+        <tr><td><code>latent_dense_q8.bin</code></td><td class="num">3.5 GiB</td><td><code title="fbb25caaa0dcf45ef62f1a4945dcf98a53a166934a3b461b166fbafa831d87ca">fbb25caaa0dc…</code></td></tr>
+      
+        <tr><td><code>model-skeleton.gguf</code></td><td class="num">5.6 GiB</td><td><code title="ab49fbe7590cdcda45d7a2bcae4be0bd42c6a70b951d594a00eb158d7df0b72f">ab49fbe7590c…</code></td></tr>
+      
+        <tr><td><code>mtp/dense.bin</code></td><td class="num">0.1 GiB</td><td><code title="c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a">c724dc0b0822…</code></td></tr>
+      
+        <tr><td><code>mtp/dense.txt</code></td><td class="num">0 GiB</td><td><code title="991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd">991456cf4eb2…</code></td></tr>
+      
+        <tr><td><code>mtp/experts.bin</code></td><td class="num">0.7 GiB</td><td><code title="09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f">09398406be61…</code></td></tr>
+      
+        <tr><td><code>native_experts.txt</code></td><td class="num">0 GiB</td><td><code title="84c702bd52f6c800f72590c9c99cf6c24290fee4e59e7e81e5a057999772fcc0">84c702bd52f6…</code></td></tr>
+      
+        <tr><td><code>ple-fp8.gguf</code></td><td class="num">47.7 GiB</td><td><code title="c7615c59b060277ddf6f84729fa8f7469cfc82c7fb983d6e7eab5a2f7446f170">c7615c59b060…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3 class="s-h3">draft_vocab <a class="s-small" href="../../registry/v1/models/edge0-145b/draft_vocab_en_tr_code.txt" rel="noopener noreferrer">hosted on the hub</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>draft_vocab_en_tr_code.txt</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="f6371cfff16e83c2202fb237744f225620dc78063f8bd69995e438f2c6264d41">f6371cfff16e…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3 class="s-h3">vision <a class="s-small" href="https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/tree/f5d175de2cf7f720d45d6064019a81fcf056e986" rel="noopener noreferrer">unsloth/Qwen3.8-Flash-Next-GGUF@f5d175de2c</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>mmproj-F16.gguf</code> <span class="s-pill">entry</span></td><td class="num">0.8 GiB</td><td><code title="1f7b7f0b984cf065c604360c29c8098362ed61b290db0ff12c6f360bb1a8a980">1f7b7f0b984c…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+    <h3 class="s-h3">config <a class="s-small" href="https://huggingface.co/Qwen/Qwen3.8-Flash-Next/tree/812d96e10a0dd82b69d749e68693698cf6c36daa" rel="noopener noreferrer">Qwen/Qwen3.8-Flash-Next@812d96e10a</a></h3>
+    <div class="s-table-wrap">
+    <table class="s-table">
+      <thead><tr><th>File</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      
+        <tr><td><code>chat_template.jinja</code></td><td class="num">0 GiB</td><td><code title="af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375">af16f654968d…</code></td></tr>
+      
+        <tr><td><code>config.json</code> <span class="s-pill">entry</span></td><td class="num">0 GiB</td><td><code title="889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b">889658f2508e…</code></td></tr>
+      
+        <tr><td><code>generation_config.json</code></td><td class="num">0 GiB</td><td><code title="e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e">e70c136c1b78…</code></td></tr>
+      
+        <tr><td><code>tokenizer.json</code></td><td class="num">0 GiB</td><td><code title="0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3">0997f410c57a…</code></td></tr>
+      
+        <tr><td><code>tokenizer_config.json</code></td><td class="num">0 GiB</td><td><code title="207c03c41a06a9c3b0cc527d8a56115159c1eac6b59a4ffae85b646e773d074e">207c03c41a06…</code></td></tr>
+      
+      </tbody>
+    </table>
+    </div>
+    
+  </details>
+  
+  <p class="s-small"><a href="../../registry/v1/models/edge0-145b/index.json">Manifest JSON</a></p>
+</section>
+
+
+<section class="section">
+  <h2 class="s-h2" id="card">Model card</h2>
+  <p class="s-muted s-small" style="margin:0">From <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/blob/6b6cc9b35ce84c0d244043f772cf584276e91439/README.md" rel="noopener noreferrer">the README on Hugging Face</a> at the pinned revision.</p>
+  <article class="s-card readme">
+<div>
+<div>
+<p><img alt="Edge0" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/hero.png" width="100%"></p>
+<h1>Edge0-145B · NVFP4</h1>
+<div>
+<p><img alt="Think big. Run here. A 145B agent. On one consumer GPU. Sparse. By design. Latent MoE. Trained natively at 4 bits." src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/editorial-pair.svg" width="720"></p>
+</div>
+<p><a href="https://github.com/Edge0-AI/Edge0" rel="noopener noreferrer nofollow"><img alt="GitHub" height="20" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/badges/github-badge.svg"></a> <a href="https://github.com/Edge0-AI/Edge0/releases" rel="noopener noreferrer nofollow"><img alt="Windows releases" height="20" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/badges/windows-releases-badge.svg"></a></p>
+<p><a href="https://huggingface.co/Edge0/Edge0-145B-q3k" rel="noopener noreferrer nofollow"><img alt="Edge0-145B-q3k" height="20" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/badges/Edge0-145B-q3k-badge.svg"></a> <a href="https://huggingface.co/Edge0/Edge0-120B-q3k" rel="noopener noreferrer nofollow"><img alt="Edge0-120B-q3k" height="20" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/badges/Edge0-120B-q3k-badge.svg"></a> <a href="https://huggingface.co/Edge0/Edge0-120B-NVFP4" rel="noopener noreferrer nofollow"><img alt="Edge0-120B-NVFP4" height="20" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/badges/Edge0-120B-NVFP4-badge.svg"></a></p>
+<p><a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/#quality" rel="noopener noreferrer nofollow">Quality</a> · <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/#speed" rel="noopener noreferrer nofollow">Speed</a> · <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/#architecture" rel="noopener noreferrer nofollow">Architecture</a> · <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/#quick-start" rel="noopener noreferrer nofollow">Quick start</a></p>
+</div>
+<hr>
+<div>
+<p><strong>A 145B agent, running on one consumer GPU.</strong></p>
+<p><strong>98.3 tok/s agent decode · 3165.7 tok/s 16K prefill · 86.5 terminal-bench 2.1.</strong></p>
+<p>Throughput measured on <strong>RTX 5090 D 24 GB · NVFP4</strong>.</p>
+</div>
+<p>A latent sparse MoE: 48 layers, 512 experts, 10 active per token, 256K context, trained natively at 4 bits.</p>
+<div>
+<p><strong>This repository:</strong> Edge0-145B · <strong>NVFP4 </strong> </p>
+<p><small>ⓘ With residency enabled, <strong>145B NVFP4</strong> used <strong>23.25 GiB VRAM + 38.27 GiB host RAM</strong> on RTX 5090 D 24 GB. </small></p>
+</div>
+<details>
+<summary><b>Model overview</b></summary>
+<p><strong>NVFP4 · RTX 5090 D 24 GB.</strong> Prefill throughput uses a 16K-token input; weight sizes are listed separately for each format.</p>
+<p><a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/model-overview.svg" title="Open full-size model overview" rel="noopener noreferrer nofollow"><img alt="Edge0-145B NVFP4 model overview: architecture, benchmark scores, throughput and weight sizes" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/model-overview.svg" width="100%"></a></p>
+</details>
+<h2>Quality</h2>
+<p>Higher is better. Results are listed by model.</p>
+<p><a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/quality/quality-overview.svg" title="Open full-size chart" rel="noopener noreferrer nofollow"><img alt="Six-model Quality comparison: DeepSWE 1.1, Terminal-Bench 2.1, HLE, GPQA-Diamond, IFBench, AA-LCR. All panels use a 0–100 scale. Full model names, scores and missing values are shown in the chart." src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/quality/quality-overview.svg" width="1400"></a></p>
+<h2>Speed</h2>
+<p>Throughput is shown in <strong>tok/s</strong>, grouped by hardware and build. The summary above uses <strong>NVFP4</strong> on RTX 5090 D 24 GB.</p>
+<details>
+<summary><b>Full speed table</b> · all reported machines and builds</summary>
+<p><small>Highlighted rows show the <strong>NVFP4</strong> build in this repository.</small></p>
+<div><table>
+<thead>
+<tr>
+<th>Machine</th>
+<th>Build</th>
+<th>4K prefill</th>
+<th>16K prefill</th>
+<th>Chat decode</th>
+<th>Agent decode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTX 5090 D 24 GB</td>
+<td>Q3_K</td>
+<td>2169.9</td>
+<td>3554.9</td>
+<td>99.7</td>
+<td><strong>121.2</strong></td>
+</tr>
+<tr>
+<td>RTX 5090 D 24 GB</td>
+<td>NVFP4</td>
+<td>1839.6</td>
+<td>3165.7</td>
+<td>79.6</td>
+<td>98.3</td>
+</tr>
+<tr>
+<td>RTX 4090 24 GB</td>
+<td>Q3_K</td>
+<td>2042.0</td>
+<td>3179.4</td>
+<td>69.9</td>
+<td>91.7</td>
+</tr>
+<tr>
+<td>RTX Spark N1X 60 GiB</td>
+<td>Q3_K</td>
+<td>674.0</td>
+<td>770.3</td>
+<td>37.7</td>
+<td>36.7</td>
+</tr>
+<tr>
+<td>RTX Spark N1X 60 GiB</td>
+<td>NVFP4</td>
+<td>821.2</td>
+<td>922.4</td>
+<td>40.1</td>
+<td>46.0</td>
+</tr>
+<tr>
+<td>Apple M2 Ultra (Metal)</td>
+<td>Q3_K</td>
+<td>755.6</td>
+<td>800.3</td>
+<td>60.9</td>
+<td>57.0</td>
+</tr>
+<tr>
+<td>16 GiB VRAM + 20 GiB RAM</td>
+<td>Q3_K</td>
+<td>249</td>
+<td>335</td>
+<td>36.8</td>
+<td>44.9</td>
+</tr>
+</tbody>
+</table></div>
+</details>
+<details>
+<summary><b>Measurement conditions</b> · constrained budget and memory residency</summary>
+<p>The <code>16 GiB VRAM + 20 GiB RAM</code> rows are the same RTX 5090 D 24 GB, not a different card. VRAM is capped with <code>--vram-reserve-mib 8192</code>. System RAM is capped by a cgroup (<code>MemoryMax=20G</code>, no swap). With residency on, the same card holds <strong>Q3_K</strong> (40.81 GiB of weights)
+as 23.14 GiB VRAM + 31.28 GiB RAM, and <strong>NVFP4</strong> (47.79 GiB) as 23.25 GiB VRAM + 38.27 GiB RAM — disjoint expert sets,
+nothing counted twice.</p>
+<p>See <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/#usage-help" rel="noopener noreferrer nofollow">Usage &amp; troubleshooting</a> for memory-saving options.</p>
+</details>
+<details>
+<summary><h2>In action</h2></summary>
+<div>
+<div>
+
+
+
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/blob/main/assets/demos/showcase.mp4" rel="noopener noreferrer nofollow">Watch the Edge0 demonstrations</a>
+
+</div>
+<p><small>Recorded with Edge0-145B</small><a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/blob/main/assets/demos/showcase.mp4" rel="noopener noreferrer nofollow">Open video ↗</a></p>
+<nav>
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/demos/showcase.mp4#t=0.0" rel="noopener noreferrer nofollow"><small>0:00</small><span>Chat &amp; Coding</span></a>
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/demos/showcase.mp4#t=36.56666666666667" rel="noopener noreferrer nofollow"><small>0:36</small><span>Video Production</span></a>
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/demos/showcase.mp4#t=58.4" rel="noopener noreferrer nofollow"><small>0:58</small><span>Manhattan in 3D</span></a>
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/demos/showcase.mp4#t=79.56666666666666" rel="noopener noreferrer nofollow"><small>1:19</small><span>3D Cathedral</span></a>
+<a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/demos/showcase.mp4#t=98.93333333333334" rel="noopener noreferrer nofollow"><small>1:38</small><span>PCB Design</span></a>
+</nav>
+</div>
+</details>
+<h2>Architecture</h2>
+<details>
+<summary><b>Architecture details</b> · diagram, configuration and expert routing</summary>
+<p><a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/main/assets/arch.svg" title="Open full-size architecture diagram" rel="noopener noreferrer nofollow"><img alt="Edge0-145B architecture and expert routing" src="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/assets/arch.svg" width="100%"></a></p>
+<div><table>
+<thead>
+<tr>
+<th></th>
+<th>Edge0-145B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total parameters</td>
+<td><strong>145B</strong> · <strong>10.12 B active per token</strong></td>
+</tr>
+<tr>
+<td>Layers</td>
+<td>48 · hybrid attention, full every 4 layers + sparse indexer</td>
+</tr>
+<tr>
+<td>Experts</td>
+<td><strong>512 per layer</strong>, 10 routed + 1 shared active per token, SwiGLU width 640</td>
+</tr>
+<tr>
+<td>Expert pool</td>
+<td>84.6 B parameters at latent width ℓ = <strong>1792</strong></td>
+</tr>
+<tr>
+<td>PLE</td>
+<td><strong>51.2 B</strong> n-gram embedding table, fp8, memory-mapped</td>
+</tr>
+<tr>
+<td>MTP head</td>
+<td>1.26 B draft model, 512 experts, for speculative decode</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>256K · KV int8 with 32K resident</td>
+</tr>
+<tr>
+<td>Builds</td>
+<td>Q3_K 40.81 GiB · NVFP4 47.79 GiB</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Left</strong>: the stack the model actually runs — token embedding, 48 hybrid-attention layers, final norm, lm_head.
+<strong>Right</strong>: one layer opened up. Attention reads and writes the full 2560 width. <strong>D</strong> then projects the token down to
+ℓ per routing group, the router picks 10 of 512 experts, each expert runs ℓ → 640 → ℓ, a shared expert runs
+alongside, and <strong>U</strong> projects the combined result back to 2560.</p>
+<p>Everything outside the expert pool stays at 2560: D and U are shared, one copy per layer. Only the 512 experts work at
+ℓ. That is why an expert is a fixed <strong>1,630,720 B</strong> record — the engine keeps a few thousand of them on the card and streams
+the rest from host memory, at a cost that tracks how many experts are resident and not how big the model is.</p>
+</details>
+<h2>Quick start</h2>
+<p>Each model folder (Q3_K or NVFP4, Edge0-145B or Edge0-120B) runs on <a href="https://github.com/Edge0-AI/Edge0" rel="noopener noreferrer nofollow">Edge0</a>
+through <code>edge0-infer</code>, from the command line or from the Edge0 Chat desktop app. Keep the folder as it is:
+<code>edge0-infer</code> identifies the model by <code>model_name</code> in its <code>model.json</code>.</p>
+<details>
+<summary><b>Platform &amp; documentation notes</b></summary>
+<p>The build instructions target NVIDIA GPUs with CUDA 13 on Linux or Windows (x64 or ARM64). The Apple M2 Ultra measurements use Metal; they do not establish macOS release availability.</p>
+</details>
+<details>
+<summary><b>Build &amp; command-line instructions</b></summary>
+<p><strong>1. Build.</strong> Clone the repository, then build two parts:</p>
+<pre><code>git clone https://github.com/Edge0-AI/Edge0.git edge0
+</code></pre>
+<ul>
+<li><strong>edge0-strata</strong>, the engine: follow "Build (Linux, NVIDIA)" or "Build (Windows, NVIDIA)" in <a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-strata/EDGE0.md" rel="noopener noreferrer nofollow">edge0-strata/EDGE0.md</a>.</li>
+<li><strong>edge0-infer</strong>: follow "Build" (Linux) or "Windows" in <a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/getting-started.md" rel="noopener noreferrer nofollow">edge0-infer/docs/getting-started.md</a>.</li>
+</ul>
+<p><strong>2. Run from the command line.</strong> Pass one model folder, such as <code>Edge0-145B-NVFP4</code>, not the folder that holds several of
+them. On Windows the program is <code>build\windows\bin\edge0-infer.exe</code>.</p>
+<pre><code>build/cpu/bin/edge0-infer serve --model /path/to/Edge0-145B-NVFP4
+</code></pre>
+<p>It prints <code>Listening: http://127.0.0.1:8000 model=&lt;name&gt;</code> once the weights are loaded, where <code>&lt;name&gt;</code> is <code>edge0_145b</code>,
+and then serves OpenAI- and Anthropic-compatible endpoints:</p>
+<pre><code>curl localhost:8000/v1/chat/completions -H 'content-type: application/json' -d '{"model":"edge0_145b","messages":[{"role":"user","content":"hi"}],"max_tokens":64}'
+</code></pre>
+<p><code>edge0-infer chat --model /path/to/Edge0-145B-NVFP4</code> opens an interactive session instead. More options:
+<a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/edge0-145b.md" rel="noopener noreferrer nofollow">edge0-infer/docs/edge0-145b.md</a>.</p>
+</details>
+<details>
+<summary><b>Desktop app</b> · Windows</summary>
+<p>⬇️ <strong>Download:</strong> <strong><a href="https://github.com/Edge0-AI/Edge0/releases" rel="noopener noreferrer nofollow">GitHub Releases</a></strong></p>
+<p>Open <strong>Edge0 Chat</strong> on Windows and choose a model folder, such as <code>Edge0-145B-NVFP4</code>, to run the model locally. To build the app from source, follow the <a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/examples/desktop/README.md" rel="noopener noreferrer nofollow">Edge0 Chat</a> guide.</p>
+</details>
+<p><a rel="noopener noreferrer nofollow"></a>
+<a rel="noopener noreferrer nofollow"></a>
+<a rel="noopener noreferrer nofollow"></a>
+<a rel="noopener noreferrer nofollow"></a></p>
+<h2>Usage &amp; troubleshooting</h2>
+<p>145B / 120B · Memory options</p>
+<details>
+<summary><a rel="noopener noreferrer nofollow"></a>Low RAM · SSD offload</summary>
+<ul>
+<li><strong>SSD mode:</strong> <code>--mmap-experts</code> — read uncached experts from SSD on demand.</li>
+<li><strong>Low-memory arguments:</strong></li>
+</ul>
+<pre><code>--resident-budget-gib 20 --expert-profile expert-profile.bin
+</code></pre>
+<p>Up to <strong>20 GiB</strong> of host RAM for the expert cache; uncached experts are read from SSD on demand. Includes <code>--mmap-experts</code> and disjoint GPU/RAM caches automatically.</p>
+<p><strong>Required:</strong> a static expert profile. Replace <code>expert-profile.bin</code> with your profile path.</p>
+</details>
+<details>
+<summary><a rel="noopener noreferrer nofollow"></a>RAM budget · what 20 GiB covers</summary>
+<ul>
+<li><strong>Expert cache:</strong> <code>--resident-budget-gib 20</code> caps host-RAM expert caching at <strong>20 GiB</strong>, lowered further to fit available memory.</li>
+<li><strong>Total RAM:</strong> expert cache + other runtime allocations. This flag does <strong>not</strong> set a total-process RAM limit.</li>
+<li><strong>Benchmark limit:</strong> the 20 GiB total RAM test budget is a separate measurement condition.</li>
+</ul>
+</details>
+<details>
+<summary><a rel="noopener noreferrer nofollow"></a>GPU / RAM · avoid duplicate experts</summary>
+<ul>
+<li><strong>Enable:</strong> <code>--resident-experts</code> or <code>--resident-budget-gib N</code>, with a static <code>--expert-profile</code>.</li>
+<li><strong>Effect:</strong> experts cached in VRAM need no duplicate RAM copy. Compatible with SSD loading.</li>
+<li><strong>Default:</strong> off, prioritizing speed.</li>
+<li><strong>Automatically enabled:</strong> <code>--mmap-experts</code>, <code>--resident-cpu-experts</code>, <code>--resident-pin</code>.</li>
+</ul>
+</details>
+<h2>Capacity controls · VRAM and host RAM</h2>
+<p><a rel="noopener noreferrer nofollow"></a></p>
+<p>All of these live in the pack's <code>model.json</code>, not on a command line: flags go in <code>args</code>, environment
+variables in <code>env</code>, with paths relative to the pack directory. That is the same file the Edge0 Chat app
+and <code>edge0-infer</code> read, so a change there applies to every launch.</p>
+<pre><code>"args": ["--expert-cache", "auto", "--kv-resident", "32768", "--vram-reserve-mib", "1024"],
+"env":  {"STRATA_LATENT_DENSE": "./latent_dense_q8.bin", "STRATA_LATENT_DENSE_FMT": "8",
+         "STRATA_LAT_FUSED_Q3K": "0"}
+</code></pre>
+<h3>VRAM</h3>
+<table><thead><tr><th>Flag</th><th>Meaning</th><th>Default</th></tr></thead><tbody>
+<tr><td><code>--vram-reserve-mib N</code></td><td>VRAM left free for the desktop, the driver and other processes; the engine sizes its caches from what remains. It means "leave this much free", not "give the engine this much", so the same number means different things on cards with different totals. Accepted but not listed by <code>--help</code>.</td><td><code>700</code></td></tr>
+<tr><td><code>--expert-cache N|auto</code></td><td>Expert slots kept in VRAM. <code>auto</code> derives the count from the free VRAM after the fixed footprint (skeleton projections ≈ 2.9 GiB, MTP draft ≈ 0.8 GiB, verify and draft-head buffers ≈ 0.45 GiB, plus the D/U device buffers).</td><td><code>0</code> (none)</td></tr>
+<tr><td><code>--expert-cache-device1..3 N|auto</code></td><td>Use the second and third GPU as further expert-cache tiers.</td><td>off</td></tr>
+<tr><td><code>--kv-resident N</code></td><td>Keep N KV cells per QSA layer in VRAM and stream the K/V from pinned host RAM, which frees VRAM for experts.</td><td><code>0</code> (all in VRAM)</td></tr>
+<tr><td><code>--mtp-q4 all|proj|head</code></td><td>4-bit copies of the draft layer's projections and/or head, about 0.3–0.5 GiB less VRAM.</td><td>off</td></tr>
+<tr><td><code>--prefill CHUNK</code></td><td>Prompt chunk size; bigger chunks need bigger device buffers. <code>auto</code> uses the largest chunk whose buffers the expert cache can lend.</td><td><code>auto</code></td></tr>
+<tr><td><code>--spec N</code></td><td>The MTP drafter's verify window: how many tokens it proposes per check. A bigger window needs bigger verify buffers (about 180 MiB at 4) and pays off when every window has a fixed per-layer cost. The shipped packs use <code>4</code>; the macOS setup picks <code>2</code>, or <code>3</code> when the experts stream from SSD. Without an MTP layer there is no speculation.</td><td><code>4</code></td></tr>
+</tbody></table>
+<h3>Host RAM</h3>
+<table><thead><tr><th>Flag</th><th>Meaning</th><th>Default</th></tr></thead><tbody>
+<tr><td><code>--memory-limit-mib N</code></td><td>The RAM this engine's container or cgroup may use, for when the container cannot see its own limit.</td><td><code>0</code> (detect)</td></tr>
+<tr><td><code>--resident-budget-gib N</code></td><td>Cap on the host-RAM expert cache. It holds only the experts the VRAM cache does <strong>not</strong> hold, so the two sets are disjoint, and the value is clamped to the RAM actually available minus headroom. Requires a static <code>--expert-profile</code>.</td><td><code>0</code> (off)</td></tr>
+<tr><td><code>--resident-experts</code></td><td>The same with the whole complement as the budget.</td><td>off</td></tr>
+<tr><td><code>--mmap-experts</code></td><td>Read experts through the pack file on demand instead of pinning them, so nothing is resident in RAM.</td><td>off</td></tr>
+<tr><td><code>--conversation-cache-mib N</code></td><td>Conversation cache. <code>0</code> turns it off.</td><td>adaptive</td></tr>
+<tr><td><code>--ple-io direct|mmap|ram</code></td><td>The PLE table on its SSD: <code>direct</code> reads it unbuffered and it never enters memory; <code>ram</code> locks the whole table in RAM.</td><td><code>direct</code></td></tr>
+<tr><td><code>--kv-resident N</code></td><td>The streamed K/V lives in pinned host RAM (1.55 GiB at 32768 cells).</td><td>—</td></tr>
+</tbody></table>
+<h2>Community builds</h2>
+<p>Third-party conversions of this model. They are <strong>not made or endorsed by Edge0</strong>; this model's licence and the
+upstream terms still apply to them.</p>
+<ul>
+<li><strong><a href="https://huggingface.co/infosave/Edge0-145B-cmf" rel="noopener noreferrer nofollow">infosave/Edge0-145B-cmf</a></strong> — a single-file CMF build for
+<a href="https://github.com/infosave2007/cmf" rel="noopener noreferrer nofollow">cortiq</a> (Rust, CUDA and Vulkan, OpenAI-compatible). The routed experts are this
+NVFP4 build's weights copied bit for bit; the D/U projections and the shared expert are re-encoded to 8 bits and the
+router to 16. The author reports it running from 12 GB cards.</li>
+</ul>
+<h2>Acknowledgements</h2>
+<details>
+<summary><b>Credits &amp; license</b></summary>
+<p>We thank the teams behind <a href="https://huggingface.co/Qwen/Qwen3.8-Flash-Next" rel="noopener noreferrer nofollow">Qwen3.8-Flash-Next</a> and <a href="https://github.com/Niko1221/Strata" rel="noopener noreferrer nofollow">Strata</a> for sharing their work with the community. Edge0 extends the Strata engine with latent MoE support.</p>
+<p><strong>Model license.</strong> Edge0-specific contributions are provided under the <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/LICENSE" rel="noopener noreferrer nofollow">Edge0 Community Model License 1.0</a>, only to the extent that Edge0 owns or is authorized to license them. Qwen materials remain subject to the <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/third-party/Qwen-LICENSE.txt" rel="noopener noreferrer nofollow">Qwen Community License 1.0</a>. Both sets of applicable terms must be followed; see <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/NOTICE" rel="noopener noreferrer nofollow">NOTICE</a> and the <a href="https://huggingface.co/Edge0/Edge0-145B-NVFP4/resolve/6b6cc9b35ce84c0d244043f772cf584276e91439/release-scope.json" rel="noopener noreferrer nofollow">release scope</a>.</p>
+<p>The Edge0 license permits personal use, research, modification, noncommercial sharing, internal use, and commercial use of generated outputs, subject to applicable upstream conditions. Selling or commercially bundling the model, operating a commercial model service, or offering an independent commercial coding or office assistant using it requires a separate written Edge0 license. See LICENSE for the precise scope and exceptions.</p>
+<p><strong>Commercial licensing:</strong> <a href="mailto:info@edge0.ai" rel="noopener noreferrer nofollow">info@edge0.ai</a>. Edge0 permission does not waive Qwen's separate authorization or attribution requirements. Framework code retains its Apache-2.0 license; Strata retains its MIT license. Existing valid grants are not revoked.</p>
+</details>
+</div>
+</article>
+</section>
+
+
+</main>
+<footer class="wrap foot">
+  <p>Every file is pinned to a commit and verified by SHA-256 on download. Built from the shiso registry recipes.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

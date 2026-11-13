@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T20:29:29.444502Z",
+  "generated_at": "2026-11-13T22:51:10.103690367Z",
   "models": [
     {
       "name": "clef",
@@ -111,6 +111,39 @@
           "quant": "Q8_0",
           "min_ram_bytes": 6442450944,
           "disk_bytes": 3475805474
+        }
+      ]
+    },
+    {
+      "name": "edge0-145b",
+      "aliases": [],
+      "family": "qwen4exp",
+      "min_shiso_version": "0.2.5",
+      "description": "Edge0-145B: a 145B latent-expert Qwen3.8-Flash-Next derivative (NVFP4 experts, FP8 n-gram table), with its own MTP draft head and the base model's vision tower. CUDA only. Licence: the Edge0 Community Model License 1.0 together with the Qwen Community License. Personal, research, education and internal organisational use are allowed; selling or renting the model, running it as a paid or ad-funded inference service for third parties, or shipping it in a commercial coding or office assistant needs a separate licence from Edge0 (info@edge0.ai), and Qwen's own terms still apply. Read both licences on the model card before using it commercially",
+      "tags": [],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-11-14T01:51:09+03:00",
+      "manifest": "models/edge0-145b/index.json",
+      "manifest_sha256": "e04e876ccba456fa6330f72b9ac075271bb90d2a019a5aa618ebc3e970a06ceb",
+      "variants": [
+        {
+          "key": "nvfp4",
+          "backends": [
+            "cuda"
+          ],
+          "quant": "nvfp4",
+          "min_ram_bytes": 85899345920,
+          "disk_bytes": 110240858972
         }
       ]
     },
