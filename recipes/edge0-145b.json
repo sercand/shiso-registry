@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "name": "edge0-145b",
+  "aliases": [],
+  "family": "qwen4exp",
+  "min_shiso_version": "0.2.5",
+  "description": "Edge0-145B: a 145B latent-expert Qwen3.8-Flash-Next derivative (NVFP4 experts, FP8 n-gram table), with its own MTP draft head and the base model's vision tower. CUDA only. Licence: the Edge0 Community Model License 1.0 together with the Qwen Community License. Personal, research, education and internal organisational use are allowed; selling or renting the model, running it as a paid or ad-funded inference service for third parties, or shipping it in a commercial coding or office assistant needs a separate licence from Edge0 (info@edge0.ai), and Qwen's own terms still apply. Read both licences on the model card before using it commercially",
+  "tags": [],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
+    ],
+    "default_reasoning_effort": "medium",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "nvfp4",
+      "backends": [
+        "cuda"
+      ],
+      "quant": "nvfp4",
+      "requires": {},
+      "requirements": {
+        "min_ram_bytes": 85899345920,
+        "recommended_ram_bytes": 103079215104,
+        "disk_bytes": 110240858972
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "Edge0/Edge0-145B-NVFP4",
+          "revision": "6b6cc9b35ce84c0d244043f772cf584276e91439",
+          "files": [
+            {
+              "name": "experts.bin",
+              "size": 47563800576,
+              "sha256": "a39b0c127983b85d07326c8bad49260d6b475293b46e4166428c91a765ee593a"
+            },
+            {
+              "name": "labels.bin",
+              "size": 98304,
+              "sha256": "ce9b4a20b92c5c866e65d84a3884c104986522471cf11cc5f797a153affbcc06"
+            },
+            {
+              "name": "latent_dense_q8.bin",
+              "size": 3743416320,
+              "sha256": "fbb25caaa0dcf45ef62f1a4945dcf98a53a166934a3b461b166fbafa831d87ca"
+            },
+            {
+              "name": "model-skeleton.gguf",
+              "size": 5991569248,
+              "sha256": "ab49fbe7590cdcda45d7a2bcae4be0bd42c6a70b951d594a00eb158d7df0b72f"
+            },
+            {
+              "name": "mtp/dense.bin",
+              "size": 116099072,
+              "sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a"
+            },
+            {
+              "name": "mtp/dense.txt",
+              "size": 1851,
+              "sha256": "991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd"
+            },
+            {
+              "name": "mtp/experts.bin",
+              "size": 707788800,
+              "sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f"
+            },
+            {
+              "name": "native_experts.txt",
+              "size": 1437,
+              "sha256": "84c702bd52f6c800f72590c9c99cf6c24290fee4e59e7e81e5a057999772fcc0"
+            },
+            {
+              "name": "ple-fp8.gguf",
+              "size": 51200246112,
+              "sha256": "c7615c59b060277ddf6f84729fa8f7469cfc82c7fb983d6e7eab5a2f7446f170"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen3.8-Flash-Next",
+          "revision": "812d96e10a0dd82b69d749e68693698cf6c36daa",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 9004,
+              "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+            },
+            {
+              "name": "config.json",
+              "size": 4745,
+              "sha256": "889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 202,
+              "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12809320,
+              "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 9984,
+              "sha256": "207c03c41a06a9c3b0cc527d8a56115159c1eac6b59a4ffae85b646e773d074e"
+            }
+          ]
+        },
+        "vision": {
+          "provider": "huggingface",
+          "repo": "unsloth/Qwen3.8-Flash-Next-GGUF",
+          "revision": "f5d175de2cf7f720d45d6064019a81fcf056e986",
+          "entry": "mmproj-F16.gguf",
+          "files": [
+            {
+              "name": "mmproj-F16.gguf",
+              "size": 904004000,
+              "sha256": "1f7b7f0b984cf065c604360c29c8098362ed61b290db0ff12c6f360bb1a8a980"
+            }
+          ]
+        },
+        "draft_vocab": {
+          "provider": "shiso",
+          "entry": "draft_vocab_en_tr_code.txt",
+          "files": [
+            {
+              "name": "draft_vocab_en_tr_code.txt",
+              "size": 999997,
+              "sha256": "f6371cfff16e83c2202fb237744f225620dc78063f8bd69995e438f2c6264d41"
+            }
+          ]
+        }
+      },
+      "server_defaults": {
+        "ctx": 131072,
+        "kv_cache_tokens": 131072,
+        "spec_k": 4,
+        "capture_verify": true,
+        "capture_batch": true,
+        "solo_prefill_chunk": 4096
+      }
+    }
+  ]
+}
