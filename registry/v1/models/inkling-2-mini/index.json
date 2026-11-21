@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "name": "inkling-2-mini",
+  "aliases": [
+    "inkling2-mini"
+  ],
+  "family": "inkling2",
+  "min_shiso_version": "0.2.4",
+  "description": "Thinking Machines Lab Inkling 2 Mini — 26.4B (3.4B–5.4B active) multimodal looped MoE (24 physical -> 48 logical layers) in native NVFP4/MXFP8 with ViT vision encoder and DSpark MTP speculator",
+  "tags": [
+    "vision",
+    "tools",
+    "moe",
+    "mtp"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "minimal",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "default_reasoning_effort": "high",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "nvfp4-mxfp8",
+      "backends": [
+        "metal",
+        "cuda"
+      ],
+      "quant": "NVFP4 / MXFP8",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 34359738368,
+        "recommended_ram_bytes": 68719476736,
+        "disk_bytes": 20188200399
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "thinkingmachines/Inkling-2-Mini",
+          "revision": "ed40e7da625f594fc9c4990f5f66be24873c22d7",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 6868,
+              "sha256": "53a9035f3255945704b5857657cfb00c1165090c0641c4f782a0cbf268cc16dc"
+            },
+            {
+              "name": "config.json",
+              "size": 2722,
+              "sha256": "a7a349601f0984c4abf999c480ef775d8567d21f5f84b4e8a3e035b44f288dc2"
+            },
+            {
+              "name": "generation_config.json",
+              "size": 98,
+              "sha256": "a08737c07a65a8fdf69f7cf086576210e5aad4b241437090b26d7b0c4f7905f7"
+            },
+            {
+              "name": "hf_quant_config.json",
+              "size": 67924,
+              "sha256": "7c656207d3ce37879c7be209a036b0dde43bf01f78159bff06880b868ed57143"
+            },
+            {
+              "name": "model-00001-of-00001.safetensors",
+              "size": 19526019168,
+              "sha256": "65e60f51aa1284d4fb022584908c315270334d991828bb774af60584523539d1",
+              "binds": "vision"
+            },
+            {
+              "name": "model.safetensors.index.json",
+              "size": 109300,
+              "sha256": "c1631065b7b00787993522dddc66a68b3abee869192977fb3dcb796e63bc5838"
+            },
+            {
+              "name": "mtp.safetensors",
+              "size": 635801416,
+              "sha256": "7c3b651317f01f73bcf4e1dceba66ef8b7e1a1eac6bc171e882e690a4b10a1d2"
+            },
+            {
+              "name": "processor_config.json",
+              "size": 461,
+              "sha256": "d7350adce18c8be4b607f261c8f0f7eabbf720bb7aaf648a43d4f8372bbacc2d"
+            },
+            {
+              "name": "special_tokens_map.json",
+              "size": 529,
+              "sha256": "c16f44b3594563d82743ddb0417a2be1bfe3e2000dfad2da4b8f32554593e1a0"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 26178678,
+              "sha256": "7f332727f9a3f093dd452a39cc978e6757627e5dad1b0673aa4e75174f236dd6"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 13235,
+              "sha256": "bf09342d285139fd37ce10c70878af1d52cb390e9901e10248654293a80ee636"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "published_at": "2026-11-21T13:33:53.796228Z",
+  "updated_at": "2026-11-21T13:33:53.796228Z"
+}
