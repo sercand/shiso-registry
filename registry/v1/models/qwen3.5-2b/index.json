@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "name": "qwen3.5-2b",
+  "aliases": [],
+  "family": "qwen35",
+  "min_shiso_version": "0.1.0",
+  "description": "Dense 2B hybrid-attention model with a vision tower",
+  "tags": [
+    "vision",
+    "tools"
+  ],
+  "tasks": [
+    "chat"
+  ],
+  "modalities": {
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "features": {
+    "tools": true,
+    "reasoning": true,
+    "reasoning_efforts": [
+      "none",
+      "medium"
+    ],
+    "default_reasoning_effort": "medium",
+    "structured_output": false
+  },
+  "variants": [
+    {
+      "key": "ud-q4_k_xl",
+      "backends": [
+        "cuda",
+        "metal"
+      ],
+      "quant": "UD-Q4_K_XL",
+      "requires": {
+        "min_cuda_sm": 80
+      },
+      "requirements": {
+        "min_ram_bytes": 4294967296,
+        "recommended_ram_bytes": 8589934592,
+        "disk_bytes": 2020816097
+      },
+      "components": {
+        "base": {
+          "provider": "huggingface",
+          "repo": "unsloth/Qwen3.5-2B-GGUF",
+          "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+          "entry": "Qwen3.5-2B-UD-Q4_K_XL.gguf",
+          "files": [
+            {
+              "name": "Qwen3.5-2B-UD-Q4_K_XL.gguf",
+              "size": 1339752704,
+              "sha256": "0af96165ea615bea39a04118d63f0b6d35908aea850ee4a51aa6151d851b8b35"
+            },
+            {
+              "name": "mmproj-F16.gguf",
+              "size": 668227264,
+              "sha256": "7035e9cb8d7c6a9681d07eef9a364783e86ea4cd73faab2eabb4f43a101830c7",
+              "binds": "vision"
+            }
+          ]
+        },
+        "config": {
+          "provider": "huggingface",
+          "repo": "Qwen/Qwen3.5-2B",
+          "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+          "entry": "config.json",
+          "files": [
+            {
+              "name": "chat_template.jinja",
+              "size": 7755,
+              "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+            },
+            {
+              "name": "config.json",
+              "size": 2908,
+              "sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4"
+            },
+            {
+              "name": "preprocessor_config.json",
+              "size": 390,
+              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            {
+              "name": "tokenizer.json",
+              "size": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "size": 16709,
+              "sha256": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c"
+            },
+            {
+              "name": "video_preprocessor_config.json",
+              "size": 385,
+              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "info": {
+    "publisher": "Qwen",
+    "license": "apache-2.0",
+    "card": {
+      "provider": "huggingface",
+      "repo": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc"
+    },
+    "parameters": 2000000000,
+    "context_length": 262144
+  },
+  "published_at": "2026-11-24T13:08:08+03:00",
+  "updated_at": "2026-11-24T13:08:08+03:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T20:29:29.444502Z",
+  "generated_at": "2026-11-24T10:08:10.115668Z",
   "models": [
     {
       "name": "clef",
@@ -370,6 +370,44 @@
           "quant": "q8_0",
           "min_ram_bytes": 4294967296,
           "disk_bytes": 2627419424
+        }
+      ]
+    },
+    {
+      "name": "qwen3.5-2b",
+      "aliases": [],
+      "family": "qwen35",
+      "min_shiso_version": "0.1.0",
+      "description": "Dense 2B hybrid-attention model with a vision tower",
+      "tags": [
+        "vision",
+        "tools"
+      ],
+      "tasks": [
+        "chat"
+      ],
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "updated_at": "2026-11-24T13:08:08+03:00",
+      "manifest": "models/qwen3.5-2b/index.json",
+      "manifest_sha256": "85691521bb914a27ccd35f5b11523da2f7d7a959f0e080a97d01cc021e26b493",
+      "variants": [
+        {
+          "key": "ud-q4_k_xl",
+          "backends": [
+            "cuda",
+            "metal"
+          ],
+          "quant": "UD-Q4_K_XL",
+          "min_ram_bytes": 4294967296,
+          "disk_bytes": 2020816097,
+          "min_cuda_sm": 80
         }
       ]
     },
