@@ -5,12 +5,13 @@
     "qwen-image-2.1"
   ],
   "family": "qwen_image21",
-  "min_shiso_version": "0.2.1",
-  "description": "Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only.",
+  "min_shiso_version": "0.2.5",
+  "description": "Qwen-Image-2.1-Turbo 7B 8-step text-to-image (RGBA), INT8 ConvRot transformer with a Qwen3-VL-8B INT8 text encoder. Qwen Research License: non-commercial use only. Transparent backgrounds via the BiRefNet_dynamic background remover (MIT).",
   "tags": [
     "image-generation",
     "rgba",
-    "non-commercial"
+    "non-commercial",
+    "transparent-background"
   ],
   "tasks": [
     "image_generation"
@@ -39,7 +40,7 @@
       "quant": "int8-convrot",
       "requirements": {
         "min_ram_bytes": 17179869184,
-        "disk_bytes": 17294526207
+        "disk_bytes": 17739000216
       },
       "components": {
         "image": {
@@ -118,6 +119,24 @@
               "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
             }
           ]
+        },
+        "image_matte": {
+          "provider": "huggingface",
+          "repo": "ZhengPeng7/BiRefNet_dynamic",
+          "revision": "280306042f57b7a33854319da62fd86aaa89ec4c",
+          "entry": "model.safetensors",
+          "files": [
+            {
+              "name": "model.safetensors",
+              "size": 444473596,
+              "sha256": "e3d2e4884e51ff30f0cd630edc6b1e41b06b7f23a0a2a5169f7b7cb33a711c2d"
+            },
+            {
+              "name": "config.json",
+              "size": 413,
+              "sha256": "557f461de22ede5b0a2ff60967e579180194ded47587f6e30a3a09ad08ae248b"
+            }
+          ]
         }
       }
     }
@@ -134,5 +153,5 @@
     "parameters": 7115124736
   },
   "published_at": "2026-10-10T07:14:22+03:00",
-  "updated_at": "2026-10-10T07:14:22+03:00"
+  "updated_at": "2026-11-25T06:17:34+03:00"
 }
